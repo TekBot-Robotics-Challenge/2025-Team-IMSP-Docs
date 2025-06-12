@@ -33,7 +33,7 @@ La classe **VehicleRobot**, quant à elle, est une spécialisation concrète d�
 
 Parmi  ces périphériques on peut avoir une corbeille pour recueillir les déchets collectés. Le bras robotique représenté (**RoboticArm)** est lui aussi modélisé comme un robot à part entière, capable de se mouvoir de manière autonome et disposant de son propre état et permet la manipulation physique des déchets. Notre architecture se veut ainsi modulaire et hiérarchisée, permettant une gestion efficace et évolutive du processus de collecte.
 
-![WhatsApp Image 2025-06-12 à 14.11.16_1a640769.jpg](WhatsApp_Image_2025-06-12__14.11.16_1a640769.jpg)
+![uml-class-diagram.jpg](uml-class-diagram.jpg)
 
 ### **Description textuelle du diagramme de classe**
 
