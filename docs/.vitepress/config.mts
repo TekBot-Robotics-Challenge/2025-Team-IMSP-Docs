@@ -32,7 +32,7 @@ export default defineConfig({
             text: 'Tests Mécanique',
             collapsed: true,
             items: [
-              { text: 'Test 1', link: 'test-meca/test-01/test_01' },
+              { text: 'Test 1', link: 'test-meca/test-01/' },
             ]
           },
         ]
