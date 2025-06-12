@@ -28,13 +28,13 @@ export default defineConfig({
               { text: 'Test 1', link: 'test-it/test-01/test_01' },
             ]
           },
-           {
-            text: 'Tests Mécanique',
-            collapsed: true,
-            items: [
-              { text: 'Test 1', link: 'test-meca/test-01/' },
-            ]
-          },
+          //  {
+          //   text: 'Tests Mécanique',
+          //   collapsed: true,
+          //   items: [
+          //     { text: 'Test 1', link: 'test-meca/test-01/' },
+          //   ]
+          // },
         ]
       }
     ],
