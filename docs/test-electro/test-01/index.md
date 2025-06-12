@@ -350,7 +350,10 @@ String directionFromGreaterAxis(float x, float y, float z)
   return directionSelonAxe(axe, x, y, z);
 }
 
+
 ```
+
+![Demo Electronique test 1](https://vimeo.com/1092865084?share=copy)
 
 Le code Arduino permet, comme il a été demandée, de préciser le sens (gauche/droite, haut/bas, avant/arrière ) dans lequel le capteur se déplace et son accélération durant le déplacement avec affichage sur un écran LCD. Voici les principales etapes du code:
 
@@ -429,5 +432,3 @@ toutes les conditions étaient réunis pour nous plonger un peu plus dans le mon
 <p align="center">
   <img src="./assets/SC22.jpg" width="400" alt="Le réparateur d'imprimante 😆">
 </p>
-
-![Demo Electronique test 1](https://vimeo.com/1092865084?share=copy)
