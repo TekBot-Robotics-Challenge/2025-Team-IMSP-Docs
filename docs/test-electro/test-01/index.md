@@ -429,7 +429,5 @@ toutes les conditions étaient réunis pour nous plonger un peu plus dans le mon
 <p align="center">
   <img src="./assets/SC22.jpg" width="400" alt="Le réparateur d'imprimante 😆">
 </p>
-<video width="640" height="360" controls>
-  <source src="https://vimeo.com/1092865084?share=copy" type="video/mp4">
-  Ton navigateur ne supporte pas la balise vidéo.
-</video>
+
+![Demo Electronique test 1](https://vimeo.com/1092865084?share=copy)
