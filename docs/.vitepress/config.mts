@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  base: '2025-Team-IMSP-Docs',
+  base: '/2025-Team-IMSP-Docs',
   title: "TEAM IMSP Docs",
   description: "IMSP TEAM Documentation for Tekbot Robotic Challenge 2025 about urban resilience",
   themeConfig: {
