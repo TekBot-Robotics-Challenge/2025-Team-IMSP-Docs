@@ -1,10 +1,10 @@
-# TRC-2K25 Test 1
+# Création d’une classe pour un Robot
 
-## DESCRIPTION DE NOTRE ROBOT
+## Introduction
 
 Pour ce projet nous avons conçu un robot dont la fonction principale est de se mouvoir dans l’espace pour ramasser des déchets. Il est composé de trois modules, interconnectés via un bus de communication : le **module principal**, le **module de collecte** et les **périphériques**.
 
- Le module principale est un module semblable au **Rosmaster X3** qui disposent de plusieurs capteurs pour scanner l'environnement et des roues pour se mouvoir dans l'espace. Il dispose également de supports pour accueillir des périphériques (modules externes). Pour ce projet, Il va accueillir le module de collecte et la poubelle intélligente.
+Le module principale est un module semblable au **Rosmaster X3** qui disposent de plusieurs capteurs pour scanner l'environnement et des roues pour se mouvoir dans l'espace. Il dispose également de supports pour accueillir des périphériques (modules externes). Pour ce projet, Il va accueillir le module de collecte et la poubelle intélligente.
 
 Le module de collecte est un module semblable au bas robotisé *Dofbot Jetson
 Nano* qui dispose d'une caméra et d'une pince pour la récupération des déchets.

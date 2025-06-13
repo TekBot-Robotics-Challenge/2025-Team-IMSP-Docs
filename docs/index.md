@@ -3,15 +3,15 @@
 layout: home
 
 hero:
-  name: "TRC-2025 | TEAM IMSP Docs"
-  text: "IMSP TEAM Documentation for Tekbot Robotic Challenge 2025 about urban resilience"
-  tagline: My great project tagline
+  name: "IMSP TEAM"
+  text: "Documentation for Tekbot Robotic Challenge 2025 about urban resilience"
+  tagline: Empowering innovation and resilience through robotics
   actions:
     - theme: brand
       text: Documentation
       link: /test-electro/test-01
     - theme: alt
-      text: API Examples
+      text: ... learn more
       link: /test-electro/test-01
 
 features:
