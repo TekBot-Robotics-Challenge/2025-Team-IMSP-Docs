@@ -175,7 +175,7 @@ On retourne par la suite dans notre esquisse puis on choisit dans le menu l’op
 On vient ainsi donc de terminer notre solide, pour se conformer aux exigences, nous allons nous rendre dans l'arbre de conception (FeatureManager). Ensuite, après avoir repéré l'option Matériau en haut de la liste, à l’aide d’un clic droit sur Matériau, on sélectionne Modifier le matériau.
 On parcourt ensuite la liste des matériaux en prenant garde de choisir comme matériau l’Alliage 1060 de l’Aluminium avec une densité de 0.0027 g/mm^3.
 
-![assets/image 10.png](assets/image%2010.png)
+![assets/image_10.png](assets/image_10.png)
 
 Puis on détermine la masse de l'objet.
 
@@ -211,22 +211,24 @@ Ces deux types de contraintes ont été répétés encore et encore entre les di
 ## IV.	Le résultat 
 La conception des pièces ainsi que l’assemblage s’étant déroulé sans encombre, nous avons ensuite procédé à la détermination de la masse des pièces modélisées ainsi que la détermination du centre de gravité de l’assemblage. 
 
-> Les résultats se présentent comme suit : 
->   
->   - __<ins>Pièce 1 :</ins>__ Masse = 3020.54 grammes  
->   - __<ins>Pièce 2 :</ins>__ Masse = 290.80 grammes  
->   - __<ins>Pièce 3 :</ins>__ Masse = 1633.25 grammes  
->   - __<ins>Pièce 4 :</ins>__ Masse = 297.29 grammes  
+:::info
+Les résultats se présentent comme suit : 
+  
+  - __<ins>Pièce 1 :</ins>__ Masse = 3020.54 grammes  
+  - __<ins>Pièce 2 :</ins>__ Masse = 290.80 grammes  
+  - __<ins>Pièce 3 :</ins>__ Masse = 1633.25 grammes  
+  - __<ins>Pièce 4 :</ins>__ Masse = 297.29 grammes  
 
-> __<ins>Assemblage :</ins>__
-> -	Vérin en position minimale Centre de gravité :  
->            X = -25.78
->            Y = 0.06
->            Z = 19.81
-> -	Vérin en position maximale 
-> X = -45.29
-> Y = 0.00 
-> Z = 24.50
+__<ins>Assemblage :</ins>__
+-	Vérin en position minimale Centre de gravité :  
+           X = -25.78
+           Y = 0.06
+           Z = 19.81
+-	Vérin en position maximale 
+X = -45.29
+Y = 0.00 
+Z = 24.50
+:::
 
 ## V. Démonstration de l’assemblage
 Pour illustrer le résultat de notre assemblage, nous avons réalisé une vidéo de démonstration. Cette vidéo montre l'assemblage complet ainsi que le fonctionnement des pièces modélisées.
