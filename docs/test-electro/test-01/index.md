@@ -2,21 +2,19 @@
 
 ## Description sommaire du projet
 
-<!-- <p style="display: flex; align-items: center;"> -->
-
-<span> Les capteurs, composants électroniques permettant de mesurer des grandeurs physiques jouent un rôle prépondérant dans la robotique moderne. Ils permettent aux systèmes robotiques de recueillir des données du monde extérieur leur permettant ainsi de s’adapter à différents types de situations. S’inscrivant dans un contexte de conception d’un bras robotique mobile capable de ramasser puis de trier les déchets, le présent projet vise à permettre l’acquisition des notions d’orientation dans l’espace et de vitesse de rotation angulaire par le futur système robotique. Ce projet a donc pour objectif principal de récupérer puis d’interpréter les valeurs envoyées par un capteur combinant les fonctionnalités de gyroscope et d’accéléromètre : Le MPU 6050. Découvrons - le ensemble !</span>
-
-  <!-- <img src="./assets/Capture d'écran 2025-06-03 034837.png" 
-  style="margin-left:10px; width: 200px">
-</p> -->
+<p style="display: flex; align-items: center;">
+  <span> Les capteurs, composants électroniques permettant de mesurer des grandeurs physiques jouent un rôle prépondérant dans la robotique moderne. Ils permettent aux systèmes robotiques de recueillir des données du monde extérieur leur permettant ainsi de s’adapter à différents types de situations. S’inscrivant dans un contexte de conception d’un bras robotique mobile capable de ramasser puis de trier les déchets, le présent projet vise à permettre l’acquisition des notions d’orientation dans l’espace et de vitesse de rotation angulaire par le futur système robotique. Ce projet a donc pour objectif principal de récupérer puis d’interpréter les valeurs envoyées par un capteur combinant les fonctionnalités de gyroscope et d’accéléromètre : Le MPU 6050. Découvrons - le ensemble !</span>
+  
+  <img src="./assets/034837.png" style="margin-left:10px; width: 200px">
+</p>
 
 ## Explication du fonctionnement du Capteur MPU 6050
 
 <p style="display: flex; align-items: center;">
-<span>Le capteur que nous utilisons : Le MPU9250 est en réalité un module de suivi de mouvement à neuf axes dont trois permettent de mesurer l’accélération linéaire sur chacun des axes x,y et z , trois la mesure de la vitesse de rotation angulaire autour de ces axes et trois l’orientation de l’objet dans l’espace (Nord, Sud, etc…). La mesure des accélérations linéaires renseigne sur la direction du mouvement, celle de la vitesse angulaire permet de déduire les angles de rotation respectives par rapport à  deux axes( roulis et tangage) puis le magnétomètre permet de déterminer l’angle de lacet.
-Son fonctionnement se base sur le concept du MEMS (Micro- Electro-Mecanical-System): Il s'agit en réalité de dispositifs miniaturisés qui combinent des composants électriques, mécaniques et parfois optiques sur une seule puce. 
-</span>
-  <img src="./assets/Capture d'écran 2025-06-06 065522.png" 
+  <span>Le capteur que nous utilisons : Le MPU9250 est en réalité un module de suivi de mouvement à neuf axes dont trois permettent de mesurer l’accélération linéaire sur chacun des axes x,y et z , trois la mesure de la vitesse de rotation angulaire autour de ces axes et trois l’orientation de l’objet dans l’espace (Nord, Sud, etc…). La mesure des accélérations linéaires renseigne sur la direction du mouvement, celle de la vitesse angulaire permet de déduire les angles de rotation respectives par rapport à  deux axes( roulis et tangage) puis le magnétomètre permet de déterminer l’angle de lacet.
+  Son fonctionnement se base sur le concept du MEMS (Micro- Electro-Mecanical-System): Il s'agit en réalité de dispositifs miniaturisés qui combinent des composants électriques, mécaniques et parfois optiques sur une seule puce. 
+  </span>
+    <img src="./assets/065522.png" 
   style="margin-left:10px; width: 200px"/>
 </p>
 
@@ -74,7 +72,7 @@ Pour résoudre ce problème d’alimentation on va utiliser certes une source co
 Sans plus tarder faisons l’inventaire des composants qui interviendrons dans la réalisation de notre alimentation.
 
 1. Une source de tension : Comme point de départ nous allons utiliser 02 batteries au mercure d’environ 8 V chacune que nous allons assembler avec un coupleur, soit un total de 16V environ. (
-Après réalisation de cette solution, nous avons remarquer que l'arduino décharge rapidement nos batteries. Donc la solution a été de rajouter des batteries monter en parallèle pour l'alimentation.)
+   Après réalisation de cette solution, nous avons remarquer que l'arduino décharge rapidement nos batteries. Donc la solution a été de rajouter des batteries monter en parallèle pour l'alimentation.)
 
 <p align="center">
   <img src="./assets/SC20.jpg" alt="Description" width="200">
@@ -352,9 +350,6 @@ String directionFromGreaterAxis(float x, float y, float z)
 
 
 ```
-<video width="320" height="240" controls>
-  <source src="https://vimeo.com/1092865084?share=copy" type="video/mp4">
-</video>
 
 Le code Arduino permet, comme il a été demandée, de préciser le sens (gauche/droite, haut/bas, avant/arrière ) dans lequel le capteur se déplace et son accélération durant le déplacement avec affichage sur un écran LCD. Voici les principales etapes du code:
 
@@ -394,6 +389,12 @@ La cause de ce problème était assez bizarre et bête à la fois mais il fallai
 ## Résultat final:
 
 Finalement nous n'avons pu déterminé que la direction de déplacement du capteur pour ce projet. Ici se présente la vidéo de fonctionnement du système:
+
+<!-- <video controls="" autoplay="" loop="" muted="" width="100%" height="auto">
+   <source src="https://fabacademy.org/2024/labs/energylab/students/mohamed-salifou/images/week13/I2C_2.mp4" type="video/mp4">
+</video> -->
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1092985856?h=e86efbfe9d" width="640" height="360" frameborder="0"    allowfullscreen>
+</iframe>
 
 ## Limites et amélioration à long terme
 
