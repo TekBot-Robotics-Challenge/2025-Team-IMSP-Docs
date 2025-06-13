@@ -154,7 +154,7 @@ Ce capteur, tout comme l’écran LCD sera câblé en mode I2C, c’est-à-dire 
 </p>
 
 <p align="center">
-  <img src="./assets/SC19.jpg" width="500" alt="Schema complete du circuit du capteur sur KICAD">
+  <img src="./assets/SC19.jpeg" width="500" alt="Schema complete du circuit du capteur sur KICAD">
 </p>
 
 ## Processus des differents montages
