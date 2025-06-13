@@ -19,21 +19,21 @@ export default defineConfig({
             text: 'Tests Électronique',
             collapsed: true,
             items: [
-              { text: 'Test 1', link: 'test-electro/test-01' },
+              { text: 'Test 1', link: 'test-electro/test-one-elec' },
             ]
           },
           {
             text: 'Tests Informatique',
             collapsed: true,
             items: [
-              { text: 'Test 1', link: 'test-it/test-01' },
+              { text: 'Test 1', link: 'test-it/test-one-it' },
             ]
           },
            {
             text: 'Tests Mécanique',
             collapsed: true,
             items: [
-              { text: 'Test 1', link: 'test-meca/test-01' },
+              { text: 'Test 1', link: 'test-meca/test-one-meca' },
             ]
           },
         ]

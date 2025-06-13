@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Documentation
-      link: /test-electro/test-01
+      link: test-it/test-one-it
     - theme: alt
       text: ... learn more
-      link: /test-electro/test-01
+      link: test-it/test-one-it
 
 features:
   - title: Feature A
