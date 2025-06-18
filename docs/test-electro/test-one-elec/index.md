@@ -164,7 +164,7 @@ Ce capteur, tout comme l’écran LCD sera câblé en mode I2C, c’est-à-dire 
 
 3. Montage final
 
-![Image du montage final du capteur](./assets/SC3.jpg)
+![Image du montage final du capteur](./assets/Image_du_montage_final_du_capteur.jpg)
 
 ### L'alimentation
 
