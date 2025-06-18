@@ -113,7 +113,6 @@ Etant donné que dans Kicad l'écran lcd ne dispose pas directement du module de
 | P4                | E             | Enable          | Validation de l’envoi des données   |
 | P5                | RW            | Read/Write      | Lecture/Ecriture                    |
 | P6                | RS            | Register select | Sélection du registre               |
-
 P7 |LED +Blacklight | Control Rétroéclairage Contrôle du rétroéclairage
 GND |K, VSS Masse | Fermeture du circuit
 
@@ -127,13 +126,9 @@ Il s’agit des broches :
 
 Ces 4 broches seront directement connectées à leurs équivalents respectifs du même nom sur le microprocesseur Arduino.
 
- <p align="center">
-  <img src="./assets/SC7.jpg" width="700" alt="Image de l'écran lcd sur KICAD">
-</p>
+![Image de l'écran lcd sur KICAD](./assets/SC7.jpg)
 
-<p align="center">
-  <img src="./assets/SC8.jpg" width="400" alt="Image du PCF sur KICAD">
-</p>
+![Image du PCF sur KICAD](./assets/SC8.jpg)
 
 Le capteur MPU-6050 quant à lui a 8 broches ayant des fonctions précises qui sont recensées dans le tableau ci-dessous :
 Nom de la broche | Fonction
@@ -149,13 +144,7 @@ XDA | Données externes
 
 Ce capteur, tout comme l’écran LCD sera câblé en mode I2C, c’est-à-dire avec les broches VCC, GND, SDA et SCL directement avec l’arduino. Les 4 autres restantes n’étant connectées à rien, on y disposera des marqueurs de non connexion .Pour notre schéma, nous utiliserons directement un connecteur 01x08 pin que nous avons renommé avec le nom des broches d’un MPU 6050 étant donné que sa représentation dans Kicad ne dispose pas directement des broches pour la communication par I2C. L’utilisation d’un tel connecteur pour également aider si on a éventuellement besoin de designer le PCB à partir du schéma du circuit.
 
-<p align="center">
-  <img src="./assets/SC17.jpg" width="500" alt="Image du capteur MPU 6050 sur KICAD">
-</p>
-
-<p align="center">
-  <img src="./assets/SC19.jpeg" width="500" alt="Schema complete du circuit du capteur sur KICAD">
-</p>
+![Image du capteur MPU 6050 sur KICAD](./assets/Image_du_capteur_MPU_6050_sur_KICAD.jpg)
 
 ## Processus des differents montages
 
@@ -175,17 +164,13 @@ Ce capteur, tout comme l’écran LCD sera câblé en mode I2C, c’est-à-dire 
 
 3. Montage final
 
-<p align="center">
-  <img src="./assets/SC3.jpg" alt="Description" width="500">
-</p>
+![Image du montage final du capteur](./assets/SC3.jpg)
 
 ### L'alimentation
 
 1. Disposition des régulateurs , des diodes et des résistances
 
-<p align="center">
-  <img src="./assets/SC11.jpg" alt="Description" width="500">
-</p>
+![Alimentation Régulateurs diodes et résistances montage](./assets/Alimentation_Régulateurs_diodes_et_résistances_montage.jpg)
 
 2. Le soudage
 
@@ -199,9 +184,7 @@ Ce capteur, tout comme l’écran LCD sera câblé en mode I2C, c’est-à-dire 
 
 3. Le montage final
 
-<p align="center">
-  <img src="./assets/SC14.jpg" alt="Description" width="500">
-</p>
+![Montage Final](./assets/Montage_Final.jpg)
 
 ## Le code
 
@@ -390,9 +373,7 @@ La cause de ce problème était assez bizarre et bête à la fois mais il fallai
 
 Finalement nous n'avons pu déterminé que la direction de déplacement du capteur pour ce projet. Ici se présente la vidéo de fonctionnement du système:
 
-<!-- <video controls="" autoplay="" loop="" muted="" width="100%" height="auto">
-   <source src="https://fabacademy.org/2024/labs/energylab/students/mohamed-salifou/images/week13/I2C_2.mp4" type="video/mp4">
-</video> -->
+
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1092985856?h=e86efbfe9d" width="640" height="360" frameborder="0"    allowfullscreen>
 </iframe>
 
@@ -419,18 +400,10 @@ toutes les conditions étaient réunis pour nous plonger un peu plus dans le mon
 
 ### La team ✌️
 
-<p align="center">
-  <img src="./assets/SC15.jpg" width="400" alt="Alex le soudeur😆👌">
-</p>
+![Team Member Alex](./assets/Team_Member_Alex.jpg)
 
-<p align="center">
-  <img src="./assets/SC16.jpg" width="400" alt="Donald Le codeur expérimenté👌✌️">
-</p>
+![Team Member Donald](./assets/Team_Member_Donald.jpg)
 
-<p align="center">
-  <img src="./assets/SC21.jpg" width="400" alt="Le schématiseur ✌️">
-</p>
+![Team Member Sigfried](./assets/Team_Member_Sigfried.jpg)
 
-<p align="center">
-  <img src="./assets/SC22.jpg" width="400" alt="Le réparateur d'imprimante 😆">
-</p>
+![Team Member Luc](./assets/Team_Member_Luc.jpg)

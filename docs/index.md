@@ -13,6 +13,9 @@ hero:
     - theme: alt
       text: ... learn more
       link: test-it/test-one-it
+  image:
+      src: /imsp_logo.png
+      alt: IMSP Team Logo
 
 features:
   - title: Test One
