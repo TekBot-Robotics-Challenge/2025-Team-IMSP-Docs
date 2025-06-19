@@ -20,7 +20,7 @@ hero:
 features:
   - title: Test One
     details: The first week allowed us to acquire basic knowledge of object-oriented programming (OOP), the UML language, Arduino programming, and mechanical part design using SolidWorks.
-    link: test-it/test-one-it
+    link: test-it/test-one-it/
     icon: 📚
   - title: Test Two
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit

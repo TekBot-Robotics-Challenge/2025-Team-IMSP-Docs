@@ -5,7 +5,7 @@
 <p style="display: flex; align-items: center;">
   <span> Les capteurs, composants électroniques permettant de mesurer des grandeurs physiques jouent un rôle prépondérant dans la robotique moderne. Ils permettent aux systèmes robotiques de recueillir des données du monde extérieur leur permettant ainsi de s’adapter à différents types de situations. S’inscrivant dans un contexte de conception d’un bras robotique mobile capable de ramasser puis de trier les déchets, le présent projet vise à permettre l’acquisition des notions d’orientation dans l’espace et de vitesse de rotation angulaire par le futur système robotique. Ce projet a donc pour objectif principal de récupérer puis d’interpréter les valeurs envoyées par un capteur combinant les fonctionnalités de gyroscope et d’accéléromètre : Le MPU 6050. Découvrons - le ensemble !</span>
   
-  <img src="./assets/034837.png" style="margin-left:10px; width: 200px">
+  <img src="./assets/test-one/034837.png" style="margin-left:10px; width: 200px">
 </p>
 
 ## Explication du fonctionnement du Capteur MPU 6050
@@ -14,7 +14,7 @@
   <span>Le capteur que nous utilisons : Le MPU9250 est en réalité un module de suivi de mouvement à neuf axes dont trois permettent de mesurer l’accélération linéaire sur chacun des axes x,y et z , trois la mesure de la vitesse de rotation angulaire autour de ces axes et trois l’orientation de l’objet dans l’espace (Nord, Sud, etc…). La mesure des accélérations linéaires renseigne sur la direction du mouvement, celle de la vitesse angulaire permet de déduire les angles de rotation respectives par rapport à  deux axes( roulis et tangage) puis le magnétomètre permet de déterminer l’angle de lacet.
   Son fonctionnement se base sur le concept du MEMS (Micro- Electro-Mecanical-System): Il s'agit en réalité de dispositifs miniaturisés qui combinent des composants électriques, mécaniques et parfois optiques sur une seule puce. 
   </span>
-    <img src="./assets/065522.png" 
+    <img src="./assets/test-one/065522.png" 
   style="margin-left:10px; width: 200px"/>
 </p>
 
@@ -23,7 +23,7 @@
 Afin de mesurer l’accélération linéaire sur un axe, le capteur se sert d’un système électromécanique constitué d’une très fine tige de silicium qui sert de masse sismique en forme de H avec des doigts sensoriels s’étendant à partir d’elle. Cette masse est attaché à un substrat aux deux extrémités et peut se déplacer d’avant en arrière entre les deux extrémités attachées lorsque le capteur est en déplacement. Ce substrat contient également des électrodes fixes qui forment avec les doits sensoriels de la masse sismique une structure en forme de peigne. Ainsi, chaque doigt de la masse sismique forme avec les deux électrodes qui l’entourent deux condensateurs dont la capacité varie lors du mouvement (Etant donné que le mouvement modifie la distance entre les armatures).
 
 <p align="center">
-  <img src="./assets/image.jpg" width="400" alt="Image décrivant le fonctionnement interne d'un accélérometre"/>
+  <img src="./assets/test-one/image.jpg" width="400" alt="Image décrivant le fonctionnement interne d'un accélérometre"/>
 </p>
 
 Cette différence de capacité est mesurée pour chaque branche de la masse, amplifié, conditionné et filtré avant d’être convertit en donnée numérique grâce à un convertisseur analogique numérique.
@@ -34,7 +34,7 @@ Le même procédé est répété pour chaque axe permettant ainsi au capteur de 
 La mesure de la vitesse de rotation angulaire par le capteur gyroscope quant à elle se base sur l’effet Coriolis qui stipule que tout corps en rotation autour d’un axe avec une certaine vitesse est soumis à une force de direction perpendiculaire à l’axe et à la vitesse. Le déplacement provoqué par cette force permet de déduire la vitesse angulaire appliquée au corps. Afin de reproduire cet effet et déduire la vitesse angulaire à laquelle il tourne, le capteur utilise une structure en forme de fourche combiné à des électrodes, qui en l’absence de rotation effectue un mouvement constant d’avant en arrière maintenue par des cristaux piézoélectriques. Mais dès que la structure est soumise à une rotation, ce mouvement est modifié en raison de force de Coriolis, modification se manifestant par des variations de capacités des condensateurs formés. Ces variations permettent de déduire la vitesse de rotation du capteur. Cette architecture est répétée sur chacun des axes ce qui permet de déduire la vitesse de rotation angulaire suivant chaque axe.
 
 <p align="center">
-  <img src="./assets/image1.png" width="700" alt="Image décrivant le fonctionnement interne du gyroscope du MPU 9250">
+  <img src="./assets/test-one/image1.png" width="700" alt="Image décrivant le fonctionnement interne du gyroscope du MPU 9250">
 </p>
 
 Les informations du gyroscope et de l'accéléromètre permettent ainsi d'avoir la direction de déplacement de l'objet dans l'espace mais permettent également d'estimer les angles que font le capteur avec les axes X et Y.
@@ -75,13 +75,13 @@ Sans plus tarder faisons l’inventaire des composants qui interviendrons dans l
    Après réalisation de cette solution, nous avons remarquer que l'arduino décharge rapidement nos batteries. Donc la solution a été de rajouter des batteries monter en parallèle pour l'alimentation.)
 
 <p align="center">
-  <img src="./assets/SC20.jpg" alt="Description" width="200">
+  <img src="./assets/test-one/SC20.jpg" alt="Description" width="200">
 </p>
 
 1. Un régulateur non linéaire de type abaisseur (buck) pour la conversion de la tension fournie en entrée par la source (les piles), en une tension plus stable, constante de 7V pour alimenter par exemple un Arduino. Plus précisément nous allons faire usage d’un XL4015 qui est model très particulier capable de prendre entre 3 et 32 volts et de restituer entre 1.5 et 35 volts(ajustable) de tension en sortie.
 
 <p align="center">
-  <img src="./assets/SC5.jpg" alt="Description" width="500">
+  <img src="./assets/test-one/SC5.jpg" alt="Description" width="500">
 </p>
 
 3. Une diode zener et une résistance :
@@ -90,11 +90,11 @@ Sans plus tarder faisons l’inventaire des composants qui interviendrons dans l
 Voici une complète de notre alimentation.
 
  <p align="center">
-  <img src="./assets/SC9.jpg" width="700" alt="Image de l'alimentation sur KICAD">
+  <img src="./assets/test-one/SC9.jpg" width="700" alt="Image de l'alimentation sur KICAD">
 </p>
 
 <p align="center">
-  <img src="./assets/SC14.jpg" width="500" alt="Image physique de l'alimentation">
+  <img src="./assets/test-one/SC14.jpg" width="500" alt="Image physique de l'alimentation">
 </p>
 
 Dans le cadre du concours, cette source d’alimentation aura deux sorties. L'un réglé sur du 7V permettant ainsi d’alimenter efficacement notre carte arduino, et l'autre sur du 5V pour des utilisations futures.
@@ -126,9 +126,9 @@ Il s’agit des broches :
 
 Ces 4 broches seront directement connectées à leurs équivalents respectifs du même nom sur le microprocesseur Arduino.
 
-![Image de l'écran lcd sur KICAD](./assets/SC7.jpg)
+![Image de l'écran lcd sur KICAD](./assets/test-one/SC7.jpg)
 
-![Image du PCF sur KICAD](./assets/SC8.jpg)
+![Image du PCF sur KICAD](./assets/test-one/SC8.jpg)
 
 Le capteur MPU-6050 quant à lui a 8 broches ayant des fonctions précises qui sont recensées dans le tableau ci-dessous :
 Nom de la broche | Fonction
@@ -144,7 +144,7 @@ XDA | Données externes
 
 Ce capteur, tout comme l’écran LCD sera câblé en mode I2C, c’est-à-dire avec les broches VCC, GND, SDA et SCL directement avec l’arduino. Les 4 autres restantes n’étant connectées à rien, on y disposera des marqueurs de non connexion .Pour notre schéma, nous utiliserons directement un connecteur 01x08 pin que nous avons renommé avec le nom des broches d’un MPU 6050 étant donné que sa représentation dans Kicad ne dispose pas directement des broches pour la communication par I2C. L’utilisation d’un tel connecteur pour également aider si on a éventuellement besoin de designer le PCB à partir du schéma du circuit.
 
-![Image du capteur MPU 6050 sur KICAD](./assets/Image_du_capteur_MPU_6050_sur_KICAD.jpg)
+![Image du capteur MPU 6050 sur KICAD](./assets/test-one/Image_du_capteur_MPU_6050_sur_KICAD.jpg)
 
 ## Processus des differents montages
 
@@ -153,38 +153,38 @@ Ce capteur, tout comme l’écran LCD sera câblé en mode I2C, c’est-à-dire 
 1. Connection du capteur à l'arduino suivant le protocole de communication I2C.
 
 <p align="center">
-  <img src="./assets/SC2.jpg" alt="Description" width="500">
+  <img src="./assets/test-one/SC2.jpg" alt="Description" width="500">
 </p>
 
 2. Ajout de l'écran Lcd
 
 <p align="center">
-  <img src="./assets/SC4.jpg" alt="Description" width="500">
+  <img src="./assets/test-one/SC4.jpg" alt="Description" width="500">
 </p>
 
 3. Montage final
 
-![Image du montage final du capteur](./assets/Image_du_montage_final_du_capteur.jpg)
+![Image du montage final du capteur](./assets/test-one/Image_du_montage_final_du_capteur.jpg)
 
 ### L'alimentation
 
 1. Disposition des régulateurs , des diodes et des résistances
 
-![Alimentation Régulateurs diodes et résistances montage](./assets/Alimentation_Régulateurs_diodes_et_résistances_montage.jpg)
+![Alimentation Régulateurs diodes et résistances montage](./assets/test-one/Alimentation_Régulateurs_diodes_et_résistances_montage.jpg)
 
 2. Le soudage
 
 <p align="center">
-  <img src="./assets/SC12.jpg" alt="Description" width="500">
+  <img src="./assets/test-one/SC12.jpg" alt="Description" width="500">
 </p>
 
 <p align="center">
-  <img src="./assets/SC13.jpg" alt="Description" width="500">
+  <img src="./assets/test-one/SC13.jpg" alt="Description" width="500">
 </p>
 
 3. Le montage final
 
-![Montage Final](./assets/Montage_Final.jpg)
+![Montage Final](./assets/test-one/Montage_Final.jpg)
 
 ## Le code
 
@@ -374,7 +374,7 @@ La cause de ce problème était assez bizarre et bête à la fois mais il fallai
 Finalement nous n'avons pu déterminé que la direction de déplacement du capteur pour ce projet. Ici se présente la vidéo de fonctionnement du système:
 
 
-<iframe title="vimeo-player" src="https://player.vimeo.com/video/1092985856?h=e86efbfe9d" width="640" height="360" frameborder="0"    allowfullscreen>
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1092985856?h=e86efbfe9d" width="640" height="360" frameborder="0" allowfullscreen>
 </iframe>
 
 ## Limites et amélioration à long terme
@@ -400,10 +400,10 @@ toutes les conditions étaient réunis pour nous plonger un peu plus dans le mon
 
 ### La team ✌️
 
-![Team Member Alex](./assets/Team_Member_Alex.jpg)
+![Team Member Alex](./assets/test-one/Team_Member_Alex.jpg)
 
-![Team Member Donald](./assets/Team_Member_Donald.jpg)
+![Team Member Donald](./assets/test-one/Team_Member_Donald.jpg)
 
-![Team Member Sigfried](./assets/Team_Member_Sigfried.jpg)
+![Team Member Sigfried](./assets/test-one/Team_Member_Sigfried.jpg)
 
-![Team Member Luc](./assets/Team_Member_Luc.jpg)
+![Team Member Luc](./assets/test-one/Team_Member_Luc.jpg)

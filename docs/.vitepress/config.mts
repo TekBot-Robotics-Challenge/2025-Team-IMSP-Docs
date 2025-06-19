@@ -12,28 +12,28 @@ export default defineConfig({
     ],
 
     sidebar: [
-      {
+       {
         text: 'Tests de Préselection',
         items: [
           {
             text: 'Tests Électronique',
             collapsed: true,
             items: [
-              { text: 'Test 1', link: 'test-electro/test-one-elec' },
+              { text: 'Test 1', link: '/test-electro/test-one.md' },
             ]
           },
           {
             text: 'Tests Informatique',
             collapsed: true,
             items: [
-              { text: 'Test 1', link: 'test-it/test-one-it' },
+              { text: 'Test 1', link: '/test-it/test-one.md' },
             ]
           },
            {
             text: 'Tests Mécanique',
             collapsed: true,
             items: [
-              { text: 'Test 1', link: 'test-meca/test-one-meca' },
+              { text: 'Test 1', link: '/test-meca/test-one.md' },
             ]
           },
         ]
