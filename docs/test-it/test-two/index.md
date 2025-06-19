@@ -1,4 +1,4 @@
-# TRC-2K25 Test 2 : ROS 2
+# Introduction à ROS2
 
 ## Objectif du Projet
 
@@ -7,7 +7,7 @@ Ce test d’introduction à `ROS2` a pour finalité la mise en place d’un syst
 - **publisher**, génère et publie périodiquement les données simulées des capteurs;
 - **subscriber**, les reçoit, les analyse et vérifie si elles se trouvent dans des plages de valeurs acceptables.
 
-> **NB:** Dans le suite de cette documentation, ROS2 est supposé être installé dans un environnement Linux, dans sa version “*HUMBLE*”. [voir plus](https://www.notion.so/Mise-en-place-de-l-environnement-ROS2-Humble-216d3871a1b180049b84e40c2c3a5d25?pvs=21)
+> **NB:** Dans le suite de cette documentation, ROS2 est supposé être installé dans un environnement Linux, dans sa version “*HUMBLE*”. [voir plus](./installation-ros2-humble.md)
 > 
 
 ## ROS – Robot Operating System
@@ -18,7 +18,7 @@ Ce test d’introduction à `ROS2` a pour finalité la mise en place d’un syst
 
 En tant que OS robotique, il doit d’une part faire fonctionner en parallèle un grand nombre d’exécutables qui doivent pouvoir échanger de
 
-![image.png](./assets/test-two/ros_humble.png)
+![image.png](../assets/test-two/ros_humble.png)
 
 l’information de manière *synchrone* ou *asynchrone* et d’autre part assurer la gestion de la concurrence afin d’assurer l’accès efficace aux  ressources du robot.
 
@@ -28,7 +28,7 @@ Pour ce faire, ce dote de concepts regroupés sous le nom de «*ROS Computation 
 
 `ROS` crée un réseau peer-to-peer dans lequel tous les processus sont connectés. Chaque nœud de ce graphique représente les concepts utilisé dans `ROS` (*“nodes”, “master”, “services”, “messages”,  “bags”,”topics” et “parameter server”*). Ils peuvent interagir entre eux en, consultant des informations, échangé ou en se transmettant des données.
 
-![image.png](./assets/test-two/ros_achitecture.png)
+![image.png](../assets/test-two/ros_achitecture.png)
 
 Parmi ceux liés à ce test, on compte :
 
@@ -38,7 +38,7 @@ Parmi ceux liés à ce test, on compte :
 
 ## Arborescence du projet
 
-La mise en place d’un projet sous ROS 2 commence par la création d’un espace de travail, appelé workspace  [voir plus](https://www.notion.so/Cr-ation-d-un-workspace-216d3871a1b1801c84b4d23c1b2aa340?pvs=21) . Cet espace constitue la base de l’organisation du projet et comporte plusieurs répertoires. Le dossier `src/` contient l’ensemble des packages  [voir plus](https://www.notion.so/Cr-ation-du-package-ROS2-216d3871a1b180db9d81ec6c720b99ca?pvs=21) développés ou ajoutés au projet. Dans notre cas, on y retrouve le package `sensor_data_evaluation`, qui représente une unité modulaire regroupant tous les fichiers nécessaires à une fonctionnalité spécifique, tels que les nœuds, les en-têtes, les scripts de lancement ou encore les fichiers de configuration.
+La mise en place d’un projet sous ROS 2 commence par la création d’un espace de travail, appelé workspace  [voir plus](./creation-workspace.md) . Cet espace constitue la base de l’organisation du projet et comporte plusieurs répertoires. Le dossier `src/` contient l’ensemble des packages  [voir plus](./creation-package.md) développés ou ajoutés au projet. Dans notre cas, on y retrouve le package `sensor_data_evaluation`, qui représente une unité modulaire regroupant tous les fichiers nécessaires à une fonctionnalité spécifique, tels que les nœuds, les en-têtes, les scripts de lancement ou encore les fichiers de configuration.
 
 Les autres dossiers `build/`, `install/` et `log/`  sont générés automatiquement lors de la compilation avec l’outil `colcon`.  Chacun ayant un rôle spécifique:
 
@@ -72,7 +72,7 @@ Le package ***sensor_data_evaluation***  regroupe tous les fichiers nécessaires
 
 ## Fonctionnement
 
-![rosgraph.png](assets/test-two/ros_graph.png)
+![rosgraph.png](../assets/test-two/ros_graph.png)
 
 Le nœud `/sensor_data_publisher` publie des données sur le topic `/topic/sensor_data`. Le nœud `/sensor_data_subscriber` et l’outil `rqt_plot` sont abonnés à ce topic et reçoivent ces données. Tous les nœuds, y compris celui généré par l’interface graphique `rqt_gui_py_node_12584`, envoient leurs messages de log vers `/rosout`.
 
