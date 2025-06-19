@@ -245,7 +245,7 @@ Ce test nous a permis notamment de
 
 ### Annexes 
 Retrouvez ici les fichiers sources de la modélisation des pièces ainsi que de l'assemblage :
-- [Lien de téléchargement](https://www.dropbox.com/scl/fi/i1576y5yejvsmfvep9jmf/test-01.zip?rlkey=v39jdvqwgtykg6nxs9rptnpsb&st=p4t0b20e&dl=0)
+- [Lien de téléchargement](https://www.dropbox.com/scl/fi/037y6ksjorbtkclsy64y4/test-01.zip?rlkey=qo0w3tk5irbw2hqvid9d1pbef&st=33f4ig7u&dl=0)
 
 Nous pouvons retrouver ici les vidéos complètes de toutes les modélisations.
 
