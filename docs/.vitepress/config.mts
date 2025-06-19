@@ -27,6 +27,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Test 1', link: '/test-it/test-one.md' },
+              { text: 'Test 2', link: '/test-it/test-two.md' }
             ]
           },
            {
@@ -34,6 +35,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Test 1', link: '/test-meca/test-one.md' },
+              { text: 'Test 2', link: '/test-meca/test-two.md' },
             ]
           },
         ]
