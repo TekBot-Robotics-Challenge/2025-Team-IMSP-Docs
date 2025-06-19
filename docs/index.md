@@ -9,10 +9,10 @@ hero:
   actions:
     - theme: brand
       text: Documentation
-      link: test-it/test-one-it
+      link: /test-it/test-one
     - theme: alt
       text: ... learn more
-      link: test-it/test-one-it
+      link: /test-it/test-one
   image:
       src: /imsp_logo.png
       alt: IMSP Team Logo
