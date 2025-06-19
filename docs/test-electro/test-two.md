@@ -204,16 +204,13 @@ Après actualisation du PCB à partir de notre schéma, on obtenait un 1er PCB  
 On voit clairement sur cette image comment les différents composants étaient mélangés et comment les fils s’entrecoupaient. 
 
 Ce n’est qu’après **des heures de réorganisation** de tout ce schéma, de reprise et des tonnes d’erreurs qu’on a  obtenu notre PCB final :
-
-<iframe src="https://player.vimeo.com/video/1094747497" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+![PCB_final.png](./assets/test-two/PCB_final.png)
 
 **Schéma du PCB final de la Boite Noire**
 
-... __Coming soon__
-
 **Vue 3D du PCB final de la Boite Noire**:
 
-<iframe src="https://player.vimeo.com/video/1094748623" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/1094747497" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 **Dimensions**  :
 
@@ -284,7 +281,7 @@ Cela nous a permis de générer le PCB et c’est aussi après un travail fastid
 
 **Vue 3D du PCB final:**
 
-[vue_3D_PCB_final.mp4](vue_3D_PCB_final.mp4)
+<iframe src="https://player.vimeo.com/video/1094748623" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 Les dimensions de ce PCB sont les mêmes que pour le PCB précédent.
 
