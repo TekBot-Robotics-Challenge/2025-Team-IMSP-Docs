@@ -23,8 +23,9 @@ features:
     link: /test-it/test-one
     icon: 📚
   - title: Test Two
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /coming-soon
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    # details: The second week focused on introducing us to the ROS2 framework, which is essential for developing robotic applications, black box in electronics fields and piece design of inusing SolidWorks.
+    link: /test-it/test-two
     icon: 🔧
   - title: Test Three
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
