@@ -197,8 +197,6 @@ L’exécution du contrôle des règles électriques sur ce schéma a permis l�
 
 ![actualisation_PCB.png](./assets/test-two/actualisation_PCB.png)
 
- 
-
 Après actualisation du PCB à partir de notre schéma, on obtenait un 1er PCB  où tous les éléments étaient collés l’un à l’autre et les fils se chevauchaient.
 
 ![1er_PCB_obtenu.png](./assets/test-two/1er_PCB_obtenu.png)
