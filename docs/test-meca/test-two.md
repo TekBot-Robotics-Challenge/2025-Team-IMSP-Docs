@@ -434,4 +434,8 @@ A l'issu des différentes modélisations et assemblages réalisés, Les résulta
 
 Etant principalement centré autour de la modélisation paramétrique avec Solid Works, Ce test nous a principalement permis de nous familiariser avec cette fonctionnalité de SolidWorks permettant d'examiner diverses géométries d'un modèle. Ce concept nous sera plus particulièrement utile lors de la modélisation géométrique de notre futur robot.
 
+## Annexe 
+Retrouvez ici les fichiers sources de la modélisation des pièces ainsi que de l'assemblage :
+- [Lien de téléchargement](https://www.dropbox.com/scl/fi/r2hmn0itufdly18regvdw/Test-02.zip?rlkey=4irb988g2dboz3zre9n1g6c1j&st=qoidaxna&dl=0)
+
 <p style="text-align: center;">Peace✌🏾️</p>
