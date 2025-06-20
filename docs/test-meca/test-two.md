@@ -436,6 +436,6 @@ Etant principalement centré autour de la modélisation paramétrique avec Solid
 
 ## Annexe 
 Retrouvez ici les fichiers sources de la modélisation des pièces ainsi que de l'assemblage :
-- [Lien de téléchargement](https://www.dropbox.com/scl/fi/r2hmn0itufdly18regvdw/Test-02.zip?rlkey=4irb988g2dboz3zre9n1g6c1j&st=qoidaxna&dl=0)
+- [Lien de téléchargement](https://www.dropbox.com/scl/fi/ktwjt27wiwndagh36exsq/test-02.zip?rlkey=dwhu7ppo41v6ku59dgryaxz2k&st=3j2ryar3&dl=0)
 
 <p style="text-align: center;">Peace✌🏾️</p>
