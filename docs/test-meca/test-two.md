@@ -6,7 +6,7 @@ Toujours dans le cadre de la conception d'un bras robotique, ce test vise à mie
 
 ## 🧰 Le processus de réalisation
 
-### ⚙️ La Conception
+## ⚙️ La Conception
 
 L'objectif principale de cette partie est d'explorer la modélisation paramétrique avec SolidWorks afin d'examiner les différentes géométries possibles de notre robot.
 
@@ -17,7 +17,7 @@ Ici se présente la pièce primaire ainsi que ses paramètres :
 
 L'objectif est de créer un modèle 3D paramétrique des différentes pièces, à concevoir dans le cadre du test2 du challenge Teckbot, d'assigner les propriétés de matériau correctes pour atteindre une masse cible, et d'appliquer l'apparence finale.
 
-#### 🧊 PIÈCE_1 (a)
+## 🧊 PIÈCE_1 (a)
 
 <img src="./assets/test-two/1.0/Objectif.png" alt=" " width="600" height="300">
 
@@ -35,7 +35,7 @@ Avant de commencer la modélisation, il est nécessaire de définir les variable
 
 Ces variables rendront la conception plus facile à modifier. La variable "A" sera utilisée pour la largeur totale et la variable "C" pour l'épaisseur de la pièce.
 
-##### 1. 📐 Procédure de Modélisation
+### 1. 📐 Procédure de Modélisation
 
 Dans un premier temps, on crée une nouvelle esquisse ✏️ (Sketch) en sélectionnant le Plan de Face (Front Plane).
 
@@ -80,7 +80,7 @@ On obtient en fin de conception une masse de 939.54 g
 
 <img src="./assets/test-two/1.0/Masse1.0.png" alt=" " width="600" height="300">
 
-#### 🧊PIÈCE1 (b)
+## 🧊PIÈCE1 (b)
 
 La conception de cette deuxième pièce(b) réside en une simple modification (variables globales) de l'esquisse la pièce(a) précédemment construite.
 
@@ -117,7 +117,7 @@ Après avoir enregistré les modifications effectués, on obtient comme masse :
   <img src="./assets/test-two/1.1/fin.png" alt=" " width="450" height="200">
  </div>
 
-#### 🧊 PIÈCE 2.0
+## 🧊 PIÈCE 2.0
 
 La conception de cette troisième se base sur la pièce 1.0 construite. Nous allons donc commencer cette nouvelle modélisation sur la base delà pièce modélisée précédemment.
 
@@ -182,7 +182,12 @@ Tout comme dans le cadre de le pièce 1, on se dirige dans l'onglet
  </p>
  </div>
 
-#### 🧊PIÈCE 3.0
+## Modélisation de la pièce 2.0
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1095096488" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
+
+## 🧊PIÈCE 3.0
 
 Concernant cette dernière pièce à modéliser, nous allons tout comme la précédente nous inspirer d'une autre. Cependant, nous allons nous inspirer par contre de la précédente.
 Il s'agira donc à cette étape d'effectuer un certain nombre de modification sur la pièce 2.0.
@@ -230,17 +235,21 @@ Suite à cela, nous allons effectuer un enlèvement de matière de la surface su
   <img src="./assets/test-two/3.0/fin.png" alt=" " width="300" height="200" style="display: block; margin: auto;"/>
  </div>
 
-#### Video complete des modélisations
+## Modélisation de la pièce 3
+
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1095107889" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
+## Video complete des modélisations
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1094677858?h=bf417bc379" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1094677836?h=7dd3e87bc5" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
-### 🧩 L'Assemblage
+## 🧩 L'Assemblage
 
 L'objectif ici est d'assembler des pièces élémentaires afin d'aboutir à un squelette de bras robotique formé de maillons ayant 5 degrés de libertés et trois paramètres géométriques angulaires nommées A,B et C.(Comme précédemment).
 
-#### 🛠️Pièces d'assemblages
+## 🛠️Pièces d'assemblages
 
 Cet assemblage se compose de trois pièces que sont :
 
@@ -256,9 +265,9 @@ Cet assemblage se compose de trois pièces que sont :
 
 <img src="./assets/test-two/Assembly/Assemblage2_Shortpin.png" alt="Assemblage2_Shortpin.png" width="300" height="200" style="display: block; margin: auto;"/>
 
-#### 🔧 Différentes étapes de l'assemblage:
+## 🔧 Différentes étapes de l'assemblage:
 
-##### - Insertion du support de la chaîne :
+### - Insertion du support de la chaîne :
 
 L'insertion se fait en appuyant sur l'outil insertion puis en sélectionnant la pièce à ajouter dans l'explorateur de fichiers.
 <img src="./assets/test-two/Assembly/Assemblage2_Contrainte.png" alt="Assemblage2_Contrainte.png" width="400" height="300" style="display: block; margin: 30px auto;"/>
@@ -286,7 +295,7 @@ Vidéo Complete du processus 👇🏽:
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1094675762?h=39308b2f97" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
-##### - Ajout des trois variables angulaires A, B et C.
+### - Ajout des trois variables angulaires A, B et C.
 
 Pour le faire, nous irons dans outils/Equations comme précédemment puis au niveau de la section Equation, nous allons entrer les noms de nos variables ainsi que leus valeurs en prenant soin de choisir "degrés" comme unité.
 
@@ -298,7 +307,7 @@ Pour le faire, nous irons dans outils/Equations comme précédemment puis au niv
 
 <img src="./assets/test-two/Assembly/Assemblage2_Montrer_Equation.png" alt="Variables ajoutées" width="300" height="200" style="display: block; margin: 30px auto;"/>
 
-##### - Insertion du premier maillon et application de contraintes :
+### - Insertion du premier maillon et application de contraintes :
 
 On insère le premier maillon de la chaîne relié à l'axe inséré précédemment. Ensuite on aura à insérer tois contraintes :
 
@@ -315,7 +324,7 @@ Video complete de l'insertion et de l'application des contraintes.
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1094675677?h=4f9c74e736" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
-##### - Insertion du 2e maillon et application de contraintes:
+### - Insertion du 2e maillon et application de contraintes:
 
 Après insertion du 2e maillon, on aura à appliquer deux contraintes et à ajouter une équation à l'assemblage afin de respecter le paramétrage angulaire imposé.
 
@@ -332,7 +341,7 @@ Après insertion du 2e maillon, on aura à appliquer deux contraintes et à ajou
 
 <img src="./assets/test-two/Assembly/Assemblage2_equation_angulaire1.png" alt="Assemblage2_equation_angulaire1.png" width="300" height="200" style="display: block; margin: auto;"/>
 
-##### Fixation de l'entretoise 🧷 :
+### Fixation de l'entretoise 🧷 :
 
 Afin de maintenir les deux maillons on insère l'entretoise dans les trous alignés. Deux contraintes interviendrons ici : Une contrainte coaxiale entre l'entretoise et le trou et une contrainte de coincidence entre l'une des faces de l'entretoise et l'une des faces extérieures du 1er maillon de la chaîne:
 
@@ -340,25 +349,25 @@ Ici se précente la vidéo explicative de l'application de ces contraintes :
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1094675718?h=7f28e584f4" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
-##### - Insertion du 3e maillon de la chaîne et application des contraintes.
+### - Insertion du 3e maillon de la chaîne et application des contraintes.
 
 Comme précédemment, on insère le maillon, on aligne son trou arrière avec les trous avant du maillon pécedent à l'aide d'une contrainte coaxiale , on fait coincider l'une des faces interne du maillon précedent et une face externe du maillon inséré, on applique une contrainte d'angle par rapport à l'assemblage, puis on ajoute l'equation angulaire. On obtient le résultet ci après:
 
 <img src="./assets/test-two/Assembly/Assemblage2_Equation2.png" alt="Assemblage2_Equation2.png" width="300" height="200" style="display: block; margin: auto;"/>
 
-##### - Insertion du 2e entretoise 🧷
+### - Insertion du 2e entretoise 🧷
 
 Elle s'effectue de manière analogue à l'insertion précédente. On obtient Comme Résultat:
 
    <img src="./assets/test-two/Assembly/Assemblage2_Entretoise2.png" alt="Assemblage2_Entretoise2.png" width="300" height="200" style="display: block; margin: 30px auto;"/>
 
-##### - Insertion du 4e maillon de la chaîne et de l'entretoise:
+### - Insertion du 4e maillon de la chaîne et de l'entretoise:
 
 En applicant la méthode décrite ci dessus, on réalise l'insertion en applicant les contraintes, en ajoutant l'équation puis on obtient le résultat suivant :
 
  <img src="./assets/test-two/Assembly/Assemblage2_preresult.png" alt="Assemblage2_preresult.png" width="300" height="200" style="display: block; margin: 30px auto;"/>
 
-##### - Insertion du Support de fin de chaîne et résultat final.
+### - Insertion du Support de fin de chaîne et résultat final.
 
 Ici, contrairement à l'insertion du 1er Support, on aura à appliquer que deux contraintes afin de faire passer l'axe dans le trou du maillon final:
 Une Contrainte Coaxiale entre L'axe et le trou et une contrainte de coincidence de faces entre les faces des objets devant s'aligner:
@@ -369,7 +378,7 @@ Une Contrainte Coaxiale entre L'axe et le trou et une contrainte de coincidence 
 
 Ainsi s'achève la partie assemblage de ce test. Il s'agira maintenant de déterminer le centre de gravité de l'assemblage obtenu afin de vérifier si toutes les contraintes ont été bien réalisées.
 
-#### ⚖️Détermination du centre de masse:
+## ⚖️Détermination du centre de masse:
 
 Pour déterminer le centre de masse, il suffit de se placer dans l'onglet évaluer puis dans Propriété de masse.
 
@@ -398,19 +407,19 @@ z = -102.91mm
 
 <img src="./assets/test-two/Assembly/Assemblage2_Centre_de_masse_2.png" alt="Centre de gravité pour les 2e valeurs" width="300" height="200" style="display: block; margin: 30px auto;"/>
 
-#### Vidéo complete de l'assemblage :
+## Vidéo complete de l'assemblage :
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1094675783?h=d39cf81c85" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
-### Quelques difficultés
+## Quelques difficultés
 
-#### - Fixation du premier support de la chaine de façon adéquate
+## - Fixation du premier support de la chaine de façon adéquate
 
 <img src="./assets/test-two/Assembly/Assemblage2_Erreur_1.png" alt="Centre de gravité pour les 2e valeurs" width="400" height="200" style="display: block; margin: 30px auto;"/>
 
 Du fait que le support après qu'on l'ait inséré s'est automatiquement fixé, on arrivais pas à appliquer des contraintes sur cette pièce. Pour régler ce problème, on a dû fait un clique droit sur le composant afin de le délier à travers l'option : libérer.
 
-#### - Assemblage désordonné:
+## - Assemblage désordonné:
 
 Lors de l'attribution des valeurs correctes aux vaiables, les contraintes d'angles sélectionnées dans la rubrique équation étaient mal orienté ce qui a provoqué un croisement des pièces entre elles rendant l'assemblage entre-autre catastrophique....
 <img src="./assets/test-two/Assembly/Assemblage2_Erreur2.png" alt="Centre de gravité pour les 2e valeurs" width="400" height="200" style="display: block; margin: 30px auto;"/>
