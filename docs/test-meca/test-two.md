@@ -182,7 +182,7 @@ Tout comme dans le cadre de le pièce 1, on se dirige dans l'onglet
  </p>
  </div>
 
-## Modélisation de la pièce 2.0
+### Modélisation de la pièce 2.0
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1095096488" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
@@ -235,7 +235,7 @@ Suite à cela, nous allons effectuer un enlèvement de matière de la surface su
   <img src="./assets/test-two/3.0/fin.png" alt=" " width="300" height="200" style="display: block; margin: auto;"/>
  </div>
 
-## Modélisation de la pièce 3
+### Modélisation de la pièce 3
 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1095107889" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
