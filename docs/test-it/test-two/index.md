@@ -14,7 +14,7 @@ Ce test d’introduction à `ROS2` a pour finalité la mise en place d’un syst
 
 ### Qu’est ce que ROS?
 
-**ROS**(***Robot Operating System***) est un comme son nom l’indique un système d'exploitation pour robot . Il est composé d’un ensemble de   bibliothèque permettant de développer des applications robotiques. 
+**ROS**(***Robot Operating System***) est comme son nom l’indique un système d'exploitation pour robot. Il est composé d’un ensemble de   bibliothèque permettant de développer des applications robotiques. 
 
 En tant que OS robotique, il doit d’une part faire fonctionner en parallèle un grand nombre d’exécutables qui doivent pouvoir échanger de
 
@@ -22,11 +22,11 @@ En tant que OS robotique, il doit d’une part faire fonctionner en parallèle u
 
 l’information de manière *synchrone* ou *asynchrone* et d’autre part assurer la gestion de la concurrence afin d’assurer l’accès efficace aux  ressources du robot.
 
-Pour ce faire, ce dote de concepts regroupés sous le nom de «*ROS Computation Graph*».
+Pour ce faire, il est dot de concepts regroupés sous le nom de «*ROS Computation Graph*».
 
 ### ROS Computation Graph
 
-`ROS` crée un réseau peer-to-peer dans lequel tous les processus sont connectés. Chaque nœud de ce graphique représente les concepts utilisé dans `ROS` (*“nodes”, “master”, “services”, “messages”,  “bags”,”topics” et “parameter server”*). Ils peuvent interagir entre eux en, consultant des informations, échangé ou en se transmettant des données.
+`ROS` crée un réseau peer-to-peer dans lequel tous les processus sont connectés. Chaque nœud de ce graphique représente les concepts utilisé dans `ROS` (*“nodes”, “master”, “services”, “messages”,  “bags”,”topics” et “parameter server”*). Ils peuvent interagir entre eux en consultant des informations échangées ou en se transmettant des données.
 
 ![image.png](../assets/test-two/ros_achitecture.png)
 
