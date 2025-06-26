@@ -8,7 +8,8 @@ export default defineConfig({
     logo: "/logo.svg",
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'About', link: '/coming-soon' }
+      { text: 'About', link: '/coming-soon' },
+      { text: 'Team', link: '/team' },
     ],
 
     sidebar: [
