@@ -245,10 +245,10 @@ Il nous a été utile pour approfondir les capacités de navigation du robot et 
 
 ![sequence_diagramme.png](../assets/test-three/sequence_diagramme.png)
 
+<details>
+<summary><b>Diagramme de séquence:</b> Processus utilisé par Nav2 pour la navigation autonome.</summary>
 
-**Diagramme de séquence:**  Processus utilisé par Nav2 pour la navigation autonome.
-
-- **Description textuelle**
+- **<u>Description textuelle</u>**
     
     **1. Publier /goal_pose (Phase d'Initialisation)**
     L'utilisateur définit la destination du robot en cliquant sur "2D Goal Pose" dans RViz. Cette action génère automatiquement un message de type `PoseStamped` qui contient les coordonnées de position (x, y, z) et l'orientation (quaternion) de la destination souhaitée. Ce message est publié sur le topic `/goal_pose` avec un timestamp et le frame de référence approprié (généralement `map`).
@@ -283,7 +283,7 @@ Il nous a été utile pour approfondir les capacités de navigation du robot et 
     Les capteurs du robot (lidar, caméras, IMU, encodeurs de roues) fournissent continuellement des données sur l'état du robot et son environnement. Le lidar détecte les obstacles, l'IMU mesure l'orientation et les accélérations, tandis que les encodeurs de roues fournissent l'odométrie. Ces informations sont utilisées pour mettre à jour le système TF, corriger la localisation et actualiser les costmaps pour la prochaine itération de la boucle.
     
     Cette boucle de contrôle se répète à haute fréquence (20-50Hz) jusqu'à ce que le robot atteigne sa destination ou qu'une condition d'arrêt soit déclenchée (obstacle insurmontable, timeout, nouveau goal, perte de localisation, etc.).
-    
+</details>
 
 ### Démo:
 
