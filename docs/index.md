@@ -13,9 +13,9 @@ hero:
     - theme: alt
       text: ... learn more
       link: https://trc.tekbot.io/trc-2025/
-  image:
-      src: /imsp_logo.png
-      alt: IMSP Team Logo
+  # image:
+  #     src: /imsp_logo.png
+  #     alt: IMSP Team Logo
 
 features:
   - title: Test One
