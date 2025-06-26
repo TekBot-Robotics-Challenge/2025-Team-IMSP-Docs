@@ -23,11 +23,10 @@ features:
     link: /test-it/test-one
     icon: 📚
   - title: Test Two
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    # details: The second week focused on introducing us to the ROS2 framework, which is essential for developing robotic applications, black box in electronics fields and piece design of inusing SolidWorks.
+    details: This test focuses on the integration of various sensors and actuators with the ROS2 framework, enabling the robot to perceive its environment and respond to changes effectively.
     link: /test-it/test-two
     icon: 🔧
   - title: Test Three
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-    link: /coming-soon
+    details: This test consists of developing an autonomous navigation system for the TekBot mobile robot in a simulated environment using ROS2 and Gazebo.
+    link: /test-it/test-three
     icon: 🛠️
