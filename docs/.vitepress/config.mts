@@ -44,6 +44,26 @@ export default defineConfig({
                   },
                 ]
               },
+              { text: 'Test 3', link: '/test-it/test-three/index.md',
+                items: [
+                  {
+                    text: 'Gazebo',
+                    link: '/test-it/test-three/gazebo.md'
+                  },
+                  {
+                    text: 'SLAM et slam_toolbox',
+                    link: '/test-it/test-three/slam_and_slam_toolbox.md'
+                  },
+                  {
+                    text: 'RViz2',
+                    link: '/test-it/test-three/RViz2.md'
+                  },
+                  {
+                    text: 'Nav2',
+                    link: '/test-it/test-three/Nav2.md'
+                  }
+                ]
+              }
             ]
           },
            {
