@@ -769,7 +769,9 @@ Si c’est 3 ou 6 :
 
 Voici la vidéo de fonctionnement du système:
 
-[Videotest3fonctionnement.mp4](./assets/test-three/Videotest3fonctionnement.mp4)
+<!-- https://player.vimeo.com/video/1097168059 -->
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1097168059" width="640" height="360" frameborder="0" allowfullscreen></iframe>
+
 
 # 4.Difficultés
 
