@@ -290,4 +290,23 @@ Il nous a été utile pour approfondir les capacités de navigation du robot et 
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1096462167?h=3b0c8f6d9e" width="640" height="360" frameborder="0" allowfullscreen>
 </iframe>
 
-*Navigation Autonome avec Nav2*
+## Navigation Autonome avec Nav2 : Smac 2D Planner
+
+Pour la navigation autonome, Nav2 utilise le **Smac 2D Planner** comme algorithme de pathfinding principal. Ce planificateur repose sur une version optimisée de l’algorithme A* adaptée aux contraintes robotiques et aux environnements réels.
+
+### Principe
+
+Le Smac 2D Planner recherche le chemin optimal entre la position actuelle du robot et la destination en explorant une grille 2D représentant la carte d’occupation. Il attribue un coût à chaque cellule (selon la présence d’obstacles ou la difficulté de passage) et utilise une heuristique pour guider la recherche vers le but, garantissant ainsi un chemin court et sûr.
+<!-- 
+### Heuristique utilisée
+
+L’heuristique principale du Smac 2D Planner est la distance de Manhattan ou Euclidienne entre la cellule courante et la cellule cible, selon la configuration choisie. Cette estimation rapide du “coût restant” permet à l’algorithme de prioriser les chemins qui semblent les plus prometteurs, tout en assurant l’optimalité du résultat. L’heuristique est dite “admissible” : elle ne surestime jamais le coût réel, ce qui garantit que le chemin trouvé est le plus court possible compte tenu des contraintes de la carte. -->
+
+### Spécificités
+
+- **Optimisé pour la robotique mobile** : Prend en compte la taille du robot et ses contraintes de mouvement (non-holonomie, rayon de braquage).
+- **Gestion efficace des obstacles** : Évite les zones à risque en s’appuyant sur la costmap générée par les capteurs.
+- **Performance** : Utilise des structures de données rapides et des optimisations pour planifier en temps réel, même sur de grandes cartes.
+- **Flexibilité** : Peut être configuré pour différents types de robots et de scénarios (grille 2D, hybrid-A* pour véhicules non-holonomes).
+
+Le Smac 2D Planner permet ainsi au robot de générer des trajectoires sûres et efficaces, adaptées à son environnement et à ses capacités physiques.
