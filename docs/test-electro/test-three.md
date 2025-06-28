@@ -789,11 +789,11 @@ Voici la vidéo de fonctionnement du système:
 
 # 6. Annexes
 
-Retrouvez ici les fichiers sources de la modélisation des pièces ainsi que de l'assemblage :
+Retrouvez ici les fichiers sources:
 - [Lien de téléchargement](https://www.dropbox.com/scl/fi/53z0m1u0zf2puv22deea2/test-03-electro.zip?rlkey=cde21n81ghqlurnngnzliq5b2&st=ihxd9txq&dl=0)
 
 
-# 6.Meet the team
+# 7.Meet the team
 
 <aside>
 💡

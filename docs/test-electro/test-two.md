@@ -688,6 +688,9 @@ Problèmes de tension avec l’alimentation en raison de l’utilisation de pile
 - Câblage d’un LCD en parallèle (mode 4bits)
 - Comprehension de l’utilisation directe d’un ATMega328p avec d’autres sans arduino.
 
+# 6. Annexe
+Retrouvez ici les fichiers sources:
+- [Lien de téléchargement](https://www.dropbox.com/scl/fi/z5cdrzrg7udv5ojdjnx21/test-02-electro.zip?rlkey=96njyhwtru3y9y58j83gv41en&st=9wv4r3ff&dl=0)
 <aside>
 💡
 
