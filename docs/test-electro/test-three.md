@@ -238,13 +238,6 @@ Les dimensions de notre circuit sont :
 
 <aside>
 💡
-
-### **Fichiers zippés**
-
-[Projet3 finalkicad.zip](./assets/test-three/Projet3_finalkicad.zip)
-
-[Project (1)PCB.zip](./assets/test-three/Project_(1)PCB.zip)
-
 </aside>
 
 Après génération du typon grâce à l’option imprimer de notre logiciel, il a fallu l’imprimer au SCOP (Sèmè City) et le rendu physique est le suivant :
@@ -324,17 +317,6 @@ L’impression du système final à été principalement faite avec deux couleur
 ![Finale.jpg](./assets/test-three/Finale.jpg)
 
 <aside>
-💡
-
-### **Fichiers zippés des pièces modélisées**
-
-[NPart3.zip](./assets/test-three/NPart3.zip)
-
-[NPart1.2.zip](./assets/test-three/NPart1.2.zip)
-
-[NPart1.zip](./assets/test-three/NPart1.zip)
-
-[Base.zip](./assets/test-three/Base.zip)
 
 </aside>
 
@@ -387,16 +369,17 @@ int pin[4]={3,5,6,9};
 int i,n=1;
 Servo servos[4];//initialisation des servomoteurs
 //Configuration des 4 premiers segments 
-const int chiffre0[10][4]={{1,1,1,1},
-{0,1,1,0},
-{1,1,0,1},
-{1,1,1,1},
-{0,1,1,0},
-{1,0,1,1},
-{1,0,1,1},
-{1,1,1,0},
-{1,1,1,1},
-{1,1,1,1},
+const int chiffre0[10][4]={
+  {1,1,1,1},
+  {0,1,1,0},
+  {1,1,0,1},
+  {1,1,1,1},
+  {0,1,1,0},
+  {1,0,1,1},
+  {1,0,1,1},
+  {1,1,1,0},
+  {1,1,1,1},
+  {1,1,1,1},
 };
 
 void setup(){

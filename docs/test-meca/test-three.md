@@ -131,8 +131,7 @@ Pour le faire nous allons créer une esquisse sur le plan de dessus conformémen
 </div>
 
 Le processus de réalisation de cette esquisse est résumé dans la vidéo ci - après : 
-<iframe src="https://vimeo.com/1096327143" width="640" height="360" frameborder="0" allowfullscreen></iframe>
-
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1096327143?h=561f04e2f3" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
 Suite à cette esquisse, nous avons procédé à une extrusion symétrique de l'esquisse jusqu'aux faces obliques obtenus lors de notre premiere extrusion. On obtient le résultat suivant : 
 
