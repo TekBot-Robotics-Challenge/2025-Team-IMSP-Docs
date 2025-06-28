@@ -8,38 +8,16 @@
 
 **Objectifs spécifiques:**
 
-● Utiliser directement un microcontrôleur Atmega328P dans le circuit final et non une
+- Utiliser directement un microcontrôleur Atmega328P dans le circuit final et non une
 carte Arduino. Vous devrez réaliser des schémas électronique avec KICAD et
 designer les PCB pour ensuite les produire.
 
-● Alimenter le circuit avec des batteries au lithium.
-● Ne pas utiliser de fonction bloquante telle que “**delay**()” dans le code Arduino.
+- Alimenter le circuit avec des batteries au lithium.
+- Ne pas utiliser de fonction bloquante telle que “**delay**()” dans le code Arduino.
 
-● Documenter votre travail sur le dépôt GitHub qui vous sera attribué
+- Documenter votre travail sur le dépôt GitHub qui vous sera attribué
 
-<aside>
-💡
-
-PLAN
-
-1. Présentation de l’afficheur 7 servos
-    
-    a-1. Matériel 
-    
-    a-2. Montage électronique 
-    
-    a-3. Modélisation et conception de l’afficheur 3D
-    
-    a-4. Résultat final
-    
-2. Code 
-3. Test de fonctionnement
-4. Difficultés 
-5. Compétences tirées de ce test
-6. Meet the team 
-</aside>
-
-# 1.Présentation de l’afficheur 7 servos
+# 1. Présentation de l’afficheur 7 servos
 
 ## 🛠️Matériel
 
@@ -324,7 +302,7 @@ L’impression du système final à été principalement faite avec deux couleur
 
 ![resultatsemifinal.jpg](./assets/test-three/resultatsemifinal.jpg)
 
-# 2.Code
+# 2. Code
 
 <aside>
 💡
@@ -471,8 +449,6 @@ delay(50);
 }
 ```
 
- 
-
 Apres les tests, l’écart des temps d’affichage était de **`50 ms`** ,ce qui **théoriquement** allait entrainé une **désynchronisation**. Donc on a décidé de trouver des approches pour pouvoir réduire cet écart.
 
 Nous avons opté pour deux approches:
@@ -497,7 +473,7 @@ Problèmes possibles
 - **Autre possibilité : surcharge électrique** :
     - Si tu alimentais tous les servos via le **5V de l'Arduino**, l'alimentation ne suivait pas → **seul le premier servo (D2) avait assez de courant** pour réagir.
 
-## 🛠️Solution finale
+## 🛠️ Solution finale
 
 **Numérotation des segments**
 
@@ -748,7 +724,7 @@ Si c’est 3 ou 6 :
 > Les servos sont mis à 0° ou 90° selon qu’un segment est actif ou non.
 > 
 
-# **3.Test de fonctionnement**
+# **3. Test de fonctionnement**
 
 Voici la vidéo de fonctionnement du système:
 
@@ -756,14 +732,14 @@ Voici la vidéo de fonctionnement du système:
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1097168059" width="640" height="360" frameborder="0" allowfullscreen></iframe>
 
 
-# 4.Difficultés
+# 4. Difficultés
 
 - Manque de matériel notamment le PCA 9685 et d’une imprimante de PCB
 - Difficultés avec le choix de la méthode adaptée pour réaliser le projet qui nous a fait perdre assez de temps
 - Problèmes de connexions sur notre PCB qui l’a rendu inutilisable
 - Difficultés à déterminer la position 0° de chaque servomoteur
 
-# 5.Compétences tirées de ce test
+# 5. Compétences tirées de ce test
 
 - Apprentissage de la soudure
 - Réalisation d’un PCB
@@ -776,7 +752,7 @@ Retrouvez ici les fichiers sources:
 - [Lien de téléchargement](https://www.dropbox.com/scl/fi/53z0m1u0zf2puv22deea2/test-03-electro.zip?rlkey=cde21n81ghqlurnngnzliq5b2&st=ihxd9txq&dl=0)
 
 
-# 7.Meet the team
+# 7. Meet the team
 
 <aside>
 💡
