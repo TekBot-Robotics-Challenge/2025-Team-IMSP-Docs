@@ -305,7 +305,9 @@ Vidéo complete de la modélisation(Telle que décrite ci _ dessus) :
 Pièces modélisées  : 
 
 Retrouvez ici les fichiers sources de la modélisation des pièces ainsi que de l'assemblage :
-- [Lien de téléchargement](https://www.dropbox.com/scl/fi/5dcozasmo6cg17eat6d2l/test-03.zip?rlkey=obq3p6z7qs1qb66ypbl8y8j6y&st=u58p9qu1&dl=0)
+<!-- - [Lien de téléchargement](https://www.dropbox.com/scl/fi/5dcozasmo6cg17eat6d2l/test-03.zip?rlkey=obq3p6z7qs1qb66ypbl8y8j6y&st=u58p9qu1&dl=0) -->
+- [Lien de téléchargement](/test-03-meca.zip)
+
 
 <div style="display: flex; justify-content: center; gap: 20px;">
   <img src="./assets/test-three/Team.jpg" alt="Image centrée" style="width: 400px; height: 300px;">
