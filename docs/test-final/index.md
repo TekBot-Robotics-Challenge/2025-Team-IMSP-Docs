@@ -405,7 +405,7 @@ Il s'agit des pièces dont le matériau de base ne saurait être du plastique . 
 
 - **Théorie :**
 
-[https://player.vimeo.com/video/1100863371?h=12bea77160](https://player.vimeo.com/video/1100863371?h=12bea77160)
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1100863371?h=12bea77160" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
 - Pratique:
 
@@ -788,7 +788,7 @@ void loop() {
 
 **Vidéo de test**
 
-[https://player.vimeo.com/video/1100859641?h=971be1dd69](https://player.vimeo.com/video/1100859641?h=971be1dd69)
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1100859641?h=971be1dd69" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
 ## **Amélioration pour le test de fonctionnement du convoyeur**
 
@@ -1315,7 +1315,7 @@ timer=millis();
 
 ```
 
-[https://player.vimeo.com/video/1100860064?h=c5f1fa30aa](https://player.vimeo.com/video/1100860064?h=c5f1fa30aa)
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1100860064?h=c5f1fa30aa" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
 **Conclusion :** la fréquence maximale réelle du moteur est *inférieure à celle nécessaire pour entraîner une propulsion*, ce qui signifie que *le moteur est parfaitement adapté à notre usage*.
 
