@@ -1228,7 +1228,7 @@ Déterminer la vitesse maximale  que peut avoir le cube sans glisser, en utilisa
 
 ⚠️ Attention :
 
-Si  les forces de frottement sont nulles, alors aucune force ne lie l’objet au tapis. Donc dès que le tapis s’arrête, l’objet continue forcément sa course à vitesse constante.
+Si les forces de frottement sont nulles, alors aucune force ne lie l’objet au tapis. Donc dès que le tapis s’arrête, l’objet continue forcément sa course à vitesse constante.
 
 En clair :
 
