@@ -2362,7 +2362,7 @@ Le fichier `App.tsx` constitue le composant principal de l’application React. 
 
 **Vidéo d’envoi de la couleur sur l’interface Web**
 
-[VideoCouleurInterface.mp4](./assets/VideoCouleurInterface.mp4)
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1100869013?h=d6fc4f6af8" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
 
 ![Screenshot from 2025-07-12 15.24.05.png](./assets/Screenshot_from_2025-07-12_15.24.05.png)
 
