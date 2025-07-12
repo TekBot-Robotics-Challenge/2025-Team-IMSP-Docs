@@ -77,6 +77,13 @@ export default defineConfig({
               { text: 'Test 3', link: '/test-meca/test-three.md' }
             ]
           },
+          {
+            text: 'Test final',
+            collapsed: true,
+            items: [
+              { text: 'Test final', link: '/test-final/index.md' },
+            ]
+          }
         ]
       }
     ],
