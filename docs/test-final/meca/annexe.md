@@ -1,5 +1,9 @@
 # Annexe
 
+## Fichiers de conception
+
+Ici sont présentés les fichiers de conception du convoyeur [voir ici](/assets/test-final/meca/sources.zip).
+
 ## Mise en plan
 
 ![Mise_en_plan.png](./assets/images/Mise_en_plan.png)

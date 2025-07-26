@@ -88,7 +88,7 @@ export default defineConfig({
                     collapsed: true,
                     items: [
                       { text: 'Photodiode', link: '/test-final/electro/subpages/photodiode.md' },
-                      { text: 'Resistance', link: '/test-final/electro/subpages/resistance_utility.md' },
+                      { text: 'Utilité de la photorésistance dans le projet', link: '/test-final/electro/subpages/resistance_utility.md' },
                       { text: 'S0/S1', link: '/test-final/electro/subpages/s0_s1.md' },
                     ]
                   },

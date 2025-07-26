@@ -1,4 +1,4 @@
-# Pourquoi faut il rajouter un résistance au circuit de la photorésistance et pourquoi dit on pull down?
+# Utilité de la photorésistance dans le projet
 
 La mesure de la **lumière ambiante** avec une **LDR** (photorésistance) exige la transformation de cette lumière en une **tension électrique comprise entre 0 et 5V** pour pouvoir la lire avec une entrée analogique (`analogRead`) de l’Arduino ou de l’ATMega.
 
