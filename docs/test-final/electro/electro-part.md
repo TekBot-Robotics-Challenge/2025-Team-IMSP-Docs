@@ -1325,3 +1325,7 @@ void afficherLED(int n);
 void pinModeLedRgb();
 #endif // LEDRGB_H_INCLUDED
 ```
+
+## Annexes
+- [**Schéma Kicad**](./assets/sources/kicad_schemas.zip)
+- [**Modélisation PCB**](./assets/sources/recepteur%20Pcb.zip)
