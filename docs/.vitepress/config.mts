@@ -94,8 +94,8 @@ export default defineConfig({
                   },
                   { text: 'Partie Mécanique', link: '/test-final/meca/meca-part.md',
                     items:[
-                      { text: 'annexe', link: '/test-final/meca/annexe.md' },
-                      { text: 'convoyeur_pieces', link: '/test-final/meca/convoyeur_pieces.md' },
+                      { text: 'Annexe', link: '/test-final/meca/annexe.md' },
+                      { text: 'Convoyeur pièces', link: '/test-final/meca/convoyeur_pieces.md' },
                     ]
                   }
                 ]
