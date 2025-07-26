@@ -8,11 +8,11 @@ Notre équipe est composée de 10 membres répartis en trois pôles distincts, c
 
 *Plongez dans l’univers des logiciels, des algorithmes et des systèmes intelligents qui assurent le contrôle du TekBot.*
 
-| <img src="/avatargirl.jpg" width="180"/> | <img src="/avatargirl.jpg" width="180"/> | <img src="/avatargirl.jpg" width="180"/> |
+| <img src="/Sara.jpg" width="180"/> | <img src="/claugitte.jpg" width="180"/> | <img src="/benilde.jpg" width="180"/> |
 |:--:|:--:|:--:|
 | [**Sara Adjaho**](https://www.linkedin.com/in/saraadjaho) | [**Claugitte Sossoumihen**](https://www.linkedin.com/in/claugittesossoumihen) | [**Bénilde Bossa**](https://www.linkedin.com/in/benildebossa)|
 
-| <img src="/avatargirl.jpg" width="180"/> | <img src="/avatarboy.jpg" width="180"/> |
+| <img src="/marie-odette.jpg" width="180"/> | <img src="/korede.jpg" width="180"/> |
 |:--:|:--:|
  | [**Marie-Odette Atondé**](https://www.linkedin.com/in/marieodetteatonde) |  [**Korede Degla**](https://www.linkedin.com/in/korededegla) |
 
@@ -22,7 +22,7 @@ Notre équipe est composée de 10 membres répartis en trois pôles distincts, c
 
 *Découvrez les capteurs, circuits et composants électroniques qui donnent vie au TekBot.*
 
-| <img src="/avatarboy.jpg" width="180"/> | <img src="/avatarboy.jpg" width="180"/> | <img src="/avatarboy.jpg" width="180"/> |
+| <img src="/donald.jpg" width="180"/> | <img src="/siegfried.jpg" width="180"/> | <img src="/Marus.jpg" width="180"/> |
 |:--:|:--:|:--:|
 | [**Donald Aitchedji**](https://www.linkedin.com/in/donaldaitchedji) | [**Siegfried Vissoh**](https://www.linkedin.com/in/siegfriedvissoh) | [**Marius Hounkpetohou**](https://www.linkedin.com/in/mariushounkpetohou) |
 
@@ -32,7 +32,7 @@ Notre équipe est composée de 10 membres répartis en trois pôles distincts, c
 
 *Explorez la conception physique, les matériaux et les techniques d’assemblage qui structurent le TekBot.*
 
-| <img src="/avatarboy.jpg" width="180"/> | <img src="/avatarboy.jpg" width="180"/> |
+| <img src="/Alex.jpg" width="180"/> | <img src="/luc.jpg" width="180"/> |
 |:--:|:--:|
 | [**Alex Gbé'nga Amigbatin**](https://www.linkedin.com/in/alexamigbatin) | [**Luc Djeto**](https://www.linkedin.com/in/lucdjeto) | 
 
