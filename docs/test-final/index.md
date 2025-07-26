@@ -39,13 +39,13 @@ L’interface web reçoit ces informations en temps réel et affiche les statist
 
 Le pôle mécanique a travaillé sur la modélisation du convoyeur en définissant ses dimensions (650 mm x 100 mm) et en concevant une structure adaptée au tri par couleur. Les plans ont été réalisés sous SolidWorks afin d’optimiser l’agencement et de faciliter l’intégration des composants.
 
-[Partie mécanique](https://www.notion.so/Partie-m-canique-23b99db3c75680fd9968ef63c119edf3?pvs=21)
+[Partie mécanique](./meca/meca-part.md)
 
 ### **Conception électronique**
 
 Le pôle électronique a intégré un microcontrôleur ATMega, un capteur de couleur pour l’identification des déchets, un capteur de présence pour détecter leur passage et un moteur pour l’entraînement du convoyeur. Une alimentation DC a également été prévue pour garantir le fonctionnement du système.
 
-[Partie électronique ](https://www.notion.so/Partie-lectronique-23999db3c75680d1947bd753e1f1b2ba?pvs=21)
+[Partie électronique ](./electro/electro-part.md)
 
 ### **Conception informatique**
 
