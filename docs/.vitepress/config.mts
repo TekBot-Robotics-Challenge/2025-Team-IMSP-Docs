@@ -81,7 +81,25 @@ export default defineConfig({
             text: 'Test final',
             collapsed: true,
             items: [
-              { text: 'Test final', link: '/test-final/index.md' },
+              { text: 'Test final', link: '/test-final/index.md',
+                items:[
+                  { text: 'Partie IT', link: '/test-final/it/it-part.md' },
+                  { text: 'Partie Electro', link: '/test-final/electro/electro-part.md',
+                    collapsed: true,
+                    items: [
+                      { text: 'Photodiode', link: '/test-final/electro/subpages/photodiode.md' },
+                      { text: 'Resistance', link: '/test-final/electro/subpages/resistance_utility.md' },
+                      { text: 'S0/S1', link: '/test-final/electro/subpages/s0_s1.md' },
+                    ]
+                  },
+                  { text: 'Partie Mécanique', link: '/test-final/meca/meca-part.md',
+                    items:[
+                      { text: 'annexe', link: '/test-final/meca/annexe.md' },
+                      { text: 'convoyeur_pieces', link: '/test-final/meca/convoyeur_pieces.md' },
+                    ]
+                  }
+                ]
+              },
             ]
           }
         ]
