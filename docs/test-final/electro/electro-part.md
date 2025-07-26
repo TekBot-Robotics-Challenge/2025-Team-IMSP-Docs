@@ -154,7 +154,8 @@ Et sa vue 3D :
 
 Il fait une dimension de 7x6cm et on a utilisé majoritairement des pistes de longueur 1.5 mm mais aussi de 0.5mm.
 
-[https://player.vimeo.com/video/1104738721?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479](https://player.vimeo.com/video/1104738721?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479)
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1104738721?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
 
 On a également fait le design du PCB de notre récepteur :
 
@@ -162,7 +163,9 @@ On a également fait le design du PCB de notre récepteur :
 
 Et sa vue 3D :
 
-[https://player.vimeo.com/video/1104739905?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479](https://player.vimeo.com/video/1104739905?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479)
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1104739905?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
+
 
 Il fait 2.5x2 cm.
 
@@ -306,7 +309,8 @@ void loop() {
 
 **Vidéo de test**
 
-[https://player.vimeo.com/video/1100859641?h=971be1dd69](https://player.vimeo.com/video/1100859641?h=971be1dd69)
+<iframe title="vimeo-player" src="https://player.vimeo.com/video/1100859641?h=971be1dd69" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
+
 
 ## **Amélioration pour le test de fonctionnement du convoyeur**
 
