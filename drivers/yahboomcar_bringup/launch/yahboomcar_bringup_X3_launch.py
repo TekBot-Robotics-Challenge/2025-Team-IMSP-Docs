@@ -14,10 +14,10 @@ from ament_index_python.packages import get_package_share_directory
 from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 
-print("---------------------robot_type = x3---------------------")
+print("--------------------robot_type = x3---------------------")
 def generate_launch_description():
-    urdf_tutorial_path = get_package_share_path('yahboomcar_description')
-    default_model_path = urdf_tutorial_path / 'urdf/yahboomcar_X3.urdf'
+    urdf_tutorial_path = get_package_share_path('x3_description')
+    default_model_path = urdf_tutorial_path / 'urdf/robots/rosmaster_x3.urdf.xacro'
     default_rviz_config_path = urdf_tutorial_path / 'rviz/yahboomcar.rviz'
 
     gui_arg = DeclareLaunchArgument(name='gui', default_value='false', choices=['true', 'false'],
