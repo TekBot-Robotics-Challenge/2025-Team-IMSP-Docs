@@ -12,9 +12,9 @@ Notre équipe est composée de 10 membres répartis en trois pôles distincts, c
 |:--:|:--:|:--:|
 | [**Sara Adjaho**](https://www.linkedin.com/in/saraadjaho) | [**Claugitte Sossoumihen**](https://www.linkedin.com/in/claugittesossoumihen) | [**Bénilde Bossa**](https://www.linkedin.com/in/benildebossa)|
 
-| <img src="/marie-odette.jpg" width="180"/> | <img src="/korede.jpg" width="180"/> |
-|:--:|:--:|
- | [**Marie-Odette Atondé**](https://www.linkedin.com/in/marieodetteatonde) |  [**Korede Degla**](https://www.linkedin.com/in/korededegla) |
+| <img src="/marie-odette.jpg" width="180"/> | <img src="/korede.jpg" width="180"/> | <img src="/beryl.jpg" width="180"/> |
+|:--:|:--:|:--:|
+ | [**Marie-Odette Atondé**](https://www.linkedin.com/in/marieodetteatonde) |  [**Korede Degla**](https://www.linkedin.com/in/korededegla) | [**Béryl Houéssou**](https://www.linkedin.com/in/berylhouessou) |
 
 ---
 
@@ -22,11 +22,11 @@ Notre équipe est composée de 10 membres répartis en trois pôles distincts, c
 
 *Découvrez les capteurs, circuits et composants électroniques qui donnent vie au TekBot.*
 
-| <img src="/donald.jpg" width="180"/> | <img src="/siegfried.jpg" width="180"/> | <img src="/Marus.jpg" width="180"/> |
-|:--:|:--:|:--:|
-| [**Donald Aitchedji**](https://www.linkedin.com/in/donaldaitchedji) | [**Siegfried Vissoh**](https://www.linkedin.com/in/siegfriedvissoh) | [**Marius Hounkpetohou**](https://www.linkedin.com/in/mariushounkpetohou) |
+| <img src="/donald.jpg" width="180"/> | <img src="/siegfried.jpg" width="180"/> |
+|:--:|:--:|
+| [**Donald Aitchedji**](https://www.linkedin.com/in/donaldaitchedji) | [**Siegfried Vissoh**](https://www.linkedin.com/in/siegfriedvissoh) |
 
----
+---e
 
 ## ⚙️ Pôle Mécanique
 
@@ -35,6 +35,21 @@ Notre équipe est composée de 10 membres répartis en trois pôles distincts, c
 | <img src="/Alex.jpg" width="180"/> | <img src="/luc.jpg" width="180"/> |
 |:--:|:--:|
 | [**Alex Gbé'nga Amigbatin**](https://www.linkedin.com/in/alexamigbatin) | [**Luc Djeto**](https://www.linkedin.com/in/lucdjeto) | 
+
+---
+
+## 🏆 Ancien membre
+
+<details>
+<summary>Nous remercions nos anciens membres qui ont contribué au développement du TekBot.</summary>
+
+
+
+| <img src="/Marus.jpg" width="180"/> |
+|:--:|
+| [**Marius Hounkpetohou**](https://www.linkedin.com/in/mariushounkpetohou) |
+
+</details>
 
 ---
 <iframe title="vimeo-player" src="https://player.vimeo.com/video/1096605096" width="640" height="360" frameborder="0"    allowfullscreen></iframe>
