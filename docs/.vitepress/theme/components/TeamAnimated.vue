@@ -2,17 +2,17 @@
   <!-- FontAwesome CDN pour les icônes -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <div class="team-page-animated">
-    <h1 class="team-title">Découvrez notre équipe</h1>
-    <p class="team-desc">Notre équipe est composée de 10 membres répartis en trois pôles distincts, chacun spécialisé dans un domaine précis : IT, Électronique et Mécanique.</p>
+    <h1 class="team-title animate__animated animate__fadeInDown">Découvrez notre équipe</h1>
+    <p class="team-desc animate__animated animate__fadeInUp animate__delay-1s">Notre équipe est composée de 10 membres répartis en trois pôles distincts, chacun spécialisé dans un domaine précis : IT, Électronique et Mécanique.</p>
 
     <section v-for="pole in poles" :key="pole.name" class="team-pole">
-      <h2 class="pole-title">
-        <i v-if="pole.icon" :class="['fa-fw', pole.icon, 'fa-bounce']" style="margin-right: 0.5rem; color: #36c087;"></i>
+      <h2 class="pole-title animate__animated animate__fadeInLeft">
+        <i v-if="pole.icon" :class="['fa-fw', pole.icon]" style="margin-right: 0.5rem; color: #36c087;"></i>
         {{ pole.name }}
       </h2>
-      <p class="pole-desc">{{ pole.desc }}</p>
+      <p class="pole-desc animate__animated animate__fadeInRight">{{ pole.desc }}</p>
       <div class="team-grid">
-        <div v-for="member in pole.members" :key="member.name" class="team-card animate__animated animate__fadeInUp">
+        <div v-for="(member, index) in pole.members" :key="member.name" class="team-card animate__animated animate__fadeInUp" :style="{ animationDelay: (index * 0.15) + 's' }">
           <div class="team-img-wrapper">
             <img :src="member.img" :alt="member.name" class="team-img" />
           </div>
@@ -71,11 +71,26 @@ const poles = [
 
 <style scoped>
 @import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
-  /* Correction : bloc CSS orphelin supprimé */
+
 @keyframes fadeInBg {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 4px 24px 0 rgba(54,192,135,0.14); }
+  50% { box-shadow: 0 4px 32px 0 rgba(54,192,135,0.3); }
+}
+
+  .team-page-animated {
+    animation: fadeInBg 0.8s ease-in-out;
+  }
+
   .team-title {
     text-align: left;
     font-size: 2.8rem;
@@ -103,6 +118,16 @@ const poles = [
     text-align: left;
     color: #36c087;
     font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .pole-title i {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+  
+  .pole-title:hover i {
+    transform: scale(1.2) rotate(10deg);
   }
   .pole-desc {
     text-align: left;
@@ -129,18 +154,18 @@ const poles = [
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     position: relative;
     overflow: visible;
     border: none;
-    animation-delay: 0.2s;
     text-align: left;
   }
-.team-card:hover {
-  transform: translateY(-10px) scale(1.04) rotate(-1deg);
-  box-shadow: 0 12px 40px 0 rgba(54,192,135,0.18);
-  border-color: #36c087;
-}
+  
+  .team-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 12px 40px 0 rgba(54,192,135,0.3);
+    animation: float 2s ease-in-out infinite;
+  }
   .team-img-wrapper {
     width: 200px;
     height: 200px;
@@ -153,11 +178,14 @@ const poles = [
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: border-color 0.3s;
+    transition: all 0.4s ease;
   }
-.team-card:hover .team-img-wrapper {
-  border-color: #36c087;
-}
+  
+  .team-card:hover .team-img-wrapper {
+    border-color: #36c087;
+    animation: pulse-glow 1.5s ease-in-out infinite;
+    transform: scale(1.05) rotate(5deg);
+  }
   .team-img {
     width: 100%;
     height: 100%;
@@ -193,11 +221,14 @@ const poles = [
 .team-socials a {
   color: #bdbdbd;
   font-size: 1.2rem;
-  transition: color 0.2s, transform 0.2s;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  display: inline-block;
 }
+
 .team-socials a:hover {
   color: #36c087;
-  transform: scale(1.2) rotate(-8deg);
+  transform: scale(1.3) rotate(360deg);
+  filter: drop-shadow(0 0 8px rgba(54,192,135,0.6));
 }
 @media (max-width: 1200px) {
   .team-grid {

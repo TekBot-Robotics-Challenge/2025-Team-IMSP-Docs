@@ -1,10 +1,12 @@
 <template>
+  <!-- Animate.css CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <div class="custom-home">
     <div class="hero-section">
       <!-- Navigation -->
       
       <nav class="custom-nav">
-        <div class="logo">
+        <div class="logo animate__animated animate__fadeInDown">
           <img
             src="/2025-Team-IMSP-Docs/logo.svg"
             alt="Logo"
@@ -14,7 +16,7 @@
             ><span class="highlight-i">TEAM IMSP</span> Docs</span
           >
         </div>
-        <ul class="nav-links" :class="{ active: menuOpen }">
+        <ul class="nav-links animate__animated animate__fadeInDown animate__delay-1s" :class="{ active: menuOpen }">
           <li><a href="/2025-Team-IMSP-Docs/" @click="closeMenu">Home</a></li>
           <li><a href="/2025-Team-IMSP-Docs/coming-soon" @click="closeMenu">About</a></li>
           <li><a href="/2025-Team-IMSP-Docs/team" @click="closeMenu">Team</a></li>
@@ -52,9 +54,9 @@
       <!-- Hero Content -->
       <div class="hero-content">
         <div class="hero-left">
-          <h3 class="hero-title">IMSP TEAM <span class="highlight">Tekbot Robotic Challenge 2025</span></h3>
+          <h3 class="hero-title animate__animated animate__fadeInLeft animate__delay-1s">IMSP TEAM <span class="highlight">Tekbot Robotic Challenge 2025</span></h3>
 
-          <div class="hero-actions">
+          <div class="hero-actions animate__animated animate__fadeInUp animate__delay-2s">
             <a href="/2025-Team-IMSP-Docs/test-it/test-one" class="btn-primary"
               >Documentation</a
             >
@@ -65,14 +67,14 @@
         </div>
 
         <div class="hero-right">
-          <div class="hero-image-wrapper">
+          <div class="hero-image-wrapper animate__animated animate__fadeInRight animate__delay-1s">
             <div class="hero-image-bg"></div>
             <img
               src="/2025-Team-IMSP-Docs/IMSP_TEAM.png"
               alt="IMSP Team"
               class="hero-image"
             />
-            <div class="floating-badge">
+            <div class="floating-badge animate__animated animate__bounceIn animate__delay-3s">
               <div class="icon">
                 
               </div>
@@ -85,7 +87,7 @@
     <!-- Features Section -->
     <div class="features-section">
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
           <div class="feature-icon">📚</div>
           <h3 class="feature-title">Test One</h3>
           <p class="feature-description">
@@ -98,7 +100,7 @@
           >
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
           <div class="feature-icon">🔧</div>
           <h3 class="feature-title">Test Two</h3>
           <p class="feature-description">
@@ -111,7 +113,7 @@
           >
         </div>
 
-        <div class="feature-card">
+        <div class="feature-card animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
           <div class="feature-icon">🛠️</div>
           <h3 class="feature-title">Test Three</h3>
           <p class="feature-description">
@@ -207,6 +209,24 @@ const closeMenu = () => {
   }
 }
 
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(54, 192, 135, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(54, 192, 135, 0.6);
+  }
+}
+
+@keyframes rotate-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 /* Navigation personnalisée */
 .custom-nav {
   display: flex;
@@ -226,11 +246,23 @@ const closeMenu = () => {
   font-weight: 700;
   color: white;
   z-index: 1001;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 .logo-img {
   height: clamp(30px, 5vw, 40px);
   width: auto;
+  transition: all 0.4s ease;
+}
+
+.logo:hover .logo-img {
+  transform: rotate(360deg);
+  filter: drop-shadow(0 0 10px rgba(54, 192, 135, 0.6));
 }
 
 .logo-text {
@@ -257,11 +289,29 @@ const closeMenu = () => {
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  transition: color 0.3s;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  position: relative;
+  display: inline-block;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #36c087;
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #36c087;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .mobile-github {
@@ -282,13 +332,15 @@ const closeMenu = () => {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   text-decoration: none;
 }
 
 .github-link:hover {
   color: #36c087;
   background: rgba(168, 255, 53, 0.1);
+  transform: scale(1.2) rotate(360deg);
+  box-shadow: 0 0 20px rgba(54, 192, 135, 0.5);
 }
 
 .desktop-github {
@@ -394,16 +446,36 @@ const closeMenu = () => {
   font-weight: 700;
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn-primary:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 .btn-primary:hover {
   background: #2da871;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(168, 255, 53, 0.4);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(54, 192, 135, 0.5);
 }
 
 .btn-secondary {
@@ -414,16 +486,23 @@ const closeMenu = () => {
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: color 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .btn-secondary:hover {
   color: #36c087;
+  gap: 15px;
 }
 
 .btn-secondary::after {
   content: "→";
   font-size: 1.3rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-secondary:hover::after {
+  transform: translateX(5px);
 }
 
 /* Section Hero droite */
@@ -439,6 +518,11 @@ const closeMenu = () => {
   position: relative;
   width: 100%;
   max-width: 500px;
+  transition: transform 0.5s ease;
+}
+
+.hero-image-wrapper:hover {
+  transform: scale(1.05);
 }
 
 .hero-image-bg {
@@ -457,6 +541,7 @@ const closeMenu = () => {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
+  animation: pulse-glow 3s ease-in-out infinite;
 }
 
 .hero-image {
@@ -465,6 +550,13 @@ const closeMenu = () => {
   width: 100%;
   height: auto;
   border-radius: 30px;
+  transition: all 0.5s ease;
+  filter: brightness(1);
+}
+
+.hero-image-wrapper:hover .hero-image {
+  filter: brightness(1.1) contrast(1.05);
+  box-shadow: 0 20px 60px rgba(54, 192, 135, 0.4);
 }
 
 .floating-badge {
@@ -485,16 +577,14 @@ const closeMenu = () => {
   padding: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   z-index: 3;
-  animation: rotate 10s linear infinite;
+  animation: rotate-slow 20s linear infinite, pulse-glow 2s ease-in-out infinite;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.floating-badge:hover {
+  transform: scale(1.15);
+  animation-play-state: paused;
 }
 
 .floating-badge .icon {
@@ -606,19 +696,43 @@ const closeMenu = () => {
   border-radius: 20px;
   padding: clamp(25px, 4vw, 40px) clamp(20px, 3vw, 30px);
   text-align: left;
-  transition: all 0.3s;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(54, 192, 135, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.feature-card:hover::before {
+  left: 100%;
 }
 
 .feature-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-15px) scale(1.02);
   border-color: #36c087;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 25px 50px rgba(54, 192, 135, 0.2);
 }
 
 .feature-icon {
   font-size: clamp(2rem, 5vw, 3rem);
   margin-bottom: 20px;
+  display: inline-block;
+  transition: all 0.4s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0 5px 15px rgba(54, 192, 135, 0.4));
 }
 
 .feature-title {
@@ -642,16 +756,22 @@ const closeMenu = () => {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  transition: gap 0.3s;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .feature-link:hover {
-  gap: 10px;
+  gap: 15px;
+  transform: translateX(5px);
 }
 
 .feature-link::after {
   content: "→";
+  transition: transform 0.3s ease;
+}
+
+.feature-link:hover::after {
+  transform: translateX(5px) scale(1.2);
 }
 
 /* Responsive */
