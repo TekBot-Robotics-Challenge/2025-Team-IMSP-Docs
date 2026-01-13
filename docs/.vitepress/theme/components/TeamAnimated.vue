@@ -6,7 +6,10 @@
     <p class="team-desc">Notre équipe est composée de 10 membres répartis en trois pôles distincts, chacun spécialisé dans un domaine précis : IT, Électronique et Mécanique.</p>
 
     <section v-for="pole in poles" :key="pole.name" class="team-pole">
-      <h2 class="pole-title">{{ pole.emoji }} {{ pole.name }}</h2>
+      <h2 class="pole-title">
+        <i v-if="pole.icon" :class="['fa-fw', pole.icon, 'fa-bounce']" style="margin-right: 0.5rem; color: #36c087;"></i>
+        {{ pole.name }}
+      </h2>
       <p class="pole-desc">{{ pole.desc }}</p>
       <div class="team-grid">
         <div v-for="member in pole.members" :key="member.name" class="team-card animate__animated animate__fadeInUp">
@@ -33,7 +36,7 @@
 const poles = [
   {
     name: 'Pôle IT',
-    emoji: '💻',
+    icon: 'fas fa-laptop-code',
     desc: "Plongez dans l’univers des logiciels, des algorithmes et des systèmes intelligents qui assurent le contrôle du TekBot.",
     members: [
       { name: 'Sara Adjaho', img: '/2025-Team-IMSP-Docs/Sara.jpg', role: 'Master 2 Data Science', linkedin: 'https://www.linkedin.com/in/saraadjaho', github: 'https://github.com/saraadjaho', email: 'sara.adjaho@example.com' },
@@ -46,7 +49,7 @@ const poles = [
   },
   {
     name: 'Pôle Électronique',
-    emoji: '⚡',
+    icon: 'fas fa-bolt',
     desc: 'Découvrez les capteurs, circuits et composants électroniques qui donnent vie au TekBot.',
     members: [
       { name: 'Donald Aitchedji', img: '/2025-Team-IMSP-Docs/donald.jpg', role: 'Licence 3 Informatiquen', linkedin: 'https://www.linkedin.com/in/donaldaitchedji', github: 'https://github.com/donaldaitchedji', email: 'donald.aitchedji@example.com' },
@@ -55,7 +58,7 @@ const poles = [
   },
   {
     name: 'Pôle Mécanique',
-    emoji: '⚙️',
+    icon: 'fas fa-cogs',
     desc: 'Explorez la conception physique, les matériaux et les techniques d’assemblage qui structurent le TekBot.',
     members: [
       { name: "Alex Gbé'nga Amigbatin", img: '/2025-Team-IMSP-Docs/Alex.jpg', role: 'Licence 3 Physique', linkedin: 'https://www.linkedin.com/in/alexamigbatin', github: 'https://github.com/alexamigbatin', email: 'alex.amigbatin@example.com' },
