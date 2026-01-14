@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.8)
-project(x3_control)
+project(robot_nav_imsp)
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -7,9 +7,6 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(ament_cmake_python REQUIRED)
-find_package(rclcpp REQUIRED)
-find_package(rclpy REQUIRED)
 # uncomment the following section in order to fill in
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
@@ -25,16 +22,5 @@ if(BUILD_TESTING)
   set(ament_cmake_cpplint_FOUND TRUE)
   ament_lint_auto_find_test_dependencies()
 endif()
-
-ament_python_install_package(${PROJECT_NAME})
-
-install(PROGRAMS
-  ${PROJECT_NAME}/scripts/yahboom_joy_X3.py
-  ${PROJECT_NAME}/scripts/yahboom_keyboard.py
-  ${PROJECT_NAME}/scripts/qr_service_node.py
-  DESTINATION lib/${PROJECT_NAME}
-)
-
-
 
 ament_package()

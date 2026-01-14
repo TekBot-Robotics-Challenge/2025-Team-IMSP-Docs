@@ -171,8 +171,8 @@ def main():
 	driver = yahboomcar_driver('driver_node')
 	rclpy.spin(driver)
 
-'''if __name__ == '__main__':
-	main()'''
+if __name__ == '__main__':
+	main()
 
 		
 		

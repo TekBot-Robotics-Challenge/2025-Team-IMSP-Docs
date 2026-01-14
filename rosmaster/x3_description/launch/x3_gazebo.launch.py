@@ -34,7 +34,7 @@ def generate_launch_description():
   )
 
   teleop_node = Node(
-    package= "yahboomcar_ctrl",
+    package= "x3_control",
     executable="yahboom_joy_X3",
     name="joy_X3",
     parameters=[{'use_sim_time': use_sim_time}]

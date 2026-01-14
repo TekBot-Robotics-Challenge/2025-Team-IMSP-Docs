@@ -9,6 +9,7 @@ from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
 import os
+import sys
 from ament_index_python.packages import get_package_share_directory
 
 from launch.actions import IncludeLaunchDescription
@@ -42,6 +43,7 @@ def generate_launch_description():
     joint_state_publisher_node = Node(
         package='joint_state_publisher',
         executable='joint_state_publisher',
+        arguments=[LaunchConfiguration('model')],
         condition=UnlessCondition(LaunchConfiguration('gui'))
     )
 
@@ -67,7 +69,9 @@ def generate_launch_description():
 
     driver_node = Node(
         package='yahboomcar_bringup',
-        executable='Mcnamu_driver_X3',
+        executable=sys.executable,
+        arguments=['-m', 'yahboomcar_bringup.Mcnamu_driver_X3'],
+        output='screen'
     )
 
     base_node = Node(
@@ -90,8 +94,8 @@ def generate_launch_description():
     )
 
     yahboom_joy_node = Node(
-        package='yahboomcar_ctrl',
-        executable='yahboom_joy_X3',
+        package='x3_control',
+        executable='yahboom_joy_X3.py',
     )
 
     return LaunchDescription([
@@ -102,7 +106,7 @@ def generate_launch_description():
         joint_state_publisher_node,
         joint_state_publisher_gui_node,
         robot_state_publisher_node,
-        # rviz_node
+        rviz_node
         driver_node,
         base_node,
         imu_filter_node,
