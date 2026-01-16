@@ -16,8 +16,8 @@
         </div>
         <ul class="nav-links animate__animated animate__fadeInDown animate__delay-1s" :class="{ active: menuOpen }">
           <li><a href="/2025-Team-IMSP-Docs/" @click="closeMenu">Home</a></li>
-          <li><a href="/2025-Team-IMSP-Docs/coming-soon" @click="closeMenu">About</a></li>
           <li><a href="/2025-Team-IMSP-Docs/team" @click="closeMenu">Team</a></li>
+          <li><a href="/2025-Team-IMSP-Docs/finale/" @click="closeMenu">Finale</a></li>
           <li class="mobile-github">
             <a
               href="https://github.com/beryl-07/TEAM-IMSP-TEKBOT-2025.git"
@@ -173,7 +173,7 @@
           <div class="timeline-content">
             <div class="timeline-badge">PHASE 1 • TERMINÉ</div>
             <h3>Pré-sélection</h3>
-            <p class="timeline-date">Juin 2024 • 3 semaines</p>
+            <p class="timeline-date">Juin 2025 à Juillet 2025</p>
             <p>10 tests techniques dans les 3 domaines : Électronique (gyroscope, boîte noire, afficheur), IT (POO, ROS2, pathfinding), Mécanique (CAO débutant à avancé)</p>
             <div class="timeline-stats">
               <span><i class="fas fa-tasks"></i> 10 Tests</span>
@@ -183,14 +183,14 @@
           </div>
         </div>
 
-        <div class="timeline-item active animate__animated animate__fadeInRight">
+        <div class="timeline-item completed animate__animated animate__fadeInRight">
           <div class="timeline-marker">
-            <i class="fas fa-rocket"></i>
+            <i class="fas fa-check"></i>
           </div>
           <div class="timeline-content">
-            <div class="timeline-badge current">PHASE 2 • EN COURS</div>
+            <div class="timeline-badge">PHASE 2 • TERMINÉ</div>
             <h3>Développement & Finale</h3>
-            <p class="timeline-date">Juillet 2024</p>
+            <p class="timeline-date">Septembre 2025 - Janvier 2026</p>
             <p>Développement du système robotique complet pour EcoCity : navigation autonome ROS Master, collecte optimisée, tri IA avec DofBot, distribution ciblée</p>
             <div class="timeline-tech">
               <span class="tech-tag">ROS2</span>
@@ -201,14 +201,14 @@
           </div>
         </div>
 
-        <div class="timeline-item upcoming animate__animated animate__fadeInLeft">
+        <div class="timeline-item completed animate__animated animate__fadeInLeft">
           <div class="timeline-marker">
-            <i class="fas fa-flag-checkered"></i>
+            <i class="fas fa-check"></i>
           </div>
           <div class="timeline-content">
-            <div class="timeline-badge">PHASE 3 • À VENIR</div>
+            <div class="timeline-badge">PHASE 3 • TERMINÉ</div>
             <h3>Présentation Finale</h3>
-            <p class="timeline-date">10 Juillet 2025</p>
+            <p class="timeline-date">Samedi 17 Janvier 2026</p>
             <p>Grande finale : démonstration complète du système robotique, affrontement des deux meilleures équipes, présentation devant le jury</p>
             <div class="timeline-goal">
               <i class="fas fa-star"></i>
@@ -265,9 +265,9 @@
             Acquisition des bases : POO & UML, gyroscope MPU6050, et initiation CAO SolidWorks niveau débutant.
           </p>
           <div class="test-poles">
-            <div class="pole-item it"><i data-lucide="code"></i> IT : POO, UML, Arduino</div>
-            <div class="pole-item electro"><i data-lucide="circle-dot"></i> Électro : Gyroscope MPU6050</div>
-            <div class="pole-item meca"><i data-lucide="pen-tool"></i> Méca : CAO débutant</div>
+            <a href="/2025-Team-IMSP-Docs/test-it/test-one" class="pole-item it"><i data-lucide="code"></i> IT : POO, UML, Arduino</a>
+            <a href="/2025-Team-IMSP-Docs/test-electro/test-one" class="pole-item electro"><i data-lucide="circle-dot"></i> Électro : Gyroscope MPU6050</a>
+            <a href="/2025-Team-IMSP-Docs/test-meca/test-one" class="pole-item meca"><i data-lucide="pen-tool"></i> Méca : CAO débutant</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-it/test-one" class="test-btn">
             <i data-lucide="arrow-right"></i> Voir plus
@@ -285,9 +285,9 @@
             ROS2 avec capteurs/actionneurs, boîte noire embarquée, et progression CAO niveau intermédiaire.
           </p>
           <div class="test-poles">
-            <div class="pole-item it"><i data-lucide="network"></i> IT : ROS2, Capteurs</div>
-            <div class="pole-item electro"><i data-lucide="database"></i> Électro : Boîte noire</div>
-            <div class="pole-item meca"><i data-lucide="box"></i> Méca : CAO intermédiaire</div>
+            <a href="/2025-Team-IMSP-Docs/test-it/test-two" class="pole-item it"><i data-lucide="network"></i> IT : ROS2, Capteurs</a>
+            <a href="/2025-Team-IMSP-Docs/test-electro/test-two" class="pole-item electro"><i data-lucide="database"></i> Électro : Boîte noire</a>
+            <a href="/2025-Team-IMSP-Docs/test-meca/test-two" class="pole-item meca"><i data-lucide="box"></i> Méca : CAO intermédiaire</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-it/test-two" class="test-btn">
             <i data-lucide="arrow-right"></i> Voir plus
@@ -305,9 +305,9 @@
             Navigation autonome Gazebo, afficheur 7 segments, et CAO avancée avec modélisation complexe.
           </p>
           <div class="test-poles">
-            <div class="pole-item it"><i data-lucide="map-pin"></i> IT : Navigation, Gazebo</div>
-            <div class="pole-item electro"><i data-lucide="grid-3x3"></i> Électro : Afficheur 7 seg</div>
-            <div class="pole-item meca"><i data-lucide="package"></i> Méca : CAO avancé</div>
+            <a href="/2025-Team-IMSP-Docs/test-it/test-three" class="pole-item it"><i data-lucide="map-pin"></i> IT : Navigation, Gazebo</a>
+            <a href="/2025-Team-IMSP-Docs/test-electro/test-three" class="pole-item electro"><i data-lucide="grid-3x3"></i> Électro : Afficheur 7 seg</a>
+            <a href="/2025-Team-IMSP-Docs/test-meca/test-three" class="pole-item meca"><i data-lucide="package"></i> Méca : CAO avancé</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-it/test-three" class="test-btn">
             <i data-lucide="arrow-right"></i> Voir plus
@@ -325,9 +325,9 @@
             Synthèse et intégration de toutes les compétences acquises pour préparer le projet final du TRC 2025.
           </p>
           <div class="test-poles">
-            <div class="pole-item it"><i data-lucide="brain"></i> IT : Intégration ROS2</div>
-            <div class="pole-item electro"><i data-lucide="cpu"></i> Électro : Système complet</div>
-            <div class="pole-item meca"><i data-lucide="printer"></i> Méca : Assemblage 3D</div>
+            <a href="/2025-Team-IMSP-Docs/test-final/it/it-part" class="pole-item it"><i data-lucide="brain"></i> IT : Intégration ROS2</a>
+            <a href="/2025-Team-IMSP-Docs/test-final/electro/electro-part" class="pole-item electro"><i data-lucide="cpu"></i> Électro : Système complet</a>
+            <a href="/2025-Team-IMSP-Docs/test-final/meca/meca-part" class="pole-item meca"><i data-lucide="printer"></i> Méca : Assemblage 3D</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-final" class="test-btn">
             <i data-lucide="arrow-right"></i> Voir plus
@@ -361,7 +361,7 @@
               <div class="doc-feature"><i data-lucide="check-circle"></i> Détection des déchets</div>
               <div class="doc-feature"><i data-lucide="check-circle"></i> Communication ESP32</div>
             </div>
-            <a href="/2025-Team-IMSP-Docs/test-final/it/it-part" class="doc-btn">
+            <a href="/2025-Team-IMSP-Docs/finale/rosmaster-x3" class="doc-btn">
               <i data-lucide="book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
@@ -382,7 +382,7 @@
               <div class="doc-feature"><i data-lucide="check-circle"></i> Contrôle motorisé</div>
               <div class="doc-feature"><i data-lucide="check-circle"></i> Synchronisation système</div>
             </div>
-            <a href="/2025-Team-IMSP-Docs/test-final/meca/convoyeur_pieces" class="doc-btn">
+            <a href="/2025-Team-IMSP-Docs/finale/convoyeur" class="doc-btn">
               <i data-lucide="book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
@@ -403,7 +403,7 @@
               <div class="doc-feature"><i data-lucide="check-circle"></i> Préhension adaptative</div>
               <div class="doc-feature"><i data-lucide="check-circle"></i> Interface ROS2</div>
             </div>
-            <a href="/2025-Team-IMSP-Docs/test-final/electro/electro-part" class="doc-btn">
+            <a href="/2025-Team-IMSP-Docs/finale/dofbot-jetson-nano" class="doc-btn">
               <i data-lucide="book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
@@ -427,7 +427,7 @@
             </div>
             <div class="stat">
               <i data-lucide="calendar"></i>
-              <span>10 Juil</span>
+              <span>17 Jan</span>
               <small>Finale TRC</small>
             </div>
           </div>
@@ -495,7 +495,11 @@
 
       <div class="footer-bottom">
         <p>&copy; 2025 TEAM IMSP • IMSP - Université d'Abomey-Calavi • Tous droits réservés</p>
-        <p class="footer-tagline">🚀 Innovation • 🤝 Collaboration • 🏆 Excellence</p>
+        <p class="footer-tagline">
+          <i data-lucide="rocket"></i> Innovation • 
+          <i data-lucide="handshake"></i> Collaboration • 
+          <i data-lucide="trophy"></i> Excellence
+        </p>
       </div>
     </section>
   </div>
@@ -2160,6 +2164,13 @@ const faqs = [
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.pole-item {
+  display: flex;
+  text-decoration: none;
 }
 
 .pole-item::before {
@@ -2767,6 +2778,16 @@ const faqs = [
 .footer-tagline {
   color: #36c087 !important;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-tagline i {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2.5;
 }
 
 /* Cacher le bouton return to top de VitePress */

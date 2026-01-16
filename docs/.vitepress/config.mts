@@ -1,14 +1,21 @@
 import { defineConfig } from 'vitepress'
+import mathjax3 from 'markdown-it-mathjax3'
 
 export default defineConfig({
   base: '/2025-Team-IMSP-Docs',
   title: "TEAM IMSP Docs",
   description: "IMSP TEAM Documentation for Tekbot Robotic Challenge 2025 about urban resilience",
+  
+  markdown: {
+    config: (md) => {
+      md.use(mathjax3)
+    }
+  },
+  
   themeConfig: {
     logo: "/logo.svg",
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'About', link: '/coming-soon' },
       { text: 'Team', link: '/team' },
     ],
 
@@ -102,6 +109,15 @@ export default defineConfig({
               },
             ]
           }
+        ]
+      },
+      {
+        text: 'Documentation Finale',
+        items: [
+          { text: 'Vue d\'ensemble', link: '/finale/' },
+          { text: 'Rosmaster X3', link: '/finale/rosmaster-x3' },
+          { text: 'Système Convoyeur', link: '/finale/convoyeur' },
+          { text: 'DofBot Jetson Nano', link: '/finale/dofbot-jetson-nano' }
         ]
       }
     ],
