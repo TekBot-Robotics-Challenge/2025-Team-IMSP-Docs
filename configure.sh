@@ -18,8 +18,7 @@ sudo apt install ros-humble-robot-localization
 sudo apt install ros-humble-imu-filter-madgwick
 
 source /opt/ros/humble/setup.bash
-colcon build --packages-select astra_camera astra_camera_msgs rplidar_ros yahboomcar_bringup yahboomcar_base_node robot_pose_publisher_ros2 yahboomcar_nav nav2_goal_publisher rf2o_laser_odometry --symlink-install --cmake-args -DCMAKE_CXX_FLAGS="-w" -Wno-dev
-colcon build --symlink-install --packages-select yahboomcar_nav
+colcon build --packages-select astra_camera astra_camera_msgs rplidar_ros yahboomcar_bringup yahboomcar_base_node robot_pose_publisher_ros2 yahboomcar_nav rf2o_laser_odometry --cmake-args -DCMAKE_CXX_FLAGS="-w" -Wno-dev
 colcon build
 source ~/trc_ws/install/setup.bash
 

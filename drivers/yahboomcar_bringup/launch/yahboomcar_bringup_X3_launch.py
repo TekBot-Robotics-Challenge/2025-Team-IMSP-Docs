@@ -93,10 +93,15 @@ def generate_launch_description():
             '/ekf_x1_x3_launch.py'])
     )
 
-    yahboom_joy_node = Node(
-        package='x3_control',
-        executable='yahboom_joy_X3.py',
-    )
+    # joy = Node(
+    #     package='joy',
+    #     executable='joy_node',
+    # )
+    
+    # yahboom_joy_node = Node(
+    #     package='x3_control',
+    #     executable='yahboom_joy_X3.py',
+    # )
 
     return LaunchDescription([
         gui_arg,
@@ -106,10 +111,11 @@ def generate_launch_description():
         joint_state_publisher_node,
         joint_state_publisher_gui_node,
         robot_state_publisher_node,
-        rviz_node
+        # rviz_node,
         driver_node,
         base_node,
         imu_filter_node,
         ekf_node,
-        yahboom_joy_node
+        # joy,
+        # yahboom_joy_node
     ])

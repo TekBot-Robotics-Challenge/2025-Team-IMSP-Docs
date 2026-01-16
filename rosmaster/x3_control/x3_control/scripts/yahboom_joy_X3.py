@@ -98,12 +98,6 @@ class JoyTeleop(Node):
 		
 		#create sub
 		self.sub_Joy = self.create_subscription(Joy,'joy', self.buttonCallback,10)
-		
-		# QR scan service params
-		self.declare_parameter('qr_button_type','button')  # 'button' or 'axis'
-		self.declare_parameter('qr_button_index',6)
-		self.declare_parameter('qr_axis_threshold',-0.9)
-		self.declare_parameter('qr_debounce',1.0)
 
 		#declare parameter and get the value
 		self.declare_parameter('xspeed_limit',1.0)
@@ -113,19 +107,6 @@ class JoyTeleop(Node):
 		self.yspeed_limit = self.get_parameter('yspeed_limit').get_parameter_value().double_value
 		self.angular_speed_limit = self.get_parameter('angular_speed_limit').get_parameter_value().double_value
 
-		# read QR params
-		self.qr_button_type = self.get_parameter('qr_button_type').get_parameter_value().string_value
-		self.qr_button_index = self.get_parameter('qr_button_index').get_parameter_value().integer_value
-		self.qr_axis_threshold = self.get_parameter('qr_axis_threshold').get_parameter_value().double_value
-		self.qr_debounce = self.get_parameter('qr_debounce').get_parameter_value().double_value
-		self._last_qr_time = 0.0
-
-		# create service client
-		self.scan_client = self.create_client(Trigger,'/scan_qr')
-		# try to wait shortly for the service to become available
-		if not self.scan_client.wait_for_service(timeout_sec=1.0):
-			self.get_logger().warn('QR scan service `/scan_qr` not available at startup')
-		
 		
 	def buttonCallback(self,joy_data):
 		if not isinstance(joy_data, Joy): return
@@ -133,8 +114,8 @@ class JoyTeleop(Node):
 		# Print currently pressed buttons and active axes
 		active_buttons = [i for i, btn in enumerate(joy_data.buttons) if btn == 1]
 		active_axes = [i for i, axis in enumerate(joy_data.axes) if abs(axis) > 0.2]
-		if active_buttons or active_axes:
-			self.get_logger().info(f"Buttons: {active_buttons}, Axes: {active_axes}")
+		# if active_buttons or active_axes:
+		# 	self.get_logger().info(f"Buttons: {active_buttons}, Axes: {active_axes}")
 
 		if self.user_name == "root": self.user_jetson(joy_data)
 		else: self.user_pc(joy_data)
@@ -142,19 +123,6 @@ class JoyTeleop(Node):
 	def user_jetson(self, joy_data):
 		#cancel nav
 		if joy_data.axes[9] == 1: self.cancel_nav()
-		#RGBLight
-		# if joy_data.buttons[7] == 1:
-		# 		RGBLight_ctrl = Int32()
-		# 		if self.RGBLight_index < 6:
-		# 			RGBLight_ctrl.data = self.RGBLight_index
-		# 			for i in range(3): self.pub_RGBLight.publish(RGBLight_ctrl)
-		# 		else: self.RGBLight_index = 0
-		# 		self.RGBLight_index += 1		
-		# if joy_data.buttons[11] == 1:
-		# 	Buzzer_ctrl = Bool() 
-		# 	self.Buzzer_active=not self.Buzzer_active
-		# 	Buzzer_ctrl.data =self.Buzzer_active
-		# 	for i in range(3): self.pub_Buzzer.publish(Buzzer_ctrl)
         #linear Gear control
 		if joy_data.buttons[13] == 1:
 			if self.linear_Gear == 1.0: self.linear_Gear = 1.0 / 3
@@ -167,20 +135,21 @@ class JoyTeleop(Node):
 			elif self.angular_Gear == 1.0 / 2: self.angular_Gear = 3.0 / 4
 			elif self.angular_Gear == 3.0 / 4: self.angular_Gear = 1.0
 
-		# QR scan (L2)
-		if self._is_qr_pressed(joy_data):
-			self._try_trigger_scan()
+		
 
 		xlinear_speed = self.filter_data(joy_data.axes[1]) * self.xspeed_limit * self.linear_Gear
-        #ylinear_speed = self.filter_data(joy_data.axes[2]) * self.yspeed_limit * self.linear_Gear
+        # ylinear_speed = self.filter_data(joy_data.axes[2]) * self.yspeed_limit * self.linear_Gear
 		ylinear_speed = self.filter_data(joy_data.axes[0]) * self.yspeed_limit * self.linear_Gear
 		angular_speed = self.filter_data(joy_data.axes[2]) * self.angular_speed_limit * self.angular_Gear
 		if xlinear_speed > self.xspeed_limit: xlinear_speed = self.xspeed_limit
 		elif xlinear_speed < -self.xspeed_limit: xlinear_speed = -self.xspeed_limit
+
 		if ylinear_speed > self.yspeed_limit: ylinear_speed = self.yspeed_limit
 		elif ylinear_speed < -self.yspeed_limit: ylinear_speed = -self.yspeed_limit
+
 		if angular_speed > self.angular_speed_limit: angular_speed = self.angular_speed_limit
 		elif angular_speed < -self.angular_speed_limit: angular_speed = -self.angular_speed_limit
+
 		twist = Twist()
 		twist.linear.x = xlinear_speed
 		twist.linear.y = ylinear_speed
@@ -206,9 +175,6 @@ class JoyTeleop(Node):
 		if joy_data.buttons[7] == 1:
 			print("Pressing R2 button ")
 
-		# QR scan (L2)
-		if self._is_qr_pressed(joy_data):
-			self._try_trigger_scan()
 		# if joy_data.buttons[7] == 1:
 		# 	self.Buzzer_active=not self.Buzzer_active
         #     # print "self.Buzzer_active: ", self.Buzzer_active
@@ -261,38 +227,6 @@ class JoyTeleop(Node):
 				#self.pub_goal.publish(GoalID())
 				self.pub_cmdVel.publish(Twist())
 			self.cancel_time = now_time
-
-	def _is_qr_pressed(self, joy_data):
-		"""Return True if configured QR button/axis is currently pressed."""
-		if self.qr_button_type == 'button':
-			idx = self.qr_button_index
-			if idx < len(joy_data.buttons) and joy_data.buttons[idx] == 1:
-				return True
-			return False
-		elif self.qr_button_type == 'axis':
-			idx = self.qr_button_index
-			if idx < len(joy_data.axes) and joy_data.axes[idx] <= self.qr_axis_threshold:
-				return True
-			return False
-		return False
-
-	def _try_trigger_scan(self):
-		now = time.time()
-		if now - self._last_qr_time < self.qr_debounce:
-			return
-		self._last_qr_time = now
-		if not self.scan_client.wait_for_service(timeout_sec=0.5):
-			self.get_logger().warn('QR scan service `/scan_qr` not available')
-			return
-		req = Trigger.Request()
-		future = self.scan_client.call_async(req)
-		def _on_done(fut):
-			try:
-				res = fut.result()
-				self.get_logger().info(f'QR scan result: success={res.success}, message={res.message}')
-			except Exception as e:
-				self.get_logger().error(f'QR scan service call failed: {e}')
-		future.add_done_callback(_on_done)
 			
 def main():
 	rclpy.init()

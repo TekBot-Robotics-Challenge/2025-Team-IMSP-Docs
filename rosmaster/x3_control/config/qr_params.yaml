@@ -1,4 +1,0 @@
-# QR scanning node parameters
-camera_index: 1
-show_window: false
-quartiers_file: quartiers.yml
