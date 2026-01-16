@@ -220,3 +220,19 @@ a:hover {
   outline: 2px solid #36c087;
   outline-offset: 2px;
 }
+
+/* Support MathJax */
+mjx-container {
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+mjx-container[display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+.dark mjx-container {
+  color: rgba(255, 255, 255, 0.9);
+}
