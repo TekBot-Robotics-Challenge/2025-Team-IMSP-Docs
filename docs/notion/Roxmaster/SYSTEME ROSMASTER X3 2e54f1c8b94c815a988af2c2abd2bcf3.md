@@ -1,12 +1,4 @@
-﻿---
-outline: deep
----
-
 # SYSTEME ROSMASTER X3
-
-[**ACCUEIL**](/2025-Team-IMSP-Docs/finale/) | [**SYSTEMES**](/2025-Team-IMSP-Docs/finale/#architecture-du-système)
-
----
 
 # Introduction
 
@@ -49,12 +41,13 @@ Pour ce faire, on doit :
 - E**nvironnementales**
     - Le système est conçu pour évoluer sur une **surface plane horizontale**.
     - La conception doit assurer **stabilité et adhérence** du robot lors de la collecte.
-- **Mobilité**
-    - Le robot doit être capable de se déplacer rapidement dans l’arène.
 
 ## **Analyse et choix du mécanisme de collecte**
 
 ### 1. Décomposition fonctionnelle
+
+- **Mobilité**
+    - Le robot doit être capable de se déplacer rapidement dans l’arène.
 
 Afin de concevoir un système de ramassage **efficace et pleinement compatible** avec le robot **ROSMATER X3**, une **décomposition fonctionnelle** a été réalisée afin d’identifier les fonctions essentielles que le dispositif doit assurer, **indépendamment des choix technologiques**.
 
@@ -68,11 +61,11 @@ L’ensemble de ces fonctions doit être assuré dans le respect des **contraint
 
 Dans le cadre de la conception du système de ramassage, plusieurs **solutions mécaniques** ont été étudiées afin de permettre au robot **ROSMASTER  X3** de collecter efficacement les déchets présents dans un quartier, tout en respectant les contraintes du cahier des charges.
 
-[**Solution 1 : Pince mécanique articulée**](/finale/solution-1)
+[**Solution 1 : Pince mécanique articulée**](https://www.notion.so/Solution-1-Pince-m-canique-articul-e-2e54f1c8b94c812ba0a2d26fd7458dda?pvs=21)
 
-[**Solution 2 : Pelle frontale avec berne arrière**](/finale/solution-2)
+[**Solution 2 : Pelle frontale avec berne arrière**](https://www.notion.so/Solution-2-Pelle-frontale-avec-berne-arri-re-2e54f1c8b94c8120b6f5d769c62fcaf3?pvs=21)
 
-[**Solution 3 : Système de collecte en masse à canalisation arrière**](/finale/solution-3)
+[**Solution 3 : Système de collecte en masse à canalisation arrière**](https://www.notion.so/Solution-3-Syst-me-de-collecte-en-masse-canalisation-arri-re-2e54f1c8b94c8139be85d47db1e8eab7?pvs=21)
 
 ### 3. Solution retenue
 
@@ -136,7 +129,7 @@ La berne présente des dimensions de **235 mm de longueur**, **200 mm de largeur
 
 Afin de faciliter l’entrée des déchets, une **ouverture a été intégrée dans la partie inférieure de la berne**. L’entrée est précédée d’une **surface inclinée à 15° par rapport à l’horizontale**, permettant aux déchets de **glisser naturellement** vers l’intérieur. Une **rampe interne** prolonge cette inclinaison afin d’assurer le **guidage et le logement des déchets** à l’intérieur de la berne, comme illustré sur la figure ci-dessous.
 
-![Berne_1.png](./assets/rosmaster-x3/Berne_1.png)
+![Berne_1.png](Berne_1.png)
 
 La berne intègre également **des logements dédiés à la fixation des rails télescopiques**, assurant le guidage du système de canalisation et la fluidité du mouvement en translation.
 
@@ -144,25 +137,25 @@ Un **logement spécifique pour un moteur pas à pas NEMA 17** a été prévu, pe
 
 Enfin, la berne est équipée d’un **système de translation secondaire**, fixé au châssis du robot à l’aide de **vis M3**, garantissant une **fixation rigide**, un **bon alignement mécanique** et une **intégration stable** avec la structure du ROSMASTER X3.
 
-![Berne_2.png](./assets/rosmaster-x3/Berne_2.png)
+![Berne_2.png](Berne_2.png)
 
 - **NEMA 17**
 
 Le moteur pas à pas **NEMA 17** a été modélisé à l’aide des **fonctions d’extrusion de matière et de coupe** de SolidWorks. L’assemblage des différentes pièces repose sur des **contraintes standards de coïncidence de faces et d’axes**, assurant une intégration correcte dans le mécanisme. Les détails de la modélisation des pièces sont présenté dans le **Test 4**.
 
-![Nema 17.png](./assets/rosmaster-x3/Nema_17.png)
+![Nema 17.png](Nema_17.png)
 
 - **Rails Télescopiques**
 
 Ce support, constitué de **trois pièces principales**, assure le maintien du dispositif de délimitation rectangulaire. Sa modélisation repose sur des **esquisses simples** et l’utilisation des **fonctions d’extrusion de matière et de coupe** de SolidWorks. L’assemblage a été réalisé à l’aide de **contraintes standards** (distance, parallélisme) ainsi que de **contraintes avancées**, telles que le **coupleur linéaire**, la **largeur** et la **distance limite**, afin de garantir le mouvement attendu.
 
-![Rail_téléscopiques.png](./assets/rosmaster-x3/Rail_tlscopiques.png)
+![Rail_téléscopiques.png](Rail_tlscopiques.png)
 
 - **Pièce Supérieure**
 
 Elle mesure en tout 250mm de longueur pour une largeur de externe de 42mm. L’épaisseur est estimé à 12mm
 
-![Supérieure.png](./assets/rosmaster-x3/Suprieure.png)
+![Supérieure.png](Suprieure.png)
 
 - **Pièce Inférieure**
 
@@ -170,37 +163,37 @@ Elle mesure en tout 247mm de longueur pour une largeur de externe de 25mm. L’�
 
 - **Pièce Intermédiaire**
 
-![Inférieure.png](./assets/rosmaster-x3/Infrieure.png)
+![Inférieure.png](Infrieure.png)
 
 Elle mesure en tout 223mm de longueur pour une largeur de externe de 35mm. L’épaisseur est estimé à 9mm
 
-![Intermédiaire.png](./assets/rosmaster-x3/Intermdiaire.png)
+![Intermédiaire.png](Intermdiaire.png)
 
 - **Roue dentée:**
 
 En effet, une roue dentée de 25 dents pour un pas de 2 à  été conçu pour transmettre de façon efficace le couple du moteur au cadre rectangle.
 
-![Complément.png](./assets/rosmaster-x3/Complment.png)
+![Complément.png](Complment.png)
 
 - **Rail Simple :**
 
-![Roue_dentée.png](./assets/rosmaster-x3/Roue_dente.png)
+![Roue_dentée.png](Roue_dente.png)
 
  Conçue en contreplaqué pour servir de **guide linéaire, elle** permet de **transmettre le mouvement de translation** des rails télescopiques tout en assurant la **stabilité et le soutien** des pièces mobiles qui y sont fixées.
 
-![image.png](./assets/rosmaster-x3/image.png)
+![image.png](image.png)
 
 - **Rail denté :**
 
 Cette pièce, fabriquée en contreplaqué, a pour fonction de servir de crémaillère pour le pignon. Elle permet de transmettre efficacement le couple du moteur NEMA 17 et d’entraîner le mouvement de translation du système de délimitation des quartiers.
 
-![Rail.png](./assets/rosmaster-x3/Rail.png)
+![Rail.png](Rail.png)
 
 La réalisation de cette pièce présente une **subtilité supplémentaire** par rapport au **rail simple**. Nous prendrons donc le soin de **décrire étape par étape sa conception**.
 
 Dans un premier temps, nous avons réalisé une esquisse dans le **plan frontal** en utilisant des outils de base, tout en appliquant les **contraintes de distance appropriées** afin de définir correctement la géométrie de la pièce *(voir image de l’esquisse)*.
 
-![Rail_sketch1.png](./assets/rosmaster-x3/Rail_sketch1.png)
+![Rail_sketch1.png](Rail_sketch1.png)
 
 Ensuite, nous avons appliqué la **fonction de création de matière (extrusion)** afin d’obtenir la pièce présentée ci-dessous . 
 
@@ -210,26 +203,26 @@ Nous avons ensuite ouvert un **assemblage SolidWorks**, dans lequel nous avons a
 
 Par la suite, au sein de l’assemblage, nous avons souhaité **modifier la pièce du rail simple** en convertissant, dans le **plan de face de cette pièce**, la **face dentée de la crémaillère** importée. Cette opération nous a conduit au résultat suivant *(une esquisse normalisée)*.
 
-![Rail_simple.png](./assets/rosmaster-x3/Rail_simple.png)
+![Rail_simple.png](Rail_simple.png)
 
 Il est alors possible de remarquer que cette pièce est encore similaire à la pièce précédente, à savoir le **rail simple**.
 
-![Rail_sketch2.png](./assets/rosmaster-x3/Rail_sketch2.png)
+![Rail_sketch2.png](Rail_sketch2.png)
 
-![Rail_sketch3.png](./assets/rosmaster-x3/Rail_sketch3.png)
+![Rail_sketch3.png](Rail_sketch3.png)
 
-![Rail_sketch4.png](./assets/rosmaster-x3/Rail_sketch4.png)
+![Rail_sketch4.png](Rail_sketch4.png)
 
 Ensuite, nous avons appliqué la **fonction de création de matière (extrusion Base/boss)** afin d’obtenir la pièce que nous voulons (rail dentée). 
 
-![Rail.png](./assets/rosmaster-x3/Rail%201.png)
+![Rail.png](Rail%201.png)
 
 - **Un dispositif de délimitation:**
     
     **E**ntraîné par le **moteur pas à pas NEMA 17**, ce mécanisme se déploie par translation pour d’encadrer un quartier contraignant ainsi les déchets à pénétrer dans la berne. Il est essentiellement composée 05principales pièces.
     
 
-![Back.png](./assets/rosmaster-x3/Back.png)
+![Back.png](Back.png)
 
 **Pièce 1 (Backpart_2) : [Polywood]**
 
@@ -251,15 +244,15 @@ Cette pièce assure la **fixation de la trappe au dispositif de délimitation**,
 
 Cette pièce complémentaire améliore le **contact et la fixation** entre la **Backpart_2** et les **rails télescopiques**, renforçant ainsi la **stabilité du mécanisme**.
 
-![Back_part_2.png](./assets/rosmaster-x3/Back_part_2.png)
+![Back_part_2.png](Back_part_2.png)
 
-![Back_prt_1.png](./assets/rosmaster-x3/Back_prt_1.png)
+![Back_prt_1.png](Back_prt_1.png)
 
-![Metal_mount.png](./assets/rosmaster-x3/Metal_mount.png)
+![Metal_mount.png](Metal_mount.png)
 
-![Trappe_part_3.png](./assets/rosmaster-x3/Trappe_part_3.png)
+![Trappe_part_3.png](Trappe_part_3.png)
 
-![Back_part_3.png](./assets/rosmaster-x3/Back_part_3.png)
+![Back_part_3.png](Back_part_3.png)
 
 - **Trappe arrière :**
 
@@ -267,15 +260,15 @@ La trappe, composée de **quatre pièces principales**, est conçue pour **empê
 
 La **modélisation des pièces** a été réalisée à partir d’**esquisses de base** comprenant des lignes droites, rectangles, cercles et polygones, suivie de l’application des **fonctions standards de création et d’extrusion de matière (Boss/Base et Extrude-Coupe)**.
 
-![Trappe_out.png](./assets/rosmaster-x3/Trappe_out.png)
+![Trappe_out.png](Trappe_out.png)
 
-![Trappe_in.png](./assets/rosmaster-x3/Trappe_in.png)
+![Trappe_in.png](Trappe_in.png)
 
 - **Pièce 1 – Pièce principale de la trappe [Polywood]**
 
 Cette pièce constitue le **support principal** du système de trappe et sert de fixation pour les autres composants. 
 
-![Trappe_part1.png](./assets/rosmaster-x3/Trappe_part1.png)
+![Trappe_part1.png](Trappe_part1.png)
 
 - **Pièce 2 – Pièce de contact [Polywood]**
 
@@ -289,17 +282,17 @@ Cette pièce assure la **fixation de la trappe au dispositif de délimitation**,
 
 De forme **bossée** et réalisée en **PLA**, cette pièce est fixée sur la pièce principale afin de **décupler la pression exercée par la trappe sur les déchets**, améliorant le confinement. Sa conception utilise des esquisses simples et les fonctions d’extrusion pour créer la forme bossée.
 
-![Trappe_part_2.png](./assets/rosmaster-x3/Trappe_part_2.png)
+![Trappe_part_2.png](Trappe_part_2.png)
 
-![Trappe_part_3+.png](./assets/rosmaster-x3/Trappe_part_3%201.png)
+![Trappe_part_3+.png](Trappe_part_3%201.png)
 
-![Trappe_part4.png](./assets/rosmaster-x3/Trappe_part4.png)
+![Trappe_part4.png](Trappe_part4.png)
 
 - **Connecteur : [Polywood]**
 
 Réalisée avec du contreplaqué, le connecteur permet de **relier la trappe au servomoteur**, assurant ainsi la **transmission du mouvement de rotation** du moteur vers la trappe. Cette liaison garantit un mouvement précis et fiable lors du fonctionnement du système.
 
-![Connecteur.png](./assets/rosmaster-x3/Connecteur.png)
+![Connecteur.png](Connecteur.png)
 
 - **Servomoteur MG995 et adaptateur**
 
@@ -307,25 +300,25 @@ Fixé à un connecteur à l’aide d’un adaptateur, le servomoteur **MG995** p
 
 Le moteur et son adaptateur **n’ont pas été modélisés** et ont été **importés directement depuis la plateforme de fabrication numérique GRABCAD**.
 
-![Servo_moteur_horn.png](./assets/rosmaster-x3/Servo_moteur_horn.png)
+![Servo_moteur_horn.png](Servo_moteur_horn.png)
 
-![MG995.png](./assets/rosmaster-x3/MG995.png)
+![MG995.png](MG995.png)
 
 - **Roue dentée:**
 
 En effet, une roue dentée de 25 dents pour un pas de 2 à  été conçu pour transmettre de façon efficace le couple du moteur au système de translation.
 
-![Roue_dentée.png](./assets/rosmaster-x3/Roue_dente.png)
+![Roue_dentée.png](Roue_dente.png)
 
 Réalisée avec du contreplaqué, cette pièce sert de contact direct avec la crémaillère et l’arbre du moteur via l’intermédiaire de la pièce suivante imprimée en PLA (Remplissage 100% pour une transmission durable)
 
-![Complément.png](./assets/rosmaster-x3/Complment.png)
+![Complément.png](Complment.png)
 
 - **Anneau**
 
 Afin d’assurer la **fixation du pignon sur l’arbre du moteur**, un **anneau de serrage** a été conçu. Il est muni d’un **logement pour une vis et un écrou**, permettant d’exercer une **pression radiale sur l’arbre du moteur** et de garantir un maintien fiable du pignon (cf. figure ci-dessous).
 
-![Anneau.png](./assets/rosmaster-x3/Anneau.png)
+![Anneau.png](Anneau.png)
 
 - **Support du kit électronique**
 
@@ -335,30 +328,27 @@ Le dispositif est constitué de **deux pièces principales**.
 
 La première pièce correspond à un **châssis squelettique** destiné à recevoir un **veroboard**, sur lequel sont implantés le **driver du NEMA 17**, le **régulateur de tension LM4015** ainsi qu’un **ESP32** (cf. figure ci-dessous).
 
-![Supp_electro_2.png](./assets/rosmaster-x3/Supp_electro_2.png)
+![Supp_electro_2.png](Supp_electro_2.png)
 
-![Supp_electro_1.png](./assets/rosmaster-x3/Supp_electro_1.png)
+![Supp_electro_1.png](Supp_electro_1.png)
 
 La seconde pièce a été conçue comme **support de ventilateur**, assurant le **refroidissement actif du système électronique** et contribuant à la fiabilité globale du dispositif (cf. figure ci-dessous).
 
-![Support_ventillateur.png](./assets/rosmaster-x3/Support_ventillateur.png)
+![Support_ventillateur.png](Support_ventillateur.png)
 
 - ROSMASTER CUSTOMISE
 
-![Screenshot 2026-01-11 202032.png](./assets/rosmaster-x3/Screenshot_2026-01-11_202032.png)
+![Screenshot 2026-01-11 202032.png](Screenshot_2026-01-11_202032.png)
 
-![Screenshot 2026-01-11 201906.png](./assets/rosmaster-x3/Screenshot_2026-01-11_201906.png)
+![Screenshot 2026-01-11 201906.png](Screenshot_2026-01-11_201906.png)
 
-![Screenshot 2026-01-11 201946.png](./assets/rosmaster-x3/Screenshot_2026-01-11_201946.png)
+![Screenshot 2026-01-11 201946.png](Screenshot_2026-01-11_201946.png)
 
-![Screenshot 2026-01-11 202002.png](./assets/rosmaster-x3/Screenshot_2026-01-11_202002.png)
+![Screenshot 2026-01-11 202002.png](Screenshot_2026-01-11_202002.png)
 
-### Justification des choix techniques
+### lJustification des choix techniques
 
-- **Matériaux :** PLA (léger, imprimable) et Contreplaqué (plus léger que le PLA, moins coûteux, renforts structurels).
-- **Mouvements :** translation avec des rails télescopiques pour la canalisation, rotation pour la trappe.
-- **Position arrière :** Equilibre du robot, champ de vision libre, meilleure intégration.
-- **Conception allégée :** Formes évidées pour réduire le poids et optimiser la consommation énergétique.
+- **Matériaux :** PLA (léger, imprimable) et Contreplaqué (plus léger que le PLA, moins coûteux,  structurels).
 
 [https://vimeo.com/1190744596?share=copy&fl=sv&fe=ci](https://vimeo.com/1190744596?share=copy&fl=sv&fe=ci)
 
@@ -370,17 +360,17 @@ La première difficulté concernait **l’entrée des déchets dans la berne**. 
 
 Pour résoudre ce problème, un **film en plastique issu d’une feuille de reliure transparente** a été fixé à l’entrée de la berne. Cette solution a permis de **réduire significativement les frottements**, facilitant ainsi le glissement des déchets vers l’intérieur de la berne.
 
-![image.png](./assets/rosmaster-x3/image%201.png)
+![image.png](image%201.png)
 
-![_berne.jpeg](./assets/rosmaster-x3/_berne.jpeg)
+![_berne.jpeg](_berne.jpeg)
 
 Le second problème majeur était lié à la **fermeture de la trappe arrière**. Dans certaines configurations, la présence de déchets pouvait **bloquer le mouvement de fermeture**, compromettant le confinement du système. Cette observation nous a conduits à **repenser le mécanisme de fermeture**, en intégrant un **système mobile plus tolérant aux interférences**, tel que présenté dans la vidéo suivante.
 
-![EP1.png](./assets/rosmaster-x3/EP1.png)
+![EP1.png](EP1.png)
 
-![EP2.png](./assets/rosmaster-x3/EP2.png)
+![EP2.png](EP2.png)
 
-La solution en question a présenté aussi des problèmes que nous avons réglé. Il s'agit en effet de la flexibilité du système mobile qui crée un blocage lors de la fermeture de la trappe arrière du  ROSMASTER X3
+La solution en question a présenté aussi des problèmes que nous avons réglé. Il s’agit en effet de la flexibilité du système mobile qui crée un blocage lors de la fermeture de la trappe arrière du  ROSMASTER X3
 
 ### **Vidéo explicative**
 

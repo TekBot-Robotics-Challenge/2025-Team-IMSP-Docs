@@ -236,3 +236,179 @@ mjx-container[display="true"] {
 .dark mjx-container {
   color: rgba(255, 255, 255, 0.9);
 }
+
+/* ============================================================
+   Solution Pages — Breadcrumb
+   ============================================================ */
+
+.solution-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0 20px 0;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+  flex-wrap: wrap;
+}
+
+.solution-breadcrumb a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s, text-decoration 0.2s;
+}
+
+.solution-breadcrumb a:hover {
+  color: var(--vp-c-accent-hover);
+  text-decoration: underline;
+}
+
+.solution-breadcrumb span {
+  color: var(--vp-c-text-3);
+}
+
+/* ============================================================
+   Solution Pages — Status Badge
+   ============================================================ */
+
+.solution-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.solution-status.rejected {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.solution-status.retained {
+  background: rgba(54, 192, 135, 0.12);
+  color: #36c087;
+  border: 1px solid rgba(54, 192, 135, 0.4);
+}
+
+.dark .solution-status.rejected {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border-color: rgba(239, 68, 68, 0.4);
+}
+
+.dark .solution-status.retained {
+  background: rgba(54, 192, 135, 0.15);
+  color: #4ade9e;
+  border-color: rgba(54, 192, 135, 0.5);
+}
+
+/* ============================================================
+   Solution Pages — Navigation Footer
+   ============================================================ */
+
+.solution-nav-footer {
+  display: flex;
+  gap: 12px;
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+  flex-wrap: wrap;
+}
+
+.solution-nav-footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  color: var(--vp-c-text-1) !important;
+  text-decoration: none !important;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+.solution-nav-footer a:hover {
+  border-color: var(--vp-c-brand-1) !important;
+  color: var(--vp-c-brand-1) !important;
+  background: var(--vp-c-brand-soft);
+}
+
+/* ============================================================
+   Global Doc Improvements — Headings
+   ============================================================ */
+
+.vp-doc h2 {
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 24px;
+  margin-top: 40px;
+}
+
+.vp-doc h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: var(--vp-c-brand-1);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   Global Doc Improvements — Tables
+   ============================================================ */
+
+.vp-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 20px 0;
+}
+
+.vp-doc table th {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+  padding: 10px 16px;
+  text-align: left;
+  border: 1px solid var(--vp-c-divider);
+}
+
+.vp-doc table td {
+  padding: 9px 16px;
+  border: 1px solid var(--vp-c-divider);
+  vertical-align: top;
+}
+
+.vp-doc table tr:nth-child(even) td {
+  background: var(--vp-c-bg-soft);
+}
+
+.vp-doc table tr:hover td {
+  background: var(--vp-c-brand-soft);
+}
+
+/* ============================================================
+   Global Doc Improvements — Inline Code
+   ============================================================ */
+
+.vp-doc :not(pre) > code {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.875em;
+}
+
+.dark .vp-doc :not(pre) > code {
+  background: rgba(54, 192, 135, 0.12);
+  color: #4ade9e;
+}

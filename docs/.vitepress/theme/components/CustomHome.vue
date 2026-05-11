@@ -17,7 +17,6 @@
         <ul class="nav-links animate__animated animate__fadeInDown animate__delay-1s" :class="{ active: menuOpen }">
           <li><a href="/2025-Team-IMSP-Docs/" @click="closeMenu">Home</a></li>
           <li><a href="/2025-Team-IMSP-Docs/team" @click="closeMenu">Team</a></li>
-          <li><a href="/2025-Team-IMSP-Docs/finale/" @click="closeMenu">Finale</a></li>
           <li class="mobile-github">
             <a
               href="https://github.com/beryl-07/TEAM-IMSP-TEKBOT-2025.git"
@@ -53,10 +52,10 @@
       <div class="hero-content">
         <div class="hero-left">
           <div class="hero-badge animate__animated animate__fadeIn">
-            <span class="badge-icon"><i data-lucide="trophy"></i></span>
+            <span class="badge-icon"><i class="fas fa-trophy"></i></span>
             <span>TRC 2025 • FINALISTES</span>
           </div>
-          <h3 class="hero-title animate__animated animate__fadeInLeft animate__delay-1s">IMSP TEAM <span class="highlight">Tekbot Robotic Challenge 2025</span></h3>
+          <h3 class="hero-title animate__animated animate__fadeInLeft animate__delay-1s">IMSP TEAM<br><span class="highlight"><span class="nowrap">Tekbot Robotic</span><br><span class="nowrap">Challenge 2025</span></span></h3>
           <p class="hero-subtitle animate__animated animate__fadeInLeft animate__delay-1s">
             Développement d'un système robotique autonome pour la gestion intelligente des déchets urbains. 
             Une équipe de 10 étudiants passionnés de l'IMSP relève le défi de la résilience urbaine.
@@ -79,11 +78,11 @@
 
           <div class="hero-actions animate__animated animate__fadeInUp animate__delay-2s">
             <a href="/2025-Team-IMSP-Docs/test-it/test-one" class="btn-primary">
-              <i data-lucide="book-open"></i>
+              <i class="fas fa-book-open"></i>
               <span>Documentation</span>
             </a>
             <a href="https://trc.tekbot.io/trc-2025/" class="btn-secondary">
-              <i data-lucide="arrow-right"></i>
+              <i class="fas fa-arrow-right"></i>
               <span>En savoir plus</span>
             </a>
           </div>
@@ -98,7 +97,7 @@
               class="hero-image"
             />
             <div class="floating-badge animate__animated animate__bounceIn animate__delay-3s">
-              <div class="icon"><i data-lucide="bot"></i></div>
+              <div class="icon"><i class="fas fa-robot"></i></div>
               <div class="badge-text">TRC<br/>2025</div>
             </div>
           </div>
@@ -109,26 +108,26 @@
     <!-- À propos du TRC Section -->
     <section class="about-trc-section">
       <div class="section-header animate__animated animate__fadeIn">
-        <span class="section-tag"><i data-lucide="target"></i> LE CHALLENGE</span>
+        <span class="section-tag"><i class="fas fa-bullseye"></i> LE CHALLENGE</span>
         <h2 class="section-title">À propos du TRC 2025</h2>
         <p class="section-desc">Porté par TEKBOT Robotics, le TRC 2025 nous pousse à créer des robots qui apportent des réponses concrètes aux besoins de nos villes</p>
       </div>
 
       <div class="trc-content">
         <div class="trc-card animate__animated animate__fadeInLeft">
-          <div class="trc-icon"><i data-lucide="globe"></i></div>
+          <div class="trc-icon"><i class="fas fa-globe"></i></div>
           <h3>Le Défi</h3>
           <p>Résilience Urbaine : Gestion Durable des Déchets. Un challenge qui répond aux besoins urgents de nos villes africaines.</p>
         </div>
 
         <div class="trc-card animate__animated animate__fadeInUp">
-          <div class="trc-icon"><i data-lucide="rocket"></i></div>
+          <div class="trc-icon"><i class="fas fa-rocket"></i></div>
           <h3>Notre Mission</h3>
           <p>Développer un système robotique autonome capable de collecter, trier et gérer les déchets de manière intelligente et efficace.</p>
         </div>
 
         <div class="trc-card animate__animated animate__fadeInRight">
-          <div class="trc-icon"><i data-lucide="lightbulb"></i></div>
+          <div class="trc-icon"><i class="fas fa-lightbulb"></i></div>
           <h3>L'Innovation</h3>
           <p>Navigation autonome, vision IA, manipulation précise : une synergie parfaite entre IT, Électronique et Mécanique.</p>
         </div>
@@ -160,7 +159,7 @@
     <!-- Roadmap Section -->
     <section class="roadmap-section">
       <div class="section-header animate__animated animate__fadeIn">
-        <span class="section-tag"><i data-lucide="map"></i> NOTRE PARCOURS</span>
+        <span class="section-tag"><i class="fas fa-route"></i> NOTRE PARCOURS</span>
         <h2 class="section-title">Feuille de Route</h2>
         <p class="section-desc">Du concept à la réalisation : les jalons de notre aventure TRC 2025</p>
       </div>
@@ -222,7 +221,7 @@
     <!-- FAQ Section -->
     <section class="faq-section">
       <div class="section-header animate__animated animate__fadeIn">
-        <span class="section-tag"><i data-lucide="help-circle"></i> QUESTIONS FRÉQUENTES</span>
+        <span class="section-tag"><i class="fas fa-circle-question"></i> QUESTIONS FRÉQUENTES</span>
         <h2 class="section-title">Tout ce qu'il faut savoir</h2>
         <p class="section-desc">Les réponses à vos questions sur notre projet et le TRC 2025</p>
       </div>
@@ -231,11 +230,11 @@
         <div v-for="(faq, index) in faqs" :key="index" class="faq-item" @click="toggleFaq(index)">
           <div class="faq-question">
             <div class="faq-icon">
-              <i :data-lucide="faq.icon"></i>
+              <i :class="faq.icon"></i>
             </div>
             <h3>{{ faq.question }}</h3>
             <div class="faq-toggle" :class="{ active: openFaq === index }">
-              <i data-lucide="chevron-down"></i>
+              <i class="fas fa-chevron-down"></i>
             </div>
           </div>
           <div class="faq-answer" :class="{ active: openFaq === index }">
@@ -248,7 +247,7 @@
     <!-- Tests de Présélection Section -->
     <section class="preselection-section">
       <div class="section-header animate__animated animate__fadeIn">
-        <span class="section-tag"><i data-lucide="clipboard-check"></i> PHASE PRÉ-SÉLECTION</span>
+        <span class="section-tag"><i class="fas fa-clipboard-check"></i> PHASE PRÉ-SÉLECTION</span>
         <h2 class="section-title">Tests de Présélection</h2>
         <p class="section-desc">4 semaines intensives où chaque pôle (IT, Électronique, Mécanique) développe ses compétences techniques fondamentales</p>
       </div>
@@ -257,7 +256,7 @@
         <!-- Test Semaine 1 -->
         <div class="test-card animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
           <div class="test-header">
-            <div class="test-icon week"><i data-lucide="braces"></i></div>
+            <div class="test-icon week"><i class="fas fa-code"></i></div>
             <div class="test-badge week">SEMAINE 1</div>
           </div>
           <h3 class="test-title">Fondamentaux</h3>
@@ -265,19 +264,19 @@
             Acquisition des bases : POO & UML, gyroscope MPU6050, et initiation CAO SolidWorks niveau débutant.
           </p>
           <div class="test-poles">
-            <a href="/2025-Team-IMSP-Docs/test-it/test-one" class="pole-item it"><i data-lucide="code"></i> IT : POO, UML, Arduino</a>
-            <a href="/2025-Team-IMSP-Docs/test-electro/test-one" class="pole-item electro"><i data-lucide="circle-dot"></i> Électro : Gyroscope MPU6050</a>
-            <a href="/2025-Team-IMSP-Docs/test-meca/test-one" class="pole-item meca"><i data-lucide="pen-tool"></i> Méca : CAO débutant</a>
+            <a href="/2025-Team-IMSP-Docs/test-it/test-one" class="pole-item it"><i class="fas fa-code"></i> IT : POO, UML, Arduino</a>
+            <a href="/2025-Team-IMSP-Docs/test-electro/test-one" class="pole-item electro"><i class="fas fa-circle-dot"></i> Électro : Gyroscope MPU6050</a>
+            <a href="/2025-Team-IMSP-Docs/test-meca/test-one" class="pole-item meca"><i class="fas fa-pen-ruler"></i> Méca : CAO débutant</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-it/test-one" class="test-btn">
-            <i data-lucide="arrow-right"></i> Voir plus
+            <i class="fas fa-arrow-right"></i> Voir plus
           </a>
         </div>
 
         <!-- Test Semaine 2 -->
         <div class="test-card animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
           <div class="test-header">
-            <div class="test-icon week"><i data-lucide="radio"></i></div>
+            <div class="test-icon week"><i class="fas fa-satellite-dish"></i></div>
             <div class="test-badge week">SEMAINE 2</div>
           </div>
           <h3 class="test-title">Intégration Systèmes</h3>
@@ -285,19 +284,19 @@
             ROS2 avec capteurs/actionneurs, boîte noire embarquée, et progression CAO niveau intermédiaire.
           </p>
           <div class="test-poles">
-            <a href="/2025-Team-IMSP-Docs/test-it/test-two" class="pole-item it"><i data-lucide="network"></i> IT : ROS2, Capteurs</a>
-            <a href="/2025-Team-IMSP-Docs/test-electro/test-two" class="pole-item electro"><i data-lucide="database"></i> Électro : Boîte noire</a>
-            <a href="/2025-Team-IMSP-Docs/test-meca/test-two" class="pole-item meca"><i data-lucide="box"></i> Méca : CAO intermédiaire</a>
+            <a href="/2025-Team-IMSP-Docs/test-it/test-two" class="pole-item it"><i class="fas fa-network-wired"></i> IT : ROS2, Capteurs</a>
+            <a href="/2025-Team-IMSP-Docs/test-electro/test-two" class="pole-item electro"><i class="fas fa-database"></i> Électro : Boîte noire</a>
+            <a href="/2025-Team-IMSP-Docs/test-meca/test-two" class="pole-item meca"><i class="fas fa-box"></i> Méca : CAO intermédiaire</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-it/test-two" class="test-btn">
-            <i data-lucide="arrow-right"></i> Voir plus
+            <i class="fas fa-arrow-right"></i> Voir plus
           </a>
         </div>
 
         <!-- Test Semaine 3 -->
         <div class="test-card animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
           <div class="test-header">
-            <div class="test-icon week"><i data-lucide="compass"></i></div>
+            <div class="test-icon week"><i class="fas fa-compass"></i></div>
             <div class="test-badge week">SEMAINE 3</div>
           </div>
           <h3 class="test-title">Navigation & Affichage</h3>
@@ -305,19 +304,19 @@
             Navigation autonome Gazebo, afficheur 7 segments, et CAO avancée avec modélisation complexe.
           </p>
           <div class="test-poles">
-            <a href="/2025-Team-IMSP-Docs/test-it/test-three" class="pole-item it"><i data-lucide="map-pin"></i> IT : Navigation, Gazebo</a>
-            <a href="/2025-Team-IMSP-Docs/test-electro/test-three" class="pole-item electro"><i data-lucide="grid-3x3"></i> Électro : Afficheur 7 seg</a>
-            <a href="/2025-Team-IMSP-Docs/test-meca/test-three" class="pole-item meca"><i data-lucide="package"></i> Méca : CAO avancé</a>
+            <a href="/2025-Team-IMSP-Docs/test-it/test-three" class="pole-item it"><i class="fas fa-map-pin"></i> IT : Navigation, Gazebo</a>
+            <a href="/2025-Team-IMSP-Docs/test-electro/test-three" class="pole-item electro"><i class="fas fa-table-cells"></i> Électro : Afficheur 7 seg</a>
+            <a href="/2025-Team-IMSP-Docs/test-meca/test-three" class="pole-item meca"><i class="fas fa-cube"></i> Méca : CAO avancé</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-it/test-three" class="test-btn">
-            <i data-lucide="arrow-right"></i> Voir plus
+            <i class="fas fa-arrow-right"></i> Voir plus
           </a>
         </div>
 
         <!-- Test Semaine 4 -->
         <div class="test-card animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
           <div class="test-header">
-            <div class="test-icon week"><i data-lucide="rocket"></i></div>
+            <div class="test-icon week"><i class="fas fa-rocket"></i></div>
             <div class="test-badge week">SEMAINE 4</div>
           </div>
           <h3 class="test-title">Intégration Finale</h3>
@@ -325,12 +324,12 @@
             Synthèse et intégration de toutes les compétences acquises pour préparer le projet final du TRC 2025.
           </p>
           <div class="test-poles">
-            <a href="/2025-Team-IMSP-Docs/test-final/it/it-part" class="pole-item it"><i data-lucide="brain"></i> IT : Intégration ROS2</a>
-            <a href="/2025-Team-IMSP-Docs/test-final/electro/electro-part" class="pole-item electro"><i data-lucide="cpu"></i> Électro : Système complet</a>
-            <a href="/2025-Team-IMSP-Docs/test-final/meca/meca-part" class="pole-item meca"><i data-lucide="printer"></i> Méca : Assemblage 3D</a>
+            <a href="/2025-Team-IMSP-Docs/test-final/it/it-part" class="pole-item it"><i class="fas fa-brain"></i> IT : Intégration ROS2</a>
+            <a href="/2025-Team-IMSP-Docs/test-final/electro/electro-part" class="pole-item electro"><i class="fas fa-microchip"></i> Électro : Système complet</a>
+            <a href="/2025-Team-IMSP-Docs/test-final/meca/meca-part" class="pole-item meca"><i class="fas fa-print"></i> Méca : Assemblage 3D</a>
           </div>
           <a href="/2025-Team-IMSP-Docs/test-final" class="test-btn">
-            <i data-lucide="arrow-right"></i> Voir plus
+            <i class="fas fa-arrow-right"></i> Voir plus
           </a>
         </div>
       </div>
@@ -340,7 +339,7 @@
     <section class="final-doc-section">
       <div class="section-container">
         <div class="section-header animate__animated animate__fadeIn">
-          <span class="section-tag"><i data-lucide="file-code"></i> PHASE FINALE</span>
+          <span class="section-tag"><i class="fas fa-file-code"></i> PHASE FINALE</span>
           <h2 class="section-title">Documentation Finale</h2>
           <p class="section-desc">Les 3 composantes majeures de notre système robotique pour le TRC 2025</p>
         </div>
@@ -350,19 +349,19 @@
           <div class="doc-category-card rosmaster animate__animated animate__fadeInUp" style="animation-delay: 0.1s;">
             <div class="doc-card-header">
               <div class="doc-icon-wrapper">
-                <i data-lucide="bot"></i>
+                <i class="fas fa-robot"></i>
               </div>
               <h3>Rosmaster X3</h3>
             </div>
             <p class="doc-description">Robot mobile omnidirectionnel équipé de ROS2 pour la navigation autonome et la détection intelligente</p>
             <div class="doc-features">
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Navigation ROS2 & SLAM</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Vision IA embarquée</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Détection des déchets</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Communication ESP32</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Navigation ROS2 & SLAM</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Vision IA embarquée</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Détection des déchets</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Communication ESP32</div>
             </div>
             <a href="/2025-Team-IMSP-Docs/finale/rosmaster-x3" class="doc-btn">
-              <i data-lucide="book-open"></i>
+              <i class="fas fa-book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
           </div>
@@ -371,19 +370,19 @@
           <div class="doc-category-card conveyor animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
             <div class="doc-card-header">
               <div class="doc-icon-wrapper">
-                <i data-lucide="move-horizontal"></i>
+                <i class="fas fa-arrows-left-right"></i>
               </div>
               <h3>Système Convoyeur</h3>
             </div>
             <p class="doc-description">Convoyeur intelligent pour le tri et l'acheminement automatique des déchets collectés</p>
             <div class="doc-features">
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Tri automatisé</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Capteurs de détection</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Contrôle motorisé</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Synchronisation système</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Tri automatisé</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Capteurs de détection</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Contrôle motorisé</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Synchronisation système</div>
             </div>
             <a href="/2025-Team-IMSP-Docs/finale/convoyeur" class="doc-btn">
-              <i data-lucide="book-open"></i>
+              <i class="fas fa-book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
           </div>
@@ -392,19 +391,19 @@
           <div class="doc-category-card dofbot animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
             <div class="doc-card-header">
               <div class="doc-icon-wrapper">
-                <i data-lucide="cpu"></i>
+                <i class="fas fa-microchip"></i>
               </div>
               <h3>DofBot Jetson Nano</h3>
             </div>
             <p class="doc-description">Bras robotique 5 DOF piloté par Jetson Nano pour la manipulation précise des objets</p>
             <div class="doc-features">
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Contrôle 5 axes</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Vision caméra embarquée</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Préhension adaptative</div>
-              <div class="doc-feature"><i data-lucide="check-circle"></i> Interface ROS2</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Contrôle 5 axes</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Vision caméra embarquée</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Préhension adaptative</div>
+              <div class="doc-feature"><i class="fas fa-circle-check"></i> Interface ROS2</div>
             </div>
             <a href="/2025-Team-IMSP-Docs/finale/dofbot-jetson-nano" class="doc-btn">
-              <i data-lucide="book-open"></i>
+              <i class="fas fa-book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
           </div>
@@ -413,7 +412,7 @@
         <!-- Bannière d'information -->
         <div class="final-doc-banner animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
           <div class="banner-icon">
-            <i data-lucide="rocket"></i>
+            <i class="fas fa-rocket"></i>
           </div>
           <div class="banner-content">
             <h4>Prêt pour la finale !</h4>
@@ -421,12 +420,12 @@
           </div>
           <div class="banner-stats">
             <div class="stat">
-              <i data-lucide="zap"></i>
+              <i class="fas fa-bolt"></i>
               <span>100%</span>
               <small>Opérationnel</small>
             </div>
             <div class="stat">
-              <i data-lucide="calendar"></i>
+              <i class="fas fa-calendar-days"></i>
               <span>17 Jan</span>
               <small>Finale TRC</small>
             </div>
@@ -496,9 +495,9 @@
       <div class="footer-bottom">
         <p>&copy; 2025 TEAM IMSP • IMSP - Université d'Abomey-Calavi • Tous droits réservés</p>
         <p class="footer-tagline">
-          <i data-lucide="rocket"></i> Innovation • 
-          <i data-lucide="handshake"></i> Collaboration • 
-          <i data-lucide="trophy"></i> Excellence
+          <i class="fas fa-rocket"></i> Innovation • 
+          <i class="fas fa-handshake"></i> Collaboration • 
+          <i class="fas fa-trophy"></i> Excellence
         </p>
       </div>
     </section>
@@ -506,12 +505,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted } from 'vue'
 
 const menuOpen = ref(false)
 const openFaq = ref(null)
 
-// Load external resources and initialize Lucide icons
+// Load external resources
 onMounted(() => {
   // Load Animate.css
   if (!document.querySelector('link[href*="animate.css"]')) {
@@ -520,37 +519,6 @@ onMounted(() => {
     animateLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
     document.head.appendChild(animateLink)
   }
-
-  // Load Lucide Icons
-  if (!document.querySelector('script[src*="lucide"]')) {
-    const lucideScript = document.createElement('script')
-    lucideScript.src = 'https://unpkg.com/lucide@latest'
-    lucideScript.onload = () => {
-      // Initialize icons after script loads
-      setTimeout(() => {
-        if (window.lucide) {
-          window.lucide.createIcons()
-        }
-      }, 100)
-    }
-    document.head.appendChild(lucideScript)
-  } else {
-    // If script already exists, just initialize
-    setTimeout(() => {
-      if (window.lucide) {
-        window.lucide.createIcons()
-      }
-    }, 100)
-  }
-
-  // Réinitialiser toutes les 500ms pour s'assurer que toutes les icônes sont affichées
-  const reinitInterval = setInterval(() => {
-    if (window.lucide) {
-      window.lucide.createIcons()
-      // Arrêter après 3 secondes
-      setTimeout(() => clearInterval(reinitInterval), 3000)
-    }
-  }, 500)
 })
 
 const toggleMenu = () => {
@@ -563,42 +531,36 @@ const closeMenu = () => {
 
 const toggleFaq = (index) => {
   openFaq.value = openFaq.value === index ? null : index
-  // Réinitialiser les icônes Lucide après le rendu
-  nextTick(() => {
-    if (window.lucide) {
-      window.lucide.createIcons()
-    }
-  })
 }
 
 const faqs = [
   {
-    icon: 'bot',
+    icon: 'fas fa-robot',
     question: "Qu'est-ce que le TEKBOT Robotics Challenge (TRC) ?",
     answer: "Le TRC est une compétition internationale de robotique organisée au Bénin qui rassemble les meilleures équipes d'étudiants pour relever des défis techniques innovants. Le thème 2025 'Résilience Urbaine : Gestion Durable des Déchets' nous pousse à créer des solutions concrètes pour nos villes."
   },
   {
-    icon: 'users',
+    icon: 'fas fa-users',
     question: "Qui compose l'équipe TEAM IMSP ?",
     answer: "Notre équipe est composée de 10 étudiants passionnés de l'IMSP (Institut de Mathématiques et de Sciences Physiques), répartis en 3 pôles : IT (6 membres), Électronique (2 membres) et Mécanique (2 membres). Chaque membre apporte son expertise unique au projet."
   },
   {
-    icon: 'cpu',
+    icon: 'fas fa-microchip',
     question: "Quelles technologies utilisez-vous ?",
     answer: "Nous utilisons ROS2 pour la navigation autonome, des systèmes de vision IA pour la détection et le tri des déchets, le robot DofBot pour la manipulation, Arduino et ESP32 pour l'électronique embarquée, et SolidWorks pour la conception mécanique 3D."
   },
   {
-    icon: 'calendar',
+    icon: 'fas fa-calendar-days',
     question: "Quand et où aura lieu la compétition ?",
     answer: "La grande finale du TRC 2025 aura lieu le 10 juillet 2025 au Bénin. Les deux meilleures équipes s'affronteront en démonstration live de leurs systèmes robotiques devant un jury d'experts."
   },
   {
-    icon: 'trophy',
+    icon: 'fas fa-trophy',
     question: "Quels sont vos objectifs pour le TRC 2025 ?",
     answer: "Notre objectif principal est de décrocher le titre de champions du TRC 2025 en développant un système robotique performant, innovant et capable de gérer efficacement les déchets urbains. Nous visons l'excellence technique et la créativité."
   },
   {
-    icon: 'settings',
+    icon: 'fas fa-gear',
     question: "Comment le robot fonctionne-t-il ?",
     answer: "Notre robot navigue de manière autonome dans EcoCity, détecte et collecte les déchets grâce à la vision IA, les trie automatiquement selon leur type, et les distribue dans les zones de recyclage appropriées. Tout cela en 5 minutes chrono !"
   }
@@ -861,7 +823,7 @@ const faqs = [
 /* Contenu Hero */
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 60px;
   align-items: center;
   padding: 40px 5%;
@@ -887,7 +849,11 @@ const faqs = [
 
 .hero-title .highlight {
   color: #36c087;
-  display: inline;
+  display: block;
+}
+
+.hero-title .nowrap {
+  white-space: nowrap;
 }
 
 .hero-actions {
@@ -1006,7 +972,7 @@ const faqs = [
 .hero-image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 860px;
   transition: transform 0.5s ease;
 }
 
@@ -1016,7 +982,7 @@ const faqs = [
 
 .hero-image-bg {
   width: 100%;
-  max-width: 450px;
+  max-width: 800px;
   height: 0;
   padding-bottom: 100%;
   background: linear-gradient(

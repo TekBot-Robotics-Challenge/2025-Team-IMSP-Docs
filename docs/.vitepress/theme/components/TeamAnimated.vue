@@ -1,5 +1,4 @@
 <template>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <div class="team-container">
     <!-- Hero Simple -->
@@ -27,21 +26,25 @@
           class="member-card animate__animated animate__fadeInUp"
           :style="{ animationDelay: (index * 0.1) + 's' }"
         >
-          <div class="member-avatar">
-            <img :src="member.img" :alt="member.name" loading="lazy" />
+          <div class="member-photo-ring">
+            <div class="member-avatar">
+              <img :src="member.img" :alt="member.name" loading="lazy" />
+            </div>
           </div>
-          <h3 class="member-name">{{ member.name }}</h3>
-          <p class="member-role">{{ member.role }}</p>
-          <div class="member-links">
-            <a v-if="member.linkedin" :href="member.linkedin" target="_blank" title="LinkedIn">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a v-if="member.github" :href="member.github" target="_blank" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a v-if="member.email" :href="'mailto:' + member.email" title="Email">
-              <i class="fas fa-envelope"></i>
-            </a>
+          <div class="member-info">
+            <h3 class="member-name">{{ member.name }}</h3>
+            <p class="member-role">{{ member.role }}</p>
+            <div class="member-links">
+              <a v-if="member.linkedin" :href="member.linkedin" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a v-if="member.github" :href="member.github" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a v-if="member.email" :href="'mailto:' + member.email" title="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -56,14 +59,18 @@
       <p class="section-subtitle">Nous remercions nos anciens membres qui ont contribué au développement du TekBot.</p>
       
       <div class="former-member-card animate__animated animate__fadeInUp">
-        <div class="member-avatar">
-          <img src="/2025-Team-IMSP-Docs/Marus.jpg" alt="Marius HOUNKPETOHOU" loading="lazy" />
+        <div class="member-photo-ring">
+          <div class="member-avatar">
+            <img src="/2025-Team-IMSP-Docs/Marus.jpg" alt="Marius HOUNKPETOHOU" loading="lazy" />
+          </div>
         </div>
-        <h3 class="member-name">Marius HOUNKPETOHOU</h3>
-        <div class="member-links">
-          <a href="https://www.linkedin.com/in/mariushounkpetohou" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-          </a>
+        <div class="member-info">
+          <h3 class="member-name">Marius HOUNKPETOHOU</h3>
+          <div class="member-links">
+            <a href="https://www.linkedin.com/in/mariushounkpetohou" target="_blank" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -269,79 +276,125 @@ const poles = [
 .members-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 .member-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 2rem;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1.5rem;
   text-align: center;
-  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  transition: all 0.35s ease;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.member-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--vp-c-brand-1), #2ea574);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .member-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 12px 40px rgba(54, 192, 135, 0.15);
+}
+
+.member-card:hover::before {
+  opacity: 1;
+}
+
+/* Photo ring styled like reference image */
+.member-photo-ring {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #36c087, #2ea574, #667eea);
+  padding: 4px;
+  margin-bottom: 1.2rem;
+  flex-shrink: 0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.member-card:hover .member-photo-ring {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 6px rgba(54, 192, 135, 0.15);
 }
 
 .member-avatar {
-  width: 140px;
-  height: 140px;
-  margin: 0 auto 1.5rem;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid rgba(255, 255, 255, 0.1);
-  transition: border-color 0.3s;
-}
-
-.member-card:hover .member-avatar {
-  border-color: var(--vp-c-brand-1);
+  border: 3px solid var(--vp-c-bg);
+  background: var(--vp-c-bg-soft);
 }
 
 .member-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
+}
+
+.member-info {
+  width: 100%;
 }
 
 .member-name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0 0 0.5rem 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
   color: var(--vp-c-text-1);
+  letter-spacing: -0.01em;
 }
 
 .member-role {
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: var(--vp-c-brand-1);
+  font-weight: 600;
   margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .member-links {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.6rem;
 }
 
 .member-links a {
-  width: 36px;
-  height: 36px;
+  width: 34px;
+  height: 34px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
   color: var(--vp-c-text-2);
-  transition: all 0.3s;
+  transition: all 0.25s;
   text-decoration: none;
+  font-size: 0.95rem;
 }
 
 .member-links a:hover {
   background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
   color: white;
   transform: translateY(-2px);
 }
@@ -531,26 +584,29 @@ const poles = [
 }
 
 .former-member-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  padding: 2.5rem;
-  max-width: 300px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 20px;
+  padding: 2rem 1.5rem 1.5rem;
+  max-width: 280px;
   margin: 0 auto;
-  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.35s ease;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06);
 }
 
 .former-member-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-6px);
+  border-color: var(--vp-c-brand-1);
+  box-shadow: 0 12px 40px rgba(54, 192, 135, 0.15);
 }
 
-.former-member-card .member-avatar {
-  width: 180px;
-  height: 180px;
-  margin: 0 auto 1.5rem;
+.former-member-card .member-photo-ring {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1.2rem;
 }
 
 /* Responsive */
