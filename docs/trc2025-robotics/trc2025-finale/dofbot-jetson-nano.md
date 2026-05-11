@@ -210,7 +210,7 @@ Voici-ci dessous quelques images prises.
 ### Quelques images du dataset
 <table>
   <tr>
-    <td><img src="./dofbot-jetson-nano/image-1.png" width="200"></td>
+    <td><img src="./dofbot-jetson-nano/image.png" width="200"></td>
     <td><img src="./dofbot-jetson-nano/image-1.png" width="200"></td>
     <td><img src="./dofbot-jetson-nano/image-2.png" width="200"></td>
   </tr>
