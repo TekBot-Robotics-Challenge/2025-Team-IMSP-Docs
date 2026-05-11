@@ -139,7 +139,7 @@ Un **logement spécifique pour un moteur pas à pas NEMA 17** a été prévu, pe
 
 Enfin, la berne est équipée d’un **système de translation secondaire**, fixé au châssis du robot à l’aide de **vis M3**, garantissant une **fixation rigide**, un **bon alignement mécanique** et une **intégration stable** avec la structure du ROSMASTER X3.
 
-![Berne_2.png](systeme-rosmaster-x3/Berne_2.png)
+![Berne_2.png](./Berne_2.png)
 
 - **NEMA 17**
 
