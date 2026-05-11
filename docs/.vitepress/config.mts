@@ -104,6 +104,59 @@ export default defineConfig({
           }
         ]
       }
+      {
+  text: 'TRC 2025:La grande finale',
+  items: [
+    {
+      text: 'Accueil',
+      link: '/trc2025-robotics/index.md'
+    },
+    {
+      text: 'README',
+      link: '/trc2025-robotics/README.md'
+    },
+
+    {
+      text: 'Dofbot Jetson Nano',
+      items: [
+        {
+          text: 'Présentation Dofbot',
+          link: '/trc2025-robotics/trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md'
+        }
+      ]
+    },
+
+    {
+      text: 'Système ROSMASTER X3',
+      items: [
+        {
+          text: 'Système de collecte (global)',
+          link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/systeme-rosmaster.md'
+        },
+
+        {
+          text: 'Solutions mécaniques',
+          items: [
+            {
+              text: 'Solution 1 : Pince mécanique articulée',
+              link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-1-Pince-mécanique-articule.md'
+            },
+            {
+              text: 'Solution 2 : Pelle frontale + berne arrière',
+              link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-2-Pelle-frontale-avec-berne-arriere.md'
+            },
+            {
+              text: 'Solution 3 : Collecte en masse par canalisation (choisie)',
+              link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-3-Système-de-collecte-en-masse-à-canalisation.md'
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+
     ],
 
     socialLinks: [
