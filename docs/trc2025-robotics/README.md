@@ -36,7 +36,7 @@ Ce rapport présente comment notre équipe a relevé ce défi technique, transfo
 
 <aside>
 
-<img src="trc2025-finale/convoyeur.png" style="transform: rotate(-90deg); display: block; margin: 20px auto;">
+<img src="./trc2025-finale/convoyeur.png" style="transform: rotate(-90deg); display: block; margin: 20px auto;">
 
 [**SYSTÈME CONVOYEUR**](trc2025-finale/systeme-convoyeur.md)
 
