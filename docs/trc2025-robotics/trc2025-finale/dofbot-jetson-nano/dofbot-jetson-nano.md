@@ -1,6 +1,5 @@
 # DOFBOT JETSON NANO
-
-**[ACCUEIL](../README.md)  -                                                                                                               [SYSTEMES](../README.md)**                                                                                  
+                                                                       
 
 ## Abstract / Objectif
 
