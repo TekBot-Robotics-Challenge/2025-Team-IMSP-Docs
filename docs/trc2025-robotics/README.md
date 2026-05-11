@@ -12,7 +12,6 @@ Mais la collecte n'est que la première étape. Une fois les déchets acheminés
 
 Ce rapport présente comment notre équipe a relevé ce défi technique, transformant des composants électroniques et des lignes de code en une solution concrète pour l'environnement.
 
-![rosmaster.webp](trc2025-finale/rosmaster.webp)
 
 ---
 
@@ -20,7 +19,7 @@ Ce rapport présente comment notre équipe a relevé ce défi technique, transfo
 
 <aside>
 
-![JetsonDOFBOT-Yahboom_800x.webp](trc2025-finale/JetsonDOFBOT-Yahboom_800x.webp)
+![JetsonDOFBOT-Yahboom_800x.webp](trc2025-finale/dofbot-jetson-nano/JetsonDOFBOT-Yahboom_800x.webp)
 
 [**DOFBOT JETSON NANO**](trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md)
 
@@ -28,7 +27,7 @@ Ce rapport présente comment notre équipe a relevé ce défi technique, transfo
 
 <aside>
 
-![WhatsApp Image 2026-01-11 at 7.25.23 PM.jpeg](trc2025-finale/WhatsApp_Image_2026-01-11_at_7.25.23_PM.jpeg)
+![WhatsApp Image 2026-01-11 at 7.25.23 PM.jpeg](trc2025-finale/systeme-rosmaster-x3/WhatsApp_Image_2026-01-11_at_7.25.23_PM.jpeg)
 
 [SYSTEME ROSMASTER X3](trc2025-finale/systeme-rosmaster-x3/systeme-rosmaster.md)
 
