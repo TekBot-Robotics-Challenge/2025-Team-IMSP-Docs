@@ -88,8 +88,10 @@ class JoyTeleop(Node):
 		self.user_name = getpass.getuser()
 		self.linear_Gear = 1
 		self.angular_Gear = 1
+		self.last_qr_time = 0
 		
 		#create pub
+		self.cli_qr = self.create_client(Trigger, 'scan_qr')
 		self.pub_goal = self.create_publisher(GoalID,"move_base/cancel",10)
 		self.pub_cmdVel = self.create_publisher(Twist,'cmd_vel',  10)
 		# self.pub_Buzzer = self.create_publisher(Bool,"Buzzer",  1)
@@ -114,8 +116,8 @@ class JoyTeleop(Node):
 		# Print currently pressed buttons and active axes
 		active_buttons = [i for i, btn in enumerate(joy_data.buttons) if btn == 1]
 		active_axes = [i for i, axis in enumerate(joy_data.axes) if abs(axis) > 0.2]
-		# if active_buttons or active_axes:
-		# 	self.get_logger().info(f"Buttons: {active_buttons}, Axes: {active_axes}")
+		if active_buttons or active_axes:
+			self.get_logger().info(f"Buttons: {active_buttons}, Axes: {active_axes}")
 
 		if self.user_name == "root": self.user_jetson(joy_data)
 		else: self.user_pc(joy_data)
@@ -134,8 +136,6 @@ class JoyTeleop(Node):
 			elif self.angular_Gear == 1.0 / 4: self.angular_Gear = 1.0 / 2
 			elif self.angular_Gear == 1.0 / 2: self.angular_Gear = 3.0 / 4
 			elif self.angular_Gear == 3.0 / 4: self.angular_Gear = 1.0
-
-		
 
 		xlinear_speed = self.filter_data(joy_data.axes[1]) * self.xspeed_limit * self.linear_Gear
         # ylinear_speed = self.filter_data(joy_data.axes[2]) * self.yspeed_limit * self.linear_Gear
@@ -173,7 +173,15 @@ class JoyTeleop(Node):
 			print("Pressing R1 button ")
 
 		if joy_data.buttons[7] == 1:
-			print("Pressing R2 button ")
+			now = time.time()
+			if now - self.last_qr_time > 2.0:
+				self.last_qr_time = now
+				print("Pressing R2 button - Scanning QR")
+				if self.cli_qr.service_is_ready():
+					req = Trigger.Request()
+					self.cli_qr.call_async(req)
+				else:
+					self.get_logger().warn("QR Service not available")
 
 		# if joy_data.buttons[7] == 1:
 		# 	self.Buzzer_active=not self.Buzzer_active
