@@ -19,7 +19,7 @@ Son rôle principal est d'*identifier, saisir et trier automatiquement les déch
 - Communication robotique (ROS)
 - Calcul de position 3D dans l'espace du bras
 
-![JetsonDOFBOT-Yahboom_800x.webp](trc2025-finale/dofbot-jetson-nano/JetsonDOFBOT-Yahboom_800x.webp)
+![JetsonDOFBOT-Yahboom_800x.webp](./JetsonDOFBOT-Yahboom_800x.webp)
 
 ## **1. Spécifications Techniques**
 
@@ -210,19 +210,19 @@ Voici-ci dessous quelques images prises.
 ### Quelques images du dataset
 <table>
   <tr>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image.png" width="200"></td>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-1.png.png" width="200"></td>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-2.png" width="200"></td>
+    <td><img src="./image.png" width="200"></td>
+    <td><img src="./image-1.png.png" width="200"></td>
+    <td><img src="./image-2.png" width="200"></td>
   </tr>
   <tr>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-3.png" width="200"></td>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-4.png" width="200"></td>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-5.png" width="200"></td>
+    <td><img src="./image-3.png" width="200"></td>
+    <td><img src="./image-4.png" width="200"></td>
+    <td><img src="./image-5.png" width="200"></td>
   </tr>
   <tr>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-6.png" width="200"></td>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-7.png" width="200"></td>
-    <td><img src="trc2025-finale/dofbot-jetson-nano/image-8.png" width="200"></td>
+    <td><img src="./image-6.png" width="200"></td>
+    <td><img src="./image-7.png" width="200"></td>
+    <td><img src="./image-8.png" width="200"></td>
   </tr>
 </table>
 
@@ -885,7 +885,7 @@ L’objectif est de faire en sorte que le **bout réel de la pince** atteigne la
 
 Schéma cinématique du robot
 
-![DOFBOTSchemacinematique.png](trc2025-finale/dofbot-jetson-nano/DOFBOTSchemacinematique.png)
+![DOFBOTSchemacinematique.png](./DOFBOTSchemacinematique.png)
 
 ### Modélisation mathématique
 
@@ -917,7 +917,7 @@ $$
 
 - **Relation entre les repères 3 et 4 (rotation d’angle gamma) (R34)**
 
-![Repere34-min_(5).jpg](trc2025-finale/dofbot-jetson-nano/Repere34-min_(5).jpg)
+![Repere34-min_(5).jpg](./Repere34-min_(5).jpg)
 
 $$
 \begin{cases}-\vec{x}_4 = \cos\gamma\,\vec{y}_3 - \sin\gamma\,\vec{x}_3 \\\vec{y}_4 = \cos\gamma\,\vec{x}_3 + \sin\gamma\,\vec{y}_3\end{cases}
@@ -925,7 +925,7 @@ $$
 
 - **Relation entre les repères 2 et 3 (rotation d’angle β) (R23)**
 
-![Repere23.png](trc2025-finale/dofbot-jetson-nano/Repere23.png)
+![Repere23.png](./Repere23.png)
 
 $$
 \begin{cases}-\vec{x}_3 = \cos\beta\,\vec{y}_2 - \sin\beta\,\vec{x}_2 \\\vec{y}_3 = \cos\beta\,\vec{x}_2 + \sin\beta\,\vec{y}_2\end{cases}
@@ -933,7 +933,7 @@ $$
 
 - **Relation entre les repères 1 et 2 (rotation d’angle α) (R21)**
 
-![Repere12-min.png](trc2025-finale/dofbot-jetson-nano/Repere12-min.png)
+![Repere12-min.png](./Repere12-min.png)
 
 $$
 \begin{cases}-\vec{x}_2 = \cos\alpha\,\vec{y}_1 + \sin\alpha\,\vec{z}_1 \\\vec{y}_2 = -\cos\alpha\,\vec{z}_1 + \sin\alpha\,\vec{y}_1\end{cases}
@@ -941,7 +941,7 @@ $$
 
 - **Relations entre les repères 4 et 5 (R45)**
 
-![Repere45-min.png](trc2025-finale/dofbot-jetson-nano/Repere45-min.png)
+![Repere45-min.png](./Repere45-min.png)
 
 $$
 \begin{cases}\vec{z}_5 = -\vec{x}_4 \\\vec{y}_5 = \vec{y}_4\end{cases}
@@ -949,7 +949,7 @@ $$
 
 - **Relation entre le repère 5 et le repère 1 (angle θ\thetaθ) (R51)**
 
-![Repere15-min.png](trc2025-finale/dofbot-jetson-nano/Repere15-min.png)
+![Repere15-min.png](./Repere15-min.png)
 
 $$
 \begin{cases}\vec{z}_5 &= \sin \theta \, \vec{y}_1 - \cos \theta \, \vec{z}_1 \\\vec{y}_5 &= -\sin \theta \, \vec{z}_1 - \cos \theta \, \vec{y}_1\end{cases}
@@ -957,7 +957,7 @@ $$
 
 - **Relation entre repère 1 et 0 ( eta)**
 
-![Repere10-min.png](trc2025-finale/dofbot-jetson-nano/Repere10-min.png)
+![Repere10-min.png](./Repere10-min.png)
 
 $$
 \begin{cases}\vec{y}_1 = \cos\eta\,\vec{x}_0 + \sin\eta\,\vec{y}_0 \\\vec{z}_1 = \vec{z}_0\end{cases}
@@ -1887,33 +1887,33 @@ En se basant sur l’URDF officielle du DOFBOT, on distingue **six repères** su
 
 - **Repère 0 – `base_link`** : repère principal du robot, immobile, dans lequel sont exprimées les coordonnées des objets à saisir.
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%209.png)
+![image.png](./image%209.png)
 
 Pour rappel l’axe des x est en rouge, l’axe des y en bleu et l’axe des z en vert. 
 
 - **Repère 1** : situé au niveau du moteur de rotation de la base.
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2010.png)
+![image.png](./image%2010.png)
 
 - **Repère 2** : associé au premier moteur levant et au premier segment du bras.
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2011.png)
+![image.png](./image%2011.png)
 
 - **Repère 3** : associé au second moteur levant et au second segment du bras.
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2012.png)
+![image.png](./image%2012.png)
 
 - **Repère 4** : associé au troisième moteur levant et au troisième segment du bras.
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2013.png)
+![image.png](./image%2013.png)
 
 - **Repère 5** : associé au moteur commandant l’orientation de la pince.
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2014.png)
+![image.png](./image%2014.png)
 
 Les repères étant correctement définis, il est alors possible de dresser le **schéma cinématique global du robot**, utilisé pour l’écriture de la cinématique directe.
 
-![WhatsApp Image 2026-01-04 at 02.20.54.jpeg](trc2025-finale/dofbot-jetson-nano/WhatsApp_Image_2026-01-04_at_02.20.54.jpeg)
+![WhatsApp Image 2026-01-04 at 02.20.54.jpeg](./WhatsApp_Image_2026-01-04_at_02.20.54.jpeg)
 
 ### 5.4.4 Paramètres géométriques et notations
 
@@ -1942,13 +1942,13 @@ $$
 
  Figures géométrales de changement de repères entres les différentes bases .
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2015.png)
+![image.png](./image%2015.png)
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2015.png)
+![image.png](./image%2015.png)
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2016.png)
+![image.png](./image%2016.png)
 
-![image.png](trc2025-finale/dofbot-jetson-nano/image%2017.png)
+![image.png](./image%2017.png)
 
 Les expressions finales obtenues sont :
 
