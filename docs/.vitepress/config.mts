@@ -4,8 +4,10 @@ export default defineConfig({
   base: '/2025-Team-IMSP-Docs',
   title: "TEAM IMSP Docs",
   description: "IMSP TEAM Documentation for Tekbot Robotic Challenge 2025 about urban resilience",
+
   themeConfig: {
     logo: "/logo.svg",
+
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/coming-soon' },
@@ -13,7 +15,7 @@ export default defineConfig({
     ],
 
     sidebar: [
-       {
+      {
         text: 'Tests de Préselection',
         items: [
           {
@@ -21,8 +23,8 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Test 1', link: '/test-electro/test-one.md' },
-              { text: 'Test 2', link: '/test-electro/test-two.md'},
-              { text: 'Test 3', link: '/test-electro/test-three.md'}
+              { text: 'Test 2', link: '/test-electro/test-two.md' },
+              { text: 'Test 3', link: '/test-electro/test-three.md' }
             ]
           },
           {
@@ -30,50 +32,33 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'Test 1', link: '/test-it/test-one.md' },
-              { text: 'Test 2', link: '/test-it/test-two/index.md',
+              {
+                text: 'Test 2',
+                link: '/test-it/test-two/index.md',
                 items: [
-                  {
-                    text: 'Installation de ROS2 Humble',
-                    link: '/test-it/test-two/installation-ros2-humble.md'
-                  },
-                  {
-                    text: 'Creation de workspace',
-                    link: '/test-it/test-two/creation-workspace.md'
-                  },
-                  {
-                    text: 'Creation de package',
-                    link: '/test-it/test-two/creation-package.md'
-                  },
+                  { text: 'Installation de ROS2 Humble', link: '/test-it/test-two/installation-ros2-humble.md' },
+                  { text: 'Creation de workspace', link: '/test-it/test-two/creation-workspace.md' },
+                  { text: 'Creation de package', link: '/test-it/test-two/creation-package.md' }
                 ]
               },
-              { text: 'Test 3', link: '/test-it/test-three/index.md',
+              {
+                text: 'Test 3',
+                link: '/test-it/test-three/index.md',
                 items: [
-                  {
-                    text: 'Gazebo',
-                    link: '/test-it/test-three/gazebo.md'
-                  },
-                  {
-                    text: 'SLAM et slam_toolbox',
-                    link: '/test-it/test-three/slam_and_slam_toolbox.md'
-                  },
-                  {
-                    text: 'RViz2',
-                    link: '/test-it/test-three/RViz2.md'
-                  },
-                  {
-                    text: 'Nav2',
-                    link: '/test-it/test-three/Nav2.md'
-                  }
+                  { text: 'Gazebo', link: '/test-it/test-three/gazebo.md' },
+                  { text: 'SLAM et slam_toolbox', link: '/test-it/test-three/slam_and_slam_toolbox.md' },
+                  { text: 'RViz2', link: '/test-it/test-three/RViz2.md' },
+                  { text: 'Nav2', link: '/test-it/test-three/Nav2.md' }
                 ]
               }
             ]
           },
-           {
+          {
             text: 'Tests Mécanique',
             collapsed: true,
             items: [
               { text: 'Test 1', link: '/test-meca/test-one.md' },
-              { text: 'Test 2', link: '/test-meca/test-two.md',},
+              { text: 'Test 2', link: '/test-meca/test-two.md' },
               { text: 'Test 3', link: '/test-meca/test-three.md' }
             ]
           },
@@ -81,82 +66,84 @@ export default defineConfig({
             text: 'Test final',
             collapsed: true,
             items: [
-              { text: 'Test final', link: '/test-final/index.md',
-                items:[
+              {
+                text: 'Test final',
+                link: '/test-final/index.md',
+                items: [
                   { text: 'Partie IT', link: '/test-final/it/it-part.md' },
-                  { text: 'Partie Electro', link: '/test-final/electro/electro-part.md',
+                  {
+                    text: 'Partie Electro',
+                    link: '/test-final/electro/electro-part.md',
                     collapsed: true,
                     items: [
                       { text: 'Photodiode', link: '/test-final/electro/subpages/photodiode.md' },
                       { text: 'Utilité de la photorésistance dans le projet', link: '/test-final/electro/subpages/resistance_utility.md' },
-                      { text: 'S0/S1', link: '/test-final/electro/subpages/s0_s1.md' },
+                      { text: 'S0/S1', link: '/test-final/electro/subpages/s0_s1.md' }
                     ]
                   },
-                  { text: 'Partie Mécanique', link: '/test-final/meca/meca-part.md',
-                    items:[
+                  {
+                    text: 'Partie Mécanique',
+                    link: '/test-final/meca/meca-part.md',
+                    items: [
                       { text: 'Annexe', link: '/test-final/meca/annexe.md' },
-                      { text: 'Convoyeur pièces', link: '/test-final/meca/convoyeur_pieces.md' },
+                      { text: 'Convoyeur pièces', link: '/test-final/meca/convoyeur_pieces.md' }
                     ]
                   }
                 ]
+              }
+            ]
+          }
+        ]
+      },
+
+      {
+        text: 'TRC 2025:La grande finale',
+        items: [
+          {
+            text: 'Accueil',
+            link: '/trc2025-robotics/index.md'
+          },
+          {
+            text: 'README',
+            link: '/trc2025-robotics/README.md'
+          },
+          {
+            text: 'Dofbot Jetson Nano',
+            items: [
+              {
+                text: 'Présentation Dofbot',
+                link: '/trc2025-robotics/trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md'
+              }
+            ]
+          },
+          {
+            text: 'Système ROSMASTER X3',
+            items: [
+              {
+                text: 'Système de collecte (global)',
+                link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/systeme-rosmaster.md'
               },
+              {
+                text: 'Solutions mécaniques',
+                items: [
+                  {
+                    text: 'Solution 1 : Pince mécanique articulée',
+                    link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-1-Pince-mécanique-articule.md'
+                  },
+                  {
+                    text: 'Solution 2 : Pelle frontale + berne arrière',
+                    link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-2-Pelle-frontale-avec-berne-arriere.md'
+                  },
+                  {
+                    text: 'Solution 3 : Collecte en masse par canalisation (choisie)',
+                    link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-3-Système-de-collecte-en-masse-à-canalisation.md'
+                  }
+                ]
+              }
             ]
           }
         ]
       }
-      {
-  text: 'TRC 2025:La grande finale',
-  items: [
-    {
-      text: 'Accueil',
-      link: '/trc2025-robotics/index.md'
-    },
-    {
-      text: 'README',
-      link: '/trc2025-robotics/README.md'
-    },
-
-    {
-      text: 'Dofbot Jetson Nano',
-      items: [
-        {
-          text: 'Présentation Dofbot',
-          link: '/trc2025-robotics/trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md'
-        }
-      ]
-    },
-
-    {
-      text: 'Système ROSMASTER X3',
-      items: [
-        {
-          text: 'Système de collecte (global)',
-          link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/systeme-rosmaster.md'
-        },
-
-        {
-          text: 'Solutions mécaniques',
-          items: [
-            {
-              text: 'Solution 1 : Pince mécanique articulée',
-              link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-1-Pince-mécanique-articule.md'
-            },
-            {
-              text: 'Solution 2 : Pelle frontale + berne arrière',
-              link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-2-Pelle-frontale-avec-berne-arriere.md'
-            },
-            {
-              text: 'Solution 3 : Collecte en masse par canalisation (choisie)',
-              link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-3-Système-de-collecte-en-masse-à-canalisation.md'
-            }
-          ]
-        }
-      ]
-    }
-  ]
-}
-
-
     ],
 
     socialLinks: [
