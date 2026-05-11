@@ -5,12 +5,19 @@ export default defineConfig({
   title: "TEAM IMSP Docs",
   description: "IMSP TEAM Documentation for Tekbot Robotic Challenge 2025 about urban resilience",
 
+  head: [
+    ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', crossorigin: 'anonymous' }],
+  ],
+
+  markdown: {
+    math: true
+  },
+
   themeConfig: {
     logo: "/logo.svg",
 
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'About', link: '/coming-soon' },
       { text: 'Team', link: '/team' },
     ],
 
@@ -142,6 +149,22 @@ export default defineConfig({
               }
             ]
           }
+        ]
+      },
+      {
+        text: 'Documentation Finale',
+        items: [
+          { text: 'Vue d\'ensemble', link: '/finale/' },
+          { text: 'Rosmaster X3', link: '/finale/rosmaster-x3',
+            collapsed: true,
+            items: [
+              { text: 'Solution 1 : Pince articulée', link: '/finale/solution-1' },
+              { text: 'Solution 2 : Pelle frontale', link: '/finale/solution-2' },
+              { text: 'Solution 3 : Canalisation arrière', link: '/finale/solution-3' },
+            ]
+          },
+          { text: 'Système Convoyeur', link: '/finale/convoyeur' },
+          { text: 'DofBot Jetson Nano', link: '/finale/dofbot-jetson-nano' }
         ]
       }
     ],
