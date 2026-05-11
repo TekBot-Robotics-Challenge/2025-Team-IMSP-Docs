@@ -22,7 +22,7 @@ Ce rapport présente comment notre équipe a relevé ce défi technique, transfo
 
 ![JetsonDOFBOT-Yahboom_800x.webp](trc2025-finale/JetsonDOFBOT-Yahboom_800x.webp)
 
-[**DOFBOT JETSON NANO**](trc2025-finale/dofbot-jetson-nano.md)
+[**DOFBOT JETSON NANO**](trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md)
 
 </aside>
 
@@ -30,7 +30,7 @@ Ce rapport présente comment notre équipe a relevé ce défi technique, transfo
 
 ![WhatsApp Image 2026-01-11 at 7.25.23 PM.jpeg](trc2025-finale/WhatsApp_Image_2026-01-11_at_7.25.23_PM.jpeg)
 
-[SYSTEME ROSMASTER X3](trc2025-finale/systeme-rosmaster.md)
+[SYSTEME ROSMASTER X3](trc2025-finale/systeme-rosmaster-x3/systeme-rosmaster.md)
 
 </aside>
 

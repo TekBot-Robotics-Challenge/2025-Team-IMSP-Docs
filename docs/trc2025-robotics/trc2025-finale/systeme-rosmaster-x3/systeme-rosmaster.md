@@ -298,7 +298,7 @@ Cette pièce constitue le **support principal** du système de trappe et sert de
 Fabriquée en **contreplaqué**, cette pièce sert de **surface de contact** lors de la mise en mouvement du système de ramassage, permettant un **guidage précis et sécurisé** de la trappe.
 <br clear="right">
 
-<img src="systeme-rosmaster-x3/Trappe_part_3-1.png" align="right" width="300" style="margin-left: 30px;">
+<img src="./Trappe_part_3-1.png" align="right" width="300" style="margin-left: 30px;">
 
 - **Pièce 3 – Pièce d’attache [PLA]**
 
