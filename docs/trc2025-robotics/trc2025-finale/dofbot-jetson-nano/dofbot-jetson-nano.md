@@ -1887,29 +1887,29 @@ En se basant sur l’URDF officielle du DOFBOT, on distingue **six repères** su
 
 - **Repère 0 – `base_link`** : repère principal du robot, immobile, dans lequel sont exprimées les coordonnées des objets à saisir.
 
-![image.png](./image%209.png)
+![image.png](./image-9.png)
 
 Pour rappel l’axe des x est en rouge, l’axe des y en bleu et l’axe des z en vert. 
 
 - **Repère 1** : situé au niveau du moteur de rotation de la base.
 
-![image.png](./image%2010.png)
+![image.png](./image-10.png)
 
 - **Repère 2** : associé au premier moteur levant et au premier segment du bras.
 
-![image.png](./image%2011.png)
+![image.png](./image-11.png)
 
 - **Repère 3** : associé au second moteur levant et au second segment du bras.
 
-![image.png](./image%2012.png)
+![image.png](./image-12.png)
 
 - **Repère 4** : associé au troisième moteur levant et au troisième segment du bras.
 
-![image.png](./image%2013.png)
+![image.png](./image-13.png)
 
 - **Repère 5** : associé au moteur commandant l’orientation de la pince.
 
-![image.png](./image%2014.png)
+![image.png](./image-14.png)
 
 Les repères étant correctement définis, il est alors possible de dresser le **schéma cinématique global du robot**, utilisé pour l’écriture de la cinématique directe.
 
@@ -1942,13 +1942,12 @@ $$
 
  Figures géométrales de changement de repères entres les différentes bases .
 
-![image.png](./image%2015.png)
 
-![image.png](./image%2015.png)
+![image.png](./image-15.png)
 
-![image.png](./image%2016.png)
+![image.png](./image-16.png)
 
-![image.png](./image%2017.png)
+![image.png](./image-17.png)
 
 Les expressions finales obtenues sont :
 
