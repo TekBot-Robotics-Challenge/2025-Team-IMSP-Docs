@@ -31,7 +31,7 @@ Lors des phases de test précédentes, plusieurs points critiques ont été iden
 
 
 
-<img src="convoyeur.png" style="transform: rotate(-90deg); display: block; margin: 20px auto;">
+<img src="./convoyeur.png" style="transform: rotate(-90deg); display: block; margin: 20px auto;">
 
 Pour pallier ces défauts, une refonte partielle de la structure a été opérée :
 
