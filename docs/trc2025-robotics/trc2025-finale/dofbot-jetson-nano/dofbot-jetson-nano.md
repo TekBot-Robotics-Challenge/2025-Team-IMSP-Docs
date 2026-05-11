@@ -211,7 +211,7 @@ Voici-ci dessous quelques images prises.
 <table>
   <tr>
     <td><img src="./image.png" width="200"></td>
-    <td><img src="./image-1.png.png" width="200"></td>
+    <td><img src="./image-1.png" width="200"></td>
     <td><img src="./image-2.png" width="200"></td>
   </tr>
   <tr>
