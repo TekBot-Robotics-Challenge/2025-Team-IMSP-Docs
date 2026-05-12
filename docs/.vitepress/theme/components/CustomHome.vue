@@ -335,26 +335,6 @@
       </div>
     </section>
 
-    <!-- Section Résultat Final - Vidéo -->
-    <section class="video-result-section">
-      <div class="section-container">
-        <div class="section-header animate__animated animate__fadeIn">
-          <span class="section-tag"><i class="fas fa-play-circle"></i> DÉMONSTRATION LIVE</span>
-          <h2 class="section-title">Notre Résultat Final</h2>
-          <p class="section-desc">Découvrez notre système robotique intégré en action lors de la grande finale TRC 2025</p>
-        </div>
-        <div class="video-player-wrapper animate__animated animate__fadeInUp">
-          <iframe
-            src="https://player.vimeo.com/video/1190665279?badge=0&autopause=0&player_id=0&app_id=58479"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
-            allowfullscreen
-            title="Résultat Final TRC 2025 - Team IMSP"
-          ></iframe>
-        </div>
-      </div>
-    </section>
-
     <!-- Documentation Finale Section -->
     <section class="final-doc-section">
       <div class="section-container">
@@ -450,6 +430,26 @@
               <small>Finale TRC</small>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Résultat Final - Vidéo -->
+    <section class="video-result-section">
+      <div class="section-container">
+        <div class="section-header animate__animated animate__fadeIn">
+          <span class="section-tag"><i class="fas fa-play-circle"></i> DÉMONSTRATION LIVE</span>
+          <h2 class="section-title">Notre Résultat Final</h2>
+          <p class="section-desc">Découvrez notre système robotique intégré en action lors de la grande finale TRC 2025</p>
+        </div>
+        <div class="video-player-wrapper animate__animated animate__fadeInUp">
+          <iframe
+            src="https://player.vimeo.com/video/1190665279?badge=0&autopause=0&player_id=0&app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            allowfullscreen
+            title="Résultat Final TRC 2025 - Team IMSP"
+          ></iframe>
         </div>
       </div>
     </section>
@@ -2331,15 +2331,15 @@ a.pole-item {
 
 .final-doc-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
-  margin: 4rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
 }
 
 .doc-category-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-  border-radius: 24px;
-  padding: 2.5rem;
+  border-radius: 16px;
+  padding: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
   transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -2399,20 +2399,21 @@ a.pole-item {
 .doc-card-header {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .doc-icon-wrapper {
-  width: 70px;
-  height: 70px;
-  border-radius: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2rem;
+  font-size: 1.4rem;
   position: relative;
   transition: all 0.4s ease;
+  flex-shrink: 0;
 }
 
 .doc-category-card.it .doc-icon-wrapper {

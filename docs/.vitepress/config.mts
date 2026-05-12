@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // Sidebar partagée : tests de présélection + test final + lien vers la finale
 const realisationsSidebar = [
   {
-    text: '⚡ Tests Électronique',
+    text: 'Tests Électronique',
     collapsed: false,
     items: [
       { text: 'Test 1', link: '/test-electro/test-one' },
@@ -12,7 +12,7 @@ const realisationsSidebar = [
     ]
   },
   {
-    text: '💻 Tests Informatique',
+    text: 'Tests Informatique',
     collapsed: false,
     items: [
       { text: 'Test 1', link: '/test-it/test-one' },
@@ -40,7 +40,7 @@ const realisationsSidebar = [
     ]
   },
   {
-    text: '⚙️ Tests Mécanique',
+    text: 'Tests Mécanique',
     collapsed: false,
     items: [
       { text: 'Test 1', link: '/test-meca/test-one' },
@@ -49,7 +49,7 @@ const realisationsSidebar = [
     ]
   },
   {
-    text: '🏁 Test Final',
+    text: 'Test Final',
     collapsed: false,
     items: [
       {
@@ -78,7 +78,7 @@ const realisationsSidebar = [
     ]
   },
   {
-    text: '🏆 Grande Finale TRC 2025',
+    text: 'Grande Finale TRC 2025',
     collapsed: false,
     items: [
       { text: 'Vue d\'ensemble', link: '/finale/' },
@@ -92,7 +92,7 @@ const realisationsSidebar = [
 // Sidebar de la section Grande Finale
 const finaleSidebar = [
   {
-    text: '🏆 Grande Finale TRC 2025',
+    text: 'Grande Finale TRC 2025',
     items: [
       { text: 'Vue d\'ensemble', link: '/finale/' },
       {
@@ -110,7 +110,7 @@ const finaleSidebar = [
     ]
   },
   {
-    text: '← Tests de Présélection',
+    text: 'Tests de Présélection',
     collapsed: true,
     items: [
       { text: 'Tests Électronique', link: '/test-electro/test-one' },
