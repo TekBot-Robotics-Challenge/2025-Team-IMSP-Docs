@@ -439,7 +439,7 @@
       <div class="footer-content">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="/2025-Team-IMSP-Docs/logo.svg" alt="IMSP Logo" class="footer-logo-img" />
+            <img src="/logo.svg" alt="IMSP Logo" class="footer-logo-img" />
             <h3>TEAM IMSP</h3>
           </div>
           <p class="footer-desc">
