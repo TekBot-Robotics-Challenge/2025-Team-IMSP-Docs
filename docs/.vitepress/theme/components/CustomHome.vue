@@ -82,7 +82,7 @@
               <span>Documentation</span>
             </a>
             <a href="https://trc.tekbot.io/trc-2025/" class="btn-secondary">
-              <i class="fas fa-arrow-right"></i>
+             
               <span>En savoir plus</span>
             </a>
           </div>
@@ -595,18 +595,7 @@ const faqs = [
   max-width: 100vw;
 }
 
-/* Décoration de fond */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 15%;
-  left: 5%;
-  width: 120px;
-  height: 120px;
-  background: rgba(139, 140, 234, 0.3);
-  border-radius: 50%;
-  z-index: 1;
-}
+
 
 .hero-section::after {
   content: "";
