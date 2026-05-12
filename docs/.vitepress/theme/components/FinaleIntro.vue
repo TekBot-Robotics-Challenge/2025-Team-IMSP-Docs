@@ -1,4 +1,8 @@
-﻿<template>
+﻿<script setup>
+import { withBase } from 'vitepress'
+</script>
+
+<template>
   <div class="finale-intro">
     <div class="intro-content">
       <div class="intro-text">
@@ -11,7 +15,7 @@
         <p>Ce rapport pr├®sente comment notre ├®quipe a relev├® ce d├®fi technique, transformant des composants ├®lectroniques et des lignes de code en une solution concr├¿te pour l'environnement.</p>
       </div>
       <div class="intro-image">
-        <img src="/2025-Team-IMSP-Docs/finale/assets/rosmaster.webp" alt="Rosmaster X3" />
+        <img :src="withBase('/finale/assets/rosmaster.webp')" alt="Rosmaster X3" />
       </div>
     </div>
   </div>
@@ -20,17 +24,17 @@
 
   <div class="architecture-grid">
     <a href="/2025-Team-IMSP-Docs/finale/dofbot-jetson-nano" class="arch-card">
-      <img src="/2025-Team-IMSP-Docs/finale/assets/JetsonDOFBOT-Yahboom_800x.webp" alt="DOFBOT JETSON NANO" />
+      <img :src="withBase('/finale/assets/JetsonDOFBOT-Yahboom_800x.webp')" alt="DOFBOT JETSON NANO" />
       <span class="arch-link">DOFBOT JETSON NANO</span>
     </a>
     
     <a href="/2025-Team-IMSP-Docs/finale/rosmaster-x3" class="arch-card">
-      <img src="/2025-Team-IMSP-Docs/finale/assets/WhatsApp_Image_2026-01-11_at_7.25.23_PM.jpeg" alt="SYSTEME ROSMASTER X3" />
+      <img :src="withBase('/finale/assets/WhatsApp_Image_2026-01-11_at_7.25.23_PM.jpeg')" alt="SYSTEME ROSMASTER X3" />
       <span class="arch-link">SYSTEME ROSMASTER X3</span>
     </a>
     
     <a href="/2025-Team-IMSP-Docs/finale/convoyeur" class="arch-card">
-      <img src="/2025-Team-IMSP-Docs/finale/assets/13c5eeda-cbfa-4074-9289-348db2985a0d.png" alt="SYST├êME CONVOYEUR" />
+      <img :src="withBase('/finale/assets/13c5eeda-cbfa-4074-9289-348db2985a0d.png')" alt="SYST\u00caME CONVOYEUR" />
       <span class="arch-link">SYST├êME CONVOYEUR</span>
     </a>
   </div>

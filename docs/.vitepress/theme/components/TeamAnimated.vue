@@ -61,7 +61,7 @@
       <div class="former-member-card animate__animated animate__fadeInUp">
         <div class="member-photo-ring">
           <div class="member-avatar">
-            <img src="/2025-Team-IMSP-Docs/Marus.jpg" alt="Marius HOUNKPETOHOU" loading="lazy" />
+            <img :src="withBase('/Marus.jpg')" alt="Marius HOUNKPETOHOU" loading="lazy" />
           </div>
         </div>
         <div class="member-info">
@@ -80,7 +80,7 @@
       <div class="footer-content">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="/2025-Team-IMSP-Docs/logo.svg" alt="IMSP Logo" class="footer-logo-img" />
+            <img :src="withBase('/logo.svg')" alt="IMSP Logo" class="footer-logo-img" />
             <h3>TEAM IMSP</h3>
           </div>
           <p class="footer-desc">
@@ -146,6 +146,7 @@
 </template>
 
 <script setup>
+import { withBase } from 'vitepress'
 const poles = [
   {
     name: 'Pôle IT',

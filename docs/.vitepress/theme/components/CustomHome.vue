@@ -6,7 +6,7 @@
       <nav class="custom-nav">
         <div class="logo animate__animated animate__fadeInDown">
           <img
-            src="/2025-Team-IMSP-Docs/logo.svg"
+            :src="withBase('/logo.svg')"
             alt="Logo"
             class="logo-img"
           />
@@ -92,7 +92,7 @@
           <div class="hero-image-wrapper animate__animated animate__fadeInRight animate__delay-1s">
             <div class="hero-image-bg"></div>
             <img
-              src="/2025-Team-IMSP-Docs/IMSP_TEAM.png"
+              :src="withBase('/IMSP_TEAM.png')"
               alt="IMSP Team"
               class="hero-image"
             />
@@ -439,7 +439,7 @@
       <div class="footer-content">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="/2025-Team-IMSP-Docs/logo.svg" alt="IMSP Logo" class="footer-logo-img" />
+            <img :src="withBase('/logo.svg')" alt="IMSP Logo" class="footer-logo-img" />
             <h3>TEAM IMSP</h3>
           </div>
           <p class="footer-desc">
@@ -506,6 +506,7 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { withBase } from 'vitepress'
 
 const menuOpen = ref(false)
 const openFaq = ref(null)

@@ -913,7 +913,7 @@ Nous avons partitionné le code final en plusieurs sous codes pour faciliter la 
 
 **Code principal**
 
-```arduino
+```cpp
 /* Inclusion des bibliothèques */
 
 //Contrôle des moteurs pas à pas

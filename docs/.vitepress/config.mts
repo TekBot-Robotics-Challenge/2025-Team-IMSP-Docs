@@ -4,6 +4,7 @@ export default defineConfig({
   base: '/2025-Team-IMSP-Docs',
   title: "TEAM IMSP Docs",
   description: "IMSP TEAM Documentation for Tekbot Robotic Challenge 2025 about urban resilience",
+  ignoreDeadLinks: true,
 
   head: [
     ['link', { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css', crossorigin: 'anonymous' }],
