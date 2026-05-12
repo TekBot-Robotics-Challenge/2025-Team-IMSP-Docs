@@ -2319,7 +2319,10 @@ a.pole-item {
 
 .final-doc-section .section-header .section-tag,
 .final-doc-section .section-title,
-.final-doc-section .section-desc {
+.final-doc-section .section-desc,
+.video-result-section .section-tag,
+.video-result-section .section-title,
+.video-result-section .section-desc {
   color: white;
 }
 
