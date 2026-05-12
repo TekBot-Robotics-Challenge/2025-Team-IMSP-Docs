@@ -1,24 +1,24 @@
----
+ï»¿---
 outline: deep
 ---
 
 # DOFBOT JETSON NANO
 
-[**ACCUEIL**](/2025-Team-IMSP-Docs/finale/) | [**SYSTEMES**](/2025-Team-IMSP-Docs/finale/#architecture-du-système)
+[**ACCUEIL**](/2025-Team-IMSP-Docs/finale/) | [**SYSTEMES**](/2025-Team-IMSP-Docs/finale/#architecture-du-systÃ¨me)
 
 ---
 
 ## Abstract / Objectif
 
-Au cœur de notre dispositif, le bras robotique **DOFBOT** orchestre les opérations de manipulation et de tri. Cette unité articulée à **5 degrés de liberté**, dotée d'une pince haute précision, est pilotée par un système de vision par ordinateur s'appuyant sur l'architecture **YOLO**. Cette synergie entre mécanique et intelligence artificielle permet une identification instantanée et un tri sélectif rigoureux des flux de déchets.
+Au cÅ“ur de notre dispositif, le bras robotiqueÂ **DOFBOT**Â orchestre les opÃ©rations de manipulation et de tri. Cette unitÃ© articulÃ©e Ã Â **5 degrÃ©s de libertÃ©**, dotÃ©e d'une pince haute prÃ©cision, est pilotÃ©e par un systÃ¨me de vision par ordinateur s'appuyant sur l'architectureÂ **YOLO**. Cette synergie entre mÃ©canique et intelligence artificielle permet une identification instantanÃ©e et un tri sÃ©lectif rigoureux des flux de dÃ©chets.
 
 ## Introduction
 
-Dans le cadre du **TEKBOT Robotics Challenge 2025 (TRC25)**, le projet ***EcoCity*** vise à simuler un système intelligent de gestion des déchets urbains reposant sur la robotique collaborative et la vision artificielle.
+Dans le cadre du **TEKBOT Robotics Challenge 2025 (TRC25)**, le projet ***EcoCity*** vise Ã  simuler un systÃ¨me intelligent de gestion des dÃ©chets urbains reposant sur la robotique collaborative et la vision artificielle.
 
-Le ***DOFBOT Jetson Nano*** constitue un élément central de ce système. Il est utilisé comme **bras robotique** intelligent de tri automatique, intégré au niveau de la ***station de tri***, en interaction directe avec un robot mobile collecteur et un convoyeur de déchets.
+Le ***DOFBOT Jetson Nano*** constitue un Ã©lÃ©ment central de ce systÃ¨me. Il est utilisÃ© comme **bras robotique** intelligent de tri automatique, intÃ©grÃ© au niveau de la ***station de tri***, en interaction directe avec un robot mobile collecteur et un convoyeur de dÃ©chets.
 
-Son rôle principal est d'*identifier, saisir et trier automatiquement les déchets* en fonction de leur catégorie, grâce à une combinaison de :
+Son rÃ´le principal est d'*identifier, saisir et trier automatiquement les dÃ©chets* en fonction de leur catÃ©gorie, grÃ¢ce Ã  une combinaison de :
 
 - Vision par ordinateur (YOLOv8)
 - Planification de mouvements (MoveIt)
@@ -27,152 +27,152 @@ Son rôle principal est d'*identifier, saisir et trier automatiquement les déchet
 
 ![JetsonDOFBOT-Yahboom_800x.webp](./assets/dofbot-jetson-nano/JetsonDOFBOT-Yahboom_800x.webp)
 
-## **1. Spécifications Techniques**
+## **1. SpÃ©cifications Techniques**
 
-| Caractéristiques | Valeur |
+| CaractÃ©ristiques | Valeur |
 | --- | --- |
-| Degrés de liberté | **6 DOF** (5 articulations + 1 pince motorisée) |
-| Charge utile | **200g** (poids levable bras tendu) / **500g** (poids max en manipulation/pince) |
-| Rayon d'action | Environ **350 mm** (portée maximale du bras) / Rayon efficace de **300 mm** |
-| Précision | **±0,5 mm** (répétabilité de positionnement) |
-| Unité de calcul | **NVIDIA Jetson Nano 4GB** (CPU Quad-core A57 + GPU Maxwell 128 cœurs) |
-| Framework | **ROS** (Robot Operating System), **Python 3**, OpenCV, MediaPipe |
-| Vision  | Caméra **HD USB (0.3 MP)** grand angle avec traitement d'image IA en temps réel |
-| Temps de cycle | **Variable** (dépend de l'algorithme d'IA utilisé ; les servos bus sont rapides avec une réponse fluide |
+| DegrÃ©s de libertÃ© | **6 DOF**Â (5 articulations + 1 pince motorisÃ©e) |
+| Charge utile | **200g**Â (poids levable bras tendu) /Â **500g**Â (poids max en manipulation/pince) |
+| Rayon d'action | EnvironÂ **350 mm**Â (portÃ©e maximale du bras) / Rayon efficace deÂ **300 mm** |
+| PrÃ©cision | **Â±0,5 mm**Â (rÃ©pÃ©tabilitÃ© de positionnement) |
+| UnitÃ© de calcul | **NVIDIA Jetson Nano 4GB**Â (CPU Quad-core A57 + GPU Maxwell 128 cÅ“urs) |
+| Framework | **ROS**Â (Robot Operating System),Â **Python 3**, OpenCV, MediaPipe |
+| Vision  | CamÃ©raÂ **HD USB (0.3 MP)**Â grand angle avec traitement d'image IA en temps rÃ©el |
+| Temps de cycle | **Variable**Â (dÃ©pend de l'algorithme d'IA utilisÃ© ; les servos bus sont rapides avec une rÃ©ponse fluide |
 
-## 2. Mise en place matérielle et logicielle
+## 2. Mise en place matÃ©rielle et logicielle
 
-### 2.1 Réception et assemblage du DOFBOT
+### 2.1 RÃ©ception et assemblage du DOFBOT
 
-Après la réception du kit **DOFBOT Jetson Nano (Yahboom)**, les opérations suivantes ont été réalisées :
+AprÃ¨s la rÃ©ception du kit **DOFBOT Jetson Nano (Yahboom)**, les opÃ©rations suivantes ont Ã©tÃ© rÃ©alisÃ©es :
 
-### **a. Assemblage mécanique**
+### **a. Assemblage mÃ©canique**
 
-- Vérification de l’ensemble des composants :
-    - structure mécanique,
+- VÃ©rification de lâ€™ensemble des composants :
+    - structure mÃ©canique,
     - servomoteurs,
-    - carte d’extension,
-    - pince de préhension,
-    - caméra.
-- Montage complet du bras robotique conformément à la **documentation officielle Yahboom**.
-- Vérification du câblage et de la fixation des articulations.
+    - carte dâ€™extension,
+    - pince de prÃ©hension,
+    - camÃ©ra.
+- Montage complet du bras robotique conformÃ©ment Ã  la **documentation officielle Yahboom**.
+- VÃ©rification du cÃ¢blage et de la fixation des articulations.
 
 ### **b. Installation du Jetson Nano**
 
-- Configuration du système d’exploitation JetPack.
-- Connexion réseau et mise à jour du système.
-- Installation des dépendances nécessaires au projet, notamment :
+- Configuration du systÃ¨me dâ€™exploitation JetPack.
+- Connexion rÃ©seau et mise Ã  jour du systÃ¨me.
+- Installation des dÃ©pendances nÃ©cessaires au projet, notamment :
     - Python 3,
     - ROS,
-    - bibliothèques de vision et d’IA (Ultralytics, OpenCV),
-    - bibliothèques spécifiques au DOFBOT (Arm_lib).
+    - bibliothÃ¨ques de vision et dâ€™IA (Ultralytics, OpenCV),
+    - bibliothÃ¨ques spÃ©cifiques au DOFBOT (Arm_lib).
 
 ### 2.2 Tests fonctionnels de base
 
-Avant le développement des modules intelligents, plusieurs tests ont été effectués :
+Avant le dÃ©veloppement des modules intelligents, plusieurs tests ont Ã©tÃ© effectuÃ©s :
 
-- Test de communication entre le Jetson Nano et la carte de contrôle du DOFBOT.
+- Test de communication entre le Jetson Nano et la carte de contrÃ´le du DOFBOT.
 - Calibration des servomoteurs.
 - Test individuel de chaque articulation :
     - rotation de la base,
-    - élévation du bras,
+    - Ã©lÃ©vation du bras,
     - flexion,
     - ouverture et fermeture de la pince.
 
-Ces tests ont permis de **valider l’intégrité matérielle** et de garantir une base stable pour la suite du développement.
+Ces tests ont permis de **valider lâ€™intÃ©gritÃ© matÃ©rielle** et de garantir une base stable pour la suite du dÃ©veloppement.
 
-## 3. Architecture globale du système de tri
+## 3. Architecture globale du systÃ¨me de tri
 
-Le système de tri intelligent repose sur trois sous-systèmes principaux :
+Le systÃ¨me de tri intelligent repose sur trois sous-systÃ¨mes principaux :
 
-### 3.1 Convoyeur de déchets
+### 3.1 Convoyeur de dÃ©chets
 
-- Conçu et fabriqué par les équipes.
-- Transporte les déchets jusqu’à la zone de détection située sous la caméra du DOFBOT.
-- Sert de déclencheur pour la phase de détection.
+- ConÃ§u et fabriquÃ© par les Ã©quipes.
+- Transporte les dÃ©chets jusquâ€™Ã  la zone de dÃ©tection situÃ©e sous la camÃ©ra du DOFBOT.
+- Sert de dÃ©clencheur pour la phase de dÃ©tection.
 
 ### 3.2 Bras robotique DOFBOT Jetson Nano
 
-- Équipé d’une caméra embarquée.
-- Réalise la détection, la saisie et le dépôt des déchets.
-- Exécute les trajectoires calculées par MoveIt.
+- Ã‰quipÃ© dâ€™une camÃ©ra embarquÃ©e.
+- RÃ©alise la dÃ©tection, la saisie et le dÃ©pÃ´t des dÃ©chets.
+- ExÃ©cute les trajectoires calculÃ©es par MoveIt.
 
 ### 3.3 Corbeilles de tri
 
-Trois corbeilles colorées représentent les catégories de déchets :
+Trois corbeilles colorÃ©es reprÃ©sentent les catÃ©gories de dÃ©chets :
 
-- **Bleue** : déchets ménagers
-- **Verte** : déchets recyclables
-- **Rouge** : déchets dangereux
+- **Bleue** : dÃ©chets mÃ©nagers
+- **Verte** : dÃ©chets recyclables
+- **Rouge** : dÃ©chets dangereux
 
 ## 4. Missions fonctionnelles du DOFBOT
 
-Le DOFBOT exécute les tâches suivantes de manière autonome :
+Le DOFBOT exÃ©cute les tÃ¢ches suivantes de maniÃ¨re autonome :
 
-1. **Réception du déchet**
-    - Détection de la présence d’un objet sous la caméra.
+1. **RÃ©ception du dÃ©chet**
+    - DÃ©tection de la prÃ©sence dâ€™un objet sous la camÃ©ra.
     - Synchronisation avec le convoyeur.
-2. **Identification du type de déchet**
-    - Acquisition d’images via la caméra.
-    - Classification à l’aide d’un modèle **YOLOv8**.
-3. **Détermination de la position de l’objet**
+2. **Identification du type de dÃ©chet**
+    - Acquisition dâ€™images via la camÃ©ra.
+    - Classification Ã  lâ€™aide dâ€™un modÃ¨le **YOLOv8**.
+3. **DÃ©termination de la position de lâ€™objet**
     - Utilisation de **YOLOv8 OBB (Oriented Bounding Boxes)** pour obtenir :
         - la position dans le plan (X, Y),
-        - l’orientation de l’objet,
-    - Estimation de la distance (axe Z) à partir du principe de la distance focale.
-4. **Planification et exécution du mouvement**
-    - Génération de trajectoires avec **MoveIt**.
-    - Déplacement du bras vers la position de préhension.
-5. **Tri et dépôt**
-    - Saisie du déchet avec la pince.
-    - Dépôt dans la corbeille correspondant à la catégorie détectée.
+        - lâ€™orientation de lâ€™objet,
+    - Estimation de la distance (axe Z) Ã  partir du principe de la distance focale.
+4. **Planification et exÃ©cution du mouvement**
+    - GÃ©nÃ©ration de trajectoires avec **MoveIt**.
+    - DÃ©placement du bras vers la position de prÃ©hension.
+5. **Tri et dÃ©pÃ´t**
+    - Saisie du dÃ©chet avec la pince.
+    - DÃ©pÃ´t dans la corbeille correspondant Ã  la catÃ©gorie dÃ©tectÃ©e.
 6. **Retour en position initiale**
-    - Retour à la position de repos.
-    - Préparation pour le déchet suivant.
+    - Retour Ã  la position de repos.
+    - PrÃ©paration pour le dÃ©chet suivant.
 
-## 5. Réalisation
+## 5. RÃ©alisation
 
-Cette section présente l’ensemble des travaux effectués dans le cadre du développement et de l’intégration du **DOFBOT Jetson Nano** au sein de la station de tri intelligente EcoCity. Les travaux ont porté à la fois sur la **vision artificielle**, la **communication robotique**, le **contrôle du bras**, ainsi que sur la **résolution de problèmes matériels critiques**.
+Cette section prÃ©sente lâ€™ensemble des travaux effectuÃ©s dans le cadre du dÃ©veloppement et de lâ€™intÃ©gration du **DOFBOT Jetson Nano** au sein de la station de tri intelligente EcoCity. Les travaux ont portÃ© Ã  la fois sur la **vision artificielle**, la **communication robotique**, le **contrÃ´le du bras**, ainsi que sur la **rÃ©solution de problÃ¨mes matÃ©riels critiques**.
 
-## 5.0 Constitution de la base de données et annotation
+## 5.0 Constitution de la base de donnÃ©es et annotation
 
-Cette étape constitue le **socle fondamental** du module de reconnaissance visuelle. Elle a consisté en la **collecte d’images réelles des déchets**, suivie de leur **annotation rigoureuse**, en vue de l’entraînement du modèle de détection basé sur **YOLOv8 OBB**.
+Cette Ã©tape constitue le **socle fondamental** du module de reconnaissance visuelle. Elle a consistÃ© en la **collecte dâ€™images rÃ©elles des dÃ©chets**, suivie de leur **annotation rigoureuse**, en vue de lâ€™entraÃ®nement du modÃ¨le de dÃ©tection basÃ© sur **YOLOv8 OBB**.
 
-### 5.0.1 Nature des déchets utilisés
+### 5.0.1 Nature des dÃ©chets utilisÃ©s
 
-Les déchets sont représentés par des **cubes de 3 cm d’arête**, sur lesquels sont collées des images de déchets courants que l’on retrouve dans l’environnement urbain. Ces visuels ont été fournis par les **organisateurs du TEKBOT Robotics Challenge** et sont présentés en annexe.
+Les dÃ©chets sont reprÃ©sentÃ©s par des **cubes de 3 cm dâ€™arÃªte**, sur lesquels sont collÃ©es des images de dÃ©chets courants que lâ€™on retrouve dans lâ€™environnement urbain. Ces visuels ont Ã©tÃ© fournis par les **organisateurs du TEKBOT Robotics Challenge** et sont prÃ©sentÃ©s en annexe.
 
-Chaque cube correspond à un **motif de déchet distinct**, permettant de simuler un large éventail de cas réels tout en conservant une géométrie compatible avec la pince du DOFBOT.
+Chaque cube correspond Ã  un **motif de dÃ©chet distinct**, permettant de simuler un large Ã©ventail de cas rÃ©els tout en conservant une gÃ©omÃ©trie compatible avec la pince du DOFBOT.
 
 ### 5.0.2 Prise des images
 
-Les images ont été acquises **exclusivement à l’aide de la caméra embarquée du DOFBOT**, afin de garantir une parfaite cohérence entre les conditions d’entraînement et les conditions réelles de détection.
+Les images ont Ã©tÃ© acquises **exclusivement Ã  lâ€™aide de la camÃ©ra embarquÃ©e du DOFBOT**, afin de garantir une parfaite cohÃ©rence entre les conditions dâ€™entraÃ®nement et les conditions rÃ©elles de dÃ©tection.
 
-Les prises de vue ont été réalisées :
+Les prises de vue ont Ã©tÃ© rÃ©alisÃ©es :
 
 - sur le **tapis du convoyeur**,
-- avec le DOFBOT placé dans sa **position réelle de détection**,
+- avec le DOFBOT placÃ© dans sa **position rÃ©elle de dÃ©tection**,
 - en variant volontairement :
-    - la luminosité,
+    - la luminositÃ©,
     - la position du cube,
     - son orientation.
 
-Cette diversité vise à améliorer la robustesse du modèle face aux variations environnementales.
+Cette diversitÃ© vise Ã  amÃ©liorer la robustesse du modÃ¨le face aux variations environnementales.
 
-Le modèle devant détecter **126 motifs distincts de déchets**, une première version de la base de données a été constituée avec **environ 22 images par motif**, soit un total d’environ **2772 images**.
+Le modÃ¨le devant dÃ©tecter **126 motifs distincts de dÃ©chets**, une premiÃ¨re version de la base de donnÃ©es a Ã©tÃ© constituÃ©e avec **environ 22 images par motif**, soit un total dâ€™environ **2772 images**.
 
-Les images ont été capturées à l’aide d’**OpenCV**, via un script Python dédié permettant une sauvegarde manuelle contrôlée.
+Les images ont Ã©tÃ© capturÃ©es Ã  lâ€™aide dâ€™**OpenCV**, via un script Python dÃ©diÃ© permettant une sauvegarde manuelle contrÃ´lÃ©e.
 
 ```python
 # Capture Images Camera avec OpenCV
 import cv2 
 import os
 
-# Créer dossier pour stocker les images
-save_dir = 'Nom_du_dossier'  # adapte ce chemin si nécessaire (ex: 'images_dataset')
+# CrÃ©er dossier pour stocker les images
+save_dir = 'Nom_du_dossier'  # adapte ce chemin si nÃ©cessaire (ex: 'images_dataset')
 os.makedirs(save_dir, exist_ok=True)
 
-# Initialiser la caméra USB (0 = première caméra détectée)
+# Initialiser la camÃ©ra USB (0 = premiÃ¨re camÃ©ra dÃ©tectÃ©e)
 camera = cv2.VideoCapture(1)
 camera.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
 camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
@@ -182,7 +182,7 @@ i = 0
 while True:
     ret, frame = camera.read()
     if not ret:
-        print("Impossible de lire la caméra.")
+        print("Impossible de lire la camÃ©ra.")
         break
 
     cv2.imshow('Frame', frame)
@@ -199,17 +199,17 @@ while True:
     if key == ord('q'):
         break
 
-# Libérer la caméra et fermer les fenêtres
+# LibÃ©rer la camÃ©ra et fermer les fenÃªtres
 camera.release()
 cv2.destroyAllWindows()
 
 ```
 
-Les images finales ont ensuite été **réparties en trois dossiers**, correspondant aux classes :
+Les images finales ont ensuite Ã©tÃ© **rÃ©parties en trois dossiers**, correspondant aux classes :
 
-- déchets ménagers,
-- déchets recyclables,
-- déchets dangereux.
+- dÃ©chets mÃ©nagers,
+- dÃ©chets recyclables,
+- dÃ©chets dangereux.
 
 Voici-ci dessous quelques images prises. 
 
@@ -231,91 +231,91 @@ Voici-ci dessous quelques images prises.
 
 ![image.png](./assets/dofbot-jetson-nano/image%208.png)
 
-### 5.0.3 Annotation des données
+### 5.0.3 Annotation des donnÃ©es
 
-L’annotation des images a été réalisée à l’aide de la plateforme cloud **Roboflow**, spécialisée dans la gestion des données pour la vision par ordinateur.
+Lâ€™annotation des images a Ã©tÃ© rÃ©alisÃ©e Ã  lâ€™aide de la plateforme cloud **Roboflow**, spÃ©cialisÃ©e dans la gestion des donnÃ©es pour la vision par ordinateur.
 
-Dans le cadre de ce projet, Roboflow a été utilisé **uniquement pour l’annotation**, l’entraînement étant assuré localement à l’aide de YOLOv8 OBB.
+Dans le cadre de ce projet, Roboflow a Ã©tÃ© utilisÃ© **uniquement pour lâ€™annotation**, lâ€™entraÃ®nement Ã©tant assurÃ© localement Ã  lâ€™aide de YOLOv8 OBB.
 
-Le processus d’annotation s’est déroulé selon les étapes suivantes :
+Le processus dâ€™annotation sâ€™est dÃ©roulÃ© selon les Ã©tapes suivantes :
 
-- création d’un **espace de travail collaboratif** permettant d’inviter jusqu’à cinq annotateurs,
-- création d’un **nouveau projet** dédié à la détection des déchets,
-- téléversement des images par classe,
-- annotation manuelle de chaque image par **encadrement polygonal de la face supérieure du cube**,
-- assignation de la classe correspondante (ménager, recyclable ou dangereux).
+- crÃ©ation dâ€™un **espace de travail collaboratif** permettant dâ€™inviter jusquâ€™Ã  cinq annotateurs,
+- crÃ©ation dâ€™un **nouveau projet** dÃ©diÃ© Ã  la dÃ©tection des dÃ©chets,
+- tÃ©lÃ©versement des images par classe,
+- annotation manuelle de chaque image par **encadrement polygonal de la face supÃ©rieure du cube**,
+- assignation de la classe correspondante (mÃ©nager, recyclable ou dangereux).
 
-Ce choix d’annotation polygonale est justifié par l’utilisation de **YOLOv8 OBB**, qui exploite des boîtes orientées afin d’améliorer la précision de la détection et de la préhension.
+Ce choix dâ€™annotation polygonale est justifiÃ© par lâ€™utilisation de **YOLOv8 OBB**, qui exploite des boÃ®tes orientÃ©es afin dâ€™amÃ©liorer la prÃ©cision de la dÃ©tection et de la prÃ©hension.
 
-Une fois l’annotation terminée, les images ont été :
+Une fois lâ€™annotation terminÃ©e, les images ont Ã©tÃ© :
 
-- ajoutées à la dataset par lots,
-- réparties en ensembles :
-    - 60 % pour l’entraînement,
+- ajoutÃ©es Ã  la dataset par lots,
+- rÃ©parties en ensembles :
+    - 60 % pour lâ€™entraÃ®nement,
     - 20 % pour les tests,
     - 20 % pour la validation,
-- soumises à plusieurs étapes de prétraitement, notamment :
-    - rotation aléatoire (±45°),
+- soumises Ã  plusieurs Ã©tapes de prÃ©traitement, notamment :
+    - rotation alÃ©atoire (Â±45Â°),
     - augmentation du contraste,
     - ajout de bruit,
 
-ce qui a permis de **tripler la taille effective de la base de données**.
+ce qui a permis de **tripler la taille effective de la base de donnÃ©es**.
 
-[Video démo](./assets/dofbot-jetson-nano/Video%20d%C3%A9mo%202e74f1c8b94c81489c5df536bd9be013.md)
+[Video dÃ©mo](./assets/dofbot-jetson-nano/Video%20d%C3%A9mo%202e74f1c8b94c81489c5df536bd9be013.md)
 
-La dataset finale a ensuite été téléchargée sous forme d’archive compatible avec YOLO.
+La dataset finale a ensuite Ã©tÃ© tÃ©lÃ©chargÃ©e sous forme dâ€™archive compatible avec YOLO.
 
-### 5.0.4 Problèmes rencontrés et améliorations apportées
+### 5.0.4 ProblÃ¨mes rencontrÃ©s et amÃ©liorations apportÃ©es
 
-Après les premiers entraînements, plusieurs limites ont été identifiées :
+AprÃ¨s les premiers entraÃ®nements, plusieurs limites ont Ã©tÃ© identifiÃ©es :
 
-- une sensibilité excessive à la luminosité,
-- une incapacité à détecter certains motifs,
-- un déséquilibre entre les classes.
+- une sensibilitÃ© excessive Ã  la luminositÃ©,
+- une incapacitÃ© Ã  dÃ©tecter certains motifs,
+- un dÃ©sÃ©quilibre entre les classes.
 
-Pour corriger ces problèmes, les améliorations suivantes ont été apportées :
+Pour corriger ces problÃ¨mes, les amÃ©liorations suivantes ont Ã©tÃ© apportÃ©es :
 
-1. **Équilibrage du nombre d’images par objet**
+1. **Ã‰quilibrage du nombre dâ€™images par objet**
     
-    Le nombre d’images a été fixé à **20 images par objet**, avec un ajustement spécifique pour les déchets dangereux afin d’obtenir un nombre équivalent d’images par classe.
+    Le nombre dâ€™images a Ã©tÃ© fixÃ© Ã  **20 images par objet**, avec un ajustement spÃ©cifique pour les dÃ©chets dangereux afin dâ€™obtenir un nombre Ã©quivalent dâ€™images par classe.
     
-2. **Amélioration des conditions de luminosité**
+2. **AmÃ©lioration des conditions de luminositÃ©**
     
-    Les prises de vue ont été répétées sous des conditions lumineuses plus variées.
+    Les prises de vue ont Ã©tÃ© rÃ©pÃ©tÃ©es sous des conditions lumineuses plus variÃ©es.
     
-3. **Téléversement séparé par objet**
+3. **TÃ©lÃ©versement sÃ©parÃ© par objet**
     
-    Les images de chaque motif ont été téléversées séparément sur Roboflow, garantissant que les ensembles d’entraînement, de test et de validation contiennent des images de **tous les objets**, évitant ainsi tout biais d’apprentissage.
+    Les images de chaque motif ont Ã©tÃ© tÃ©lÃ©versÃ©es sÃ©parÃ©ment sur Roboflow, garantissant que les ensembles dâ€™entraÃ®nement, de test et de validation contiennent des images de **tous les objets**, Ã©vitant ainsi tout biais dâ€™apprentissage.
     
 
-Ces ajustements ont permis d’obtenir une base de données **plus robuste, équilibrée et représentative**, améliorant significativement les performances finales du modèle.
+Ces ajustements ont permis dâ€™obtenir une base de donnÃ©es **plus robuste, Ã©quilibrÃ©e et reprÃ©sentative**, amÃ©liorant significativement les performances finales du modÃ¨le.
 
-## 5.1 Développement du module de reconnaissance visuelle
+## 5.1 DÃ©veloppement du module de reconnaissance visuelle
 
-### Technologies et bibliothèques utilisées
+### Technologies et bibliothÃ¨ques utilisÃ©es
 
 - **Ultralytics YOLOv8**
 - **YOLOv8 OBB (Oriented Bounding Boxes)**
 - **Python 3**
-- **OpenCV (acquisition et prétraitement des images)**
+- **OpenCV (acquisition et prÃ©traitement des images)**
 
-### Description du travail réalisé
+### Description du travail rÃ©alisÃ©
 
-Le module de reconnaissance visuelle a été conçu pour identifier automatiquement les déchets présents sur le convoyeur et déterminer leur catégorie (ménager, recyclable ou dangereux). Ce module constitue l’élément décisionnel central du système de tri.
+Le module de reconnaissance visuelle a Ã©tÃ© conÃ§u pour identifier automatiquement les dÃ©chets prÃ©sents sur le convoyeur et dÃ©terminer leur catÃ©gorie (mÃ©nager, recyclable ou dangereux). Ce module constitue lâ€™Ã©lÃ©ment dÃ©cisionnel central du systÃ¨me de tri.
 
-Le choix de **YOLOv8** s’explique par sa capacité à effectuer des détections rapides et précises en temps réel, même sur une plateforme embarquée comme le **Jetson Nano**. L’utilisation de la variante **OBB** permet d’obtenir des boîtes englobantes orientées, fournissant non seulement la position de l’objet dans l’image, mais également son orientation, information essentielle pour une préhension correcte par le bras robotique.
+Le choix de **YOLOv8** sâ€™explique par sa capacitÃ© Ã  effectuer des dÃ©tections rapides et prÃ©cises en temps rÃ©el, mÃªme sur une plateforme embarquÃ©e comme le **Jetson Nano**. Lâ€™utilisation de la variante **OBB** permet dâ€™obtenir des boÃ®tes englobantes orientÃ©es, fournissant non seulement la position de lâ€™objet dans lâ€™image, mais Ã©galement son orientation, information essentielle pour une prÃ©hension correcte par le bras robotique.
 
-Un modèle pré-entraîné (yolov8n-obb.pt) a été utilisé afin de bénéficier du transfert d’apprentissage. Cette approche permet d’améliorer la convergence du modèle tout en réduisant le temps d’entraînement.
+Un modÃ¨le prÃ©-entraÃ®nÃ© (yolov8n-obb.pt) a Ã©tÃ© utilisÃ© afin de bÃ©nÃ©ficier du transfert dâ€™apprentissage. Cette approche permet dâ€™amÃ©liorer la convergence du modÃ¨le tout en rÃ©duisant le temps dâ€™entraÃ®nement.
 
-### Code d’entraînement du modèle YOLOv8 OBB
+### Code dâ€™entraÃ®nement du modÃ¨le YOLOv8 OBB
 
 ```python
 from ultralytics import YOLO
 
-# Charger le modèle pré-entraîné OBB
+# Charger le modÃ¨le prÃ©-entraÃ®nÃ© OBB
 model = YOLO("yolov8n-obb.pt")
 
-# Lancer l'entraînement avec early stopping automatique
+# Lancer l'entraÃ®nement avec early stopping automatique
 metrics = model.train(
     data="data.yaml",
     epochs=50,
@@ -325,81 +325,81 @@ metrics = model.train(
     patience=5
 )
 
-# Afficher toutes les métriques finales
-print("Toutes les métriques :")
+# Afficher toutes les mÃ©triques finales
+print("Toutes les mÃ©triques :")
 for k, v in metrics.items():
     print(f"{k}: {v}")
 ```
 
-### Résultats obtenus
+### RÃ©sultats obtenus
 
-Les performances obtenues démontrent l’efficacité du modèle :
+Les performances obtenues dÃ©montrent lâ€™efficacitÃ© du modÃ¨le :
 
 - **Precision** : 0.976
 - **Recall** : 0.966
 
-**Métriques de validation :**
+**MÃ©triques de validation :**
 
 - Precision : 0.9760
 - Recall : 0.9658
 - mAP@50 : 0.9842
-- mAP@50–95 : 0.9019
+- mAP@50â€“95 : 0.9019
 
-Ces résultats indiquent une excellente capacité de généralisation du modèle, avec un très faible taux de faux positifs et de faux négatifs, ce qui est crucial pour un système de tri automatique.
+Ces rÃ©sultats indiquent une excellente capacitÃ© de gÃ©nÃ©ralisation du modÃ¨le, avec un trÃ¨s faible taux de faux positifs et de faux nÃ©gatifs, ce qui est crucial pour un systÃ¨me de tri automatique.
 
-## 5.2 Détection des déchets et calcul de leur position 3D
+## 5.2 DÃ©tection des dÃ©chets et calcul de leur position 3D
 
-Après l’entraînement du modèle YOLOv8, une **architecture ROS distribuée** a été mise en place afin de transformer les résultats de détection en une position exploitable par le bras robotique.
+AprÃ¨s lâ€™entraÃ®nement du modÃ¨le YOLOv8, une **architecture ROS distribuÃ©e** a Ã©tÃ© mise en place afin de transformer les rÃ©sultats de dÃ©tection en une position exploitable par le bras robotique.
 
-Cette architecture repose sur **deux nœuds ROS complémentaires** :
+Cette architecture repose sur **deux nÅ“uds ROS complÃ©mentaires** :
 
-- `yolo_node` : détection et calcul de la position du déchet dans le repère caméra
-- `waste_tf_node` : transformation de cette position vers le repère du bras robotique
+- `yolo_node` : dÃ©tection et calcul de la position du dÃ©chet dans le repÃ¨re camÃ©ra
+- `waste_tf_node` : transformation de cette position vers le repÃ¨re du bras robotique
 
-### 5.2.1 Nœud `yolo_node` – Détection et publication dans le repère caméra
+### 5.2.1 NÅ“ud `yolo_node` â€“ DÃ©tection et publication dans le repÃ¨re camÃ©ra
 
-### Rôle du nœud
+### RÃ´le du nÅ“ud
 
-Le nœud `yolo_node` est responsable de :
+Le nÅ“ud `yolo_node` est responsable de :
 
-- la réception des images de la caméra,
-- l’exécution du modèle YOLOv8,
-- l’estimation de la position 3D du déchet dans le repère **camera_link**,
-- la publication de la classe du déchet et de sa position.
+- la rÃ©ception des images de la camÃ©ra,
+- lâ€™exÃ©cution du modÃ¨le YOLOv8,
+- lâ€™estimation de la position 3D du dÃ©chet dans le repÃ¨re **camera_link**,
+- la publication de la classe du dÃ©chet et de sa position.
 
-### Topics utilisés
+### Topics utilisÃ©s
 
 - **Abonnements** :
-    - `/usb_cam/image_raw` (Image) – flux vidéo
-    - `/dofbot/execution_status` (String) – synchronisation avec l’exécution du bras
+    - `/usb_cam/image_raw` (Image) â€“ flux vidÃ©o
+    - `/dofbot/execution_status` (String) â€“ synchronisation avec lâ€™exÃ©cution du bras
 - **Publications** :
-    - `/waste/pos_cam` (PointStamped) – position du déchet dans le repère caméra
-    - `/cls_publisher` (String) – classe du déchet détecté
+    - `/waste/pos_cam` (PointStamped) â€“ position du dÃ©chet dans le repÃ¨re camÃ©ra
+    - `/cls_publisher` (String) â€“ classe du dÃ©chet dÃ©tectÃ©
 
 ### Principe de fonctionnement
 
-Le nœud `yolo_node` constitue le **point d’entrée de la chaîne de perception visuelle** du système. Il assure la transition entre les données brutes issues de la caméra et une information géométrique exploitable par les modules robotiques.
+Le nÅ“ud `yolo_node` constitue le **point dâ€™entrÃ©e de la chaÃ®ne de perception visuelle** du systÃ¨me. Il assure la transition entre les donnÃ©es brutes issues de la camÃ©ra et une information gÃ©omÃ©trique exploitable par les modules robotiques.
 
-Après son initialisation, le nœud se met en attente de deux flux d’information distincts :
+AprÃ¨s son initialisation, le nÅ“ud se met en attente de deux flux dâ€™information distincts :
 
-le flux vidéo provenant de la caméra USB et le statut d’exécution du bras robotique. Cette synchronisation garantit que la détection n’est effectuée que lorsque le bras est dans un état stable, évitant ainsi des incohérences dues à des mouvements en cours.
+le flux vidÃ©o provenant de la camÃ©ra USB et le statut dâ€™exÃ©cution du bras robotique. Cette synchronisation garantit que la dÃ©tection nâ€™est effectuÃ©e que lorsque le bras est dans un Ã©tat stable, Ã©vitant ainsi des incohÃ©rences dues Ã  des mouvements en cours.
 
-Les images reçues sous forme de messages ROS `sensor_msgs/Image` sont converties en images OpenCV grâce à la fonction `rosimg_to_cv2`. Cette conversion gère explicitement les différents encodages possibles (`rgb8` ou `bgr8`) afin d’assurer une compatibilité totale avec la librairie de vision utilisée.
+Les images reÃ§ues sous forme de messages ROS `sensor_msgs/Image` sont converties en images OpenCV grÃ¢ce Ã  la fonction `rosimg_to_cv2`. Cette conversion gÃ¨re explicitement les diffÃ©rents encodages possibles (`rgb8` ou `bgr8`) afin dâ€™assurer une compatibilitÃ© totale avec la librairie de vision utilisÃ©e.
 
-Une fois le statut `Success` reçu, le nœud applique le modèle YOLOv8 à l’image courante à l’aide de la fonction `next_waste_pos`. Cette fonction retourne :
+Une fois le statut `Success` reÃ§u, le nÅ“ud applique le modÃ¨le YOLOv8 Ã  lâ€™image courante Ã  lâ€™aide de la fonction `next_waste_pos`. Cette fonction retourne :
 
-- le vecteur de translation 3D (`tvec`) représentant la position estimée du déchet par rapport à la caméra,
-- la classe du déchet détecté.
+- le vecteur de translation 3D (`tvec`) reprÃ©sentant la position estimÃ©e du dÃ©chet par rapport Ã  la camÃ©ra,
+- la classe du dÃ©chet dÃ©tectÃ©.
 
-Si aucune détection valide n’est trouvée, le nœud ignore l’image et attend le cycle suivant. Dans le cas contraire, la classe du déchet est publiée sur le topic `/cls_publisher`, permettant aux modules décisionnels de connaître la nature de l’objet à manipuler.
+Si aucune dÃ©tection valide nâ€™est trouvÃ©e, le nÅ“ud ignore lâ€™image et attend le cycle suivant. Dans le cas contraire, la classe du dÃ©chet est publiÃ©e sur le topic `/cls_publisher`, permettant aux modules dÃ©cisionnels de connaÃ®tre la nature de lâ€™objet Ã  manipuler.
 
-La position 3D du déchet est ensuite encapsulée dans un message `geometry_msgs/PointStamped`. L’utilisation de ce type de message permet :
+La position 3D du dÃ©chet est ensuite encapsulÃ©e dans un message `geometry_msgs/PointStamped`. Lâ€™utilisation de ce type de message permet :
 
-- d’associer explicitement la position au repère `camera_link`,
-- d’inclure un horodatage précis,
-- de faciliter les transformations ultérieures via le système TF de ROS.
+- dâ€™associer explicitement la position au repÃ¨re `camera_link`,
+- dâ€™inclure un horodatage prÃ©cis,
+- de faciliter les transformations ultÃ©rieures via le systÃ¨me TF de ROS.
 
-Une fois la publication effectuée, le statut est réinitialisé afin d’éviter des détections multiples pour un même cycle de manipulation. Ce mécanisme assure un fonctionnement déterministe et synchronisé entre la perception et l’action.
+Une fois la publication effectuÃ©e, le statut est rÃ©initialisÃ© afin dâ€™Ã©viter des dÃ©tections multiples pour un mÃªme cycle de manipulation. Ce mÃ©canisme assure un fonctionnement dÃ©terministe et synchronisÃ© entre la perception et lâ€™action.
 
 ```python
 #!/home/jetson/miniforge3/envs/yolo2/bin/python3.10
@@ -414,7 +414,7 @@ from detect_waste_lib_v2 import next_waste_pos
 
 pub = rospy.Publisher("/waste/pos_cam", PointStamped, queue_size=1)
 pub1 = rospy.Publisher('/cls_publisher', String, queue_size=1)
-rospy.loginfo("Node YOLO lancé. En attente d'images et de statut Success...")
+rospy.loginfo("Node YOLO lancÃ©. En attente d'images et de statut Success...")
 
         
 def rosimg_to_cv2(msg):
@@ -431,7 +431,7 @@ statut = "Success"
 def callback(msg):
     global statut
     if msg is None:
-        rospy.logwarn("Aucune image reçue encore !")
+        rospy.logwarn("Aucune image reÃ§ue encore !")
         return
     frame = rosimg_to_cv2(msg)
     if statut == "Success":
@@ -461,19 +461,19 @@ rospy.Subscriber("/dofbot/execution_status", String, callback_success, queue_siz
 rospy.spin()
 ```
 
-### 5.2.2 Nœud `waste_tf_node` – Transformation vers le repère du bras
+### 5.2.2 NÅ“ud `waste_tf_node` â€“ Transformation vers le repÃ¨re du bras
 
-### Rôle du nœud
+### RÃ´le du nÅ“ud
 
-Le nœud `waste_tf_node` assure le **passage entre la vision et la robotique**. Il transforme la position du déchet depuis le repère caméra (`camera_link`) vers le repère de base du bras (`base_link`).
+Le nÅ“ud `waste_tf_node` assure le **passage entre la vision et la robotique**. Il transforme la position du dÃ©chet depuis le repÃ¨re camÃ©ra (`camera_link`) vers le repÃ¨re de base du bras (`base_link`).
 
-### Technologies utilisées
+### Technologies utilisÃ©es
 
 - `tf.TransformListener`
 - `geometry_msgs/PointStamped`
 - `visualization_msgs/Marker`
 
-### Topics utilisés
+### Topics utilisÃ©s
 
 - **Abonnement** :
     - `/waste/pos_cam` (PointStamped)
@@ -483,17 +483,17 @@ Le nœud `waste_tf_node` assure le **passage entre la vision et la robotique**. I
 
 ### Principe de fonctionnement
 
-Le nœud `waste_tf_node` joue un rôle fondamental d’**interface entre la vision et le contrôle du bras robotique**. Il permet de convertir une position détectée dans le repère caméra en une position exprimée dans le repère de base du bras, indispensable pour la planification de trajectoires.
+Le nÅ“ud `waste_tf_node` joue un rÃ´le fondamental dâ€™**interface entre la vision et le contrÃ´le du bras robotique**. Il permet de convertir une position dÃ©tectÃ©e dans le repÃ¨re camÃ©ra en une position exprimÃ©e dans le repÃ¨re de base du bras, indispensable pour la planification de trajectoires.
 
-À la réception d’un message `PointStamped` sur le topic `/waste/pos_cam`, le nœud vérifie d’abord que le point est bien exprimé dans le repère `camera_link`. Cette vérification constitue une mesure de sécurité permettant d’éviter des erreurs de transformation liées à un mauvais référentiel.
+Ã€ la rÃ©ception dâ€™un message `PointStamped` sur le topic `/waste/pos_cam`, le nÅ“ud vÃ©rifie dâ€™abord que le point est bien exprimÃ© dans le repÃ¨re `camera_link`. Cette vÃ©rification constitue une mesure de sÃ©curitÃ© permettant dâ€™Ã©viter des erreurs de transformation liÃ©es Ã  un mauvais rÃ©fÃ©rentiel.
 
-Le nœud utilise ensuite un objet `tf.TransformListener` pour attendre la disponibilité de la transformation TF entre `camera_link` et `base_link`. Cette attente est synchronisée avec l’horodatage du message reçu, garantissant une cohérence temporelle entre la position détectée et l’état courant du système de transformation.
+Le nÅ“ud utilise ensuite un objet `tf.TransformListener` pour attendre la disponibilitÃ© de la transformation TF entre `camera_link` et `base_link`. Cette attente est synchronisÃ©e avec lâ€™horodatage du message reÃ§u, garantissant une cohÃ©rence temporelle entre la position dÃ©tectÃ©e et lâ€™Ã©tat courant du systÃ¨me de transformation.
 
-Une fois la transformation disponible, la position du déchet est convertie vers le repère `base_link`. Le point transformé est alors publié sur le topic `/waste/pose`, rendant cette information directement exploitable par les modules de planification et de contrôle du bras robotique.
+Une fois la transformation disponible, la position du dÃ©chet est convertie vers le repÃ¨re `base_link`. Le point transformÃ© est alors publiÃ© sur le topic `/waste/pose`, rendant cette information directement exploitable par les modules de planification et de contrÃ´le du bras robotique.
 
-En parallèle, un message de type `visualization_msgs/Marker` est généré. Ce marqueur, représenté sous forme de sphère, est publié dans le repère `base_link` et permet de visualiser la position cible du déchet dans RViz. Les paramètres de taille, de couleur et de position sont configurés de manière à offrir une visualisation claire et intuitive.
+En parallÃ¨le, un message de type `visualization_msgs/Marker` est gÃ©nÃ©rÃ©. Ce marqueur, reprÃ©sentÃ© sous forme de sphÃ¨re, est publiÃ© dans le repÃ¨re `base_link` et permet de visualiser la position cible du dÃ©chet dans RViz. Les paramÃ¨tres de taille, de couleur et de position sont configurÃ©s de maniÃ¨re Ã  offrir une visualisation claire et intuitive.
 
-Ce mécanisme de visualisation constitue un outil essentiel pour le débogage et la validation expérimentale. Il permet de vérifier en temps réel la cohérence entre la détection visuelle, les transformations de repères et la position réellement utilisée par le bras robotique.
+Ce mÃ©canisme de visualisation constitue un outil essentiel pour le dÃ©bogage et la validation expÃ©rimentale. Il permet de vÃ©rifier en temps rÃ©el la cohÃ©rence entre la dÃ©tection visuelle, les transformations de repÃ¨res et la position rÃ©ellement utilisÃ©e par le bras robotique.
 
 ```python
 #!/usr/bin/env python
@@ -552,23 +552,23 @@ rospy.Subscriber("/waste/pos_cam", PointStamped, callback, queue_size=1)
 rospy.spin()
 ```
 
-## 5.3 Communication et contrôle du bras robotique avec ROS
+## 5.3 Communication et contrÃ´le du bras robotique avec ROS
 
-### Technologies et bibliothèques utilisées
+### Technologies et bibliothÃ¨ques utilisÃ©es
 
 - **ROS (Robot Operating System)**
 - **rospy**
 - **robot_state_publisher**
 - **URDF (Unified Robot Description Format)**
 
-### Description du travail réalisé
+### Description du travail rÃ©alisÃ©
 
-ROS a été utilisé comme middleware principal pour assurer la communication entre les différents modules du système robotique. Il permet une architecture modulaire et évolutive, essentielle pour l’intégration de la vision artificielle, du contrôle moteur et de la planification de mouvements.
+ROS a Ã©tÃ© utilisÃ© comme middleware principal pour assurer la communication entre les diffÃ©rents modules du systÃ¨me robotique. Il permet une architecture modulaire et Ã©volutive, essentielle pour lâ€™intÃ©gration de la vision artificielle, du contrÃ´le moteur et de la planification de mouvements.
 
-Un nœud ROS spécifique, nommé **dofbot_state_publisher**, a été développé afin de lire les angles des servomoteurs du DOFBOT et de publier ces informations sur des topics ROS. Ces données sont utilisées pour :
+Un nÅ“ud ROS spÃ©cifique, nommÃ© **dofbot_state_publisher**, a Ã©tÃ© dÃ©veloppÃ© afin de lire les angles des servomoteurs du DOFBOT et de publier ces informations sur des topics ROS. Ces donnÃ©es sont utilisÃ©es pour :
 
-- représenter l’état du bras dans l’espace,
-- alimenter le modèle cinématique,
+- reprÃ©senter lâ€™Ã©tat du bras dans lâ€™espace,
+- alimenter le modÃ¨le cinÃ©matique,
 - permettre la planification de trajectoires avec MoveIt.
 
 ```python
@@ -583,8 +583,8 @@ arm = Arm_Device()
 
 def get_servo_positions():
     """
-    Lit les positions réelles des 6 servos.
-    Retourne une liste d'angles en degrés.
+    Lit les positions rÃ©elles des 6 servos.
+    Retourne une liste d'angles en degrÃ©s.
     """
     positions = []
     for i in range(1, 6):
@@ -608,7 +608,7 @@ def talker():
         # Conversion en radians et limitation [-pi/2, pi/2]
         msg.position = [(math.radians(p) - math.pi/2) for p in positions]
         pub.publish(msg)
-        #rospy.loginfo(f"Positions publiées (radians) : {msg.position}")
+        #rospy.loginfo(f"Positions publiÃ©es (radians) : {msg.position}")
         rate.sleep()
 
 if __name__ == '__main__':
@@ -619,85 +619,85 @@ if __name__ == '__main__':
 
 ```
 
-Le script présenté ci-dessus implémente le nœud ROS `dofbot_state_publisher` ****chargé de publier l’état instantané des articulations du bras robotique DOFBOT sous forme de messages `JointState`. Ce nœud joue un rôle central dans la synchronisation entre le matériel réel et l’environnement logiciel ROS.
+Le script prÃ©sentÃ© ci-dessus implÃ©mente le nÅ“ud ROS `dofbot_state_publisher` ****chargÃ© de publier lâ€™Ã©tat instantanÃ© des articulations du bras robotique DOFBOT sous forme de messages `JointState`. Ce nÅ“ud joue un rÃ´le central dans la synchronisation entre le matÃ©riel rÃ©el et lâ€™environnement logiciel ROS.
 
-Tout d’abord, la librairie officielle `Arm_Lib` est utilisée pour établir la communication avec les servomoteurs du bras. L’objet `Arm_Device` permet d’accéder directement aux positions réelles de chaque servo via une liaison série, garantissant ainsi une lecture fidèle de l’état physique du robot.
+Tout dâ€™abord, la librairie officielle `Arm_Lib` est utilisÃ©e pour Ã©tablir la communication avec les servomoteurs du bras. Lâ€™objet `Arm_Device` permet dâ€™accÃ©der directement aux positions rÃ©elles de chaque servo via une liaison sÃ©rie, garantissant ainsi une lecture fidÃ¨le de lâ€™Ã©tat physique du robot.
 
-La fonction `get_servo_positions()` interroge successivement les servomoteurs du bras et récupère leurs angles de rotation exprimés en degrés. Une valeur par défaut est appliquée lorsque la lecture échoue, afin d’assurer la continuité de fonctionnement du nœud et d’éviter des erreurs lors de la publication des données.
+La fonction `get_servo_positions()` interroge successivement les servomoteurs du bras et rÃ©cupÃ¨re leurs angles de rotation exprimÃ©s en degrÃ©s. Une valeur par dÃ©faut est appliquÃ©e lorsque la lecture Ã©choue, afin dâ€™assurer la continuitÃ© de fonctionnement du nÅ“ud et dâ€™Ã©viter des erreurs lors de la publication des donnÃ©es.
 
-Le nœud ROS, nommé `dofbot_joint_publisher`, est initialisé à l’aide de `rospy.init_node`. Il publie périodiquement des messages sur le topic standard `/joint_states`, utilisé par ROS pour représenter l’état cinématique des robots. Le type de message `sensor_msgs/JointState` contient notamment :
+Le nÅ“ud ROS, nommÃ© `dofbot_joint_publisher`, est initialisÃ© Ã  lâ€™aide de `rospy.init_node`. Il publie pÃ©riodiquement des messages sur le topic standard `/joint_states`, utilisÃ© par ROS pour reprÃ©senter lâ€™Ã©tat cinÃ©matique des robots. Le type de message `sensor_msgs/JointState` contient notamment :
 
 - les noms des articulations,
 - leurs positions angulaires,
-- un horodatage assurant la cohérence temporelle des données.
+- un horodatage assurant la cohÃ©rence temporelle des donnÃ©es.
 
-Avant la publication, les angles mesurés en degrés sont convertis en radians, conformément aux conventions de ROS et de MoveIt. Un décalage de `p/2` est appliqué afin d’aligner le référentiel des servomoteurs avec celui du modèle cinématique défini dans l’URDF.
+Avant la publication, les angles mesurÃ©s en degrÃ©s sont convertis en radians, conformÃ©ment aux conventions de ROS et de MoveIt. Un dÃ©calage de `p/2` est appliquÃ© afin dâ€™aligner le rÃ©fÃ©rentiel des servomoteurs avec celui du modÃ¨le cinÃ©matique dÃ©fini dans lâ€™URDF.
 
-La boucle principale du nœud fonctionne à une fréquence définie (2 Hz), permettant une mise à jour régulière de l’état du bras tout en limitant la charge de communication. Chaque itération publie un message `JointState` actualisé, assurant ainsi une représentation cohérente du bras robotique dans les outils de visualisation tels que RViz.
+La boucle principale du nÅ“ud fonctionne Ã  une frÃ©quence dÃ©finie (2 Hz), permettant une mise Ã  jour rÃ©guliÃ¨re de lâ€™Ã©tat du bras tout en limitant la charge de communication. Chaque itÃ©ration publie un message `JointState` actualisÃ©, assurant ainsi une reprÃ©sentation cohÃ©rente du bras robotique dans les outils de visualisation tels que RViz.
 
-Grâce à ce mécanisme, le modèle URDF, le `robot_state_publisher` et les modules de planification de trajectoires (MoveIt) disposent en permanence d’une information fiable sur l’état réel du robot. Cela garantit la cohérence entre le bras physique, sa représentation virtuelle et les algorithmes de contrôle et de planification.
+GrÃ¢ce Ã  ce mÃ©canisme, le modÃ¨le URDF, le `robot_state_publisher` et les modules de planification de trajectoires (MoveIt) disposent en permanence dâ€™une information fiable sur lâ€™Ã©tat rÃ©el du robot. Cela garantit la cohÃ©rence entre le bras physique, sa reprÃ©sentation virtuelle et les algorithmes de contrÃ´le et de planification.
 
-Ce mécanisme est indispensable pour la cohérence entre la perception visuelle, la cinématique du bras et la planification de trajectoires.
+Ce mÃ©canisme est indispensable pour la cohÃ©rence entre la perception visuelle, la cinÃ©matique du bras et la planification de trajectoires.
 
-### 5.3 Planification de trajectoires et déplacement réel du bras DOFBOT
+### 5.3 Planification de trajectoires et dÃ©placement rÃ©el du bras DOFBOT
 
-Après avoir obtenu la **position 3D de l’objet** ainsi que sa **classe**, l’étape suivante consiste à **planifier une trajectoire valide** puis à **déplacer physiquement le bras DOFBOT** afin de saisir l’objet et le déposer dans la **corbeille correspondante**.
+AprÃ¨s avoir obtenu la **position 3D de lâ€™objet** ainsi que sa **classe**, lâ€™Ã©tape suivante consiste Ã  **planifier une trajectoire valide** puis Ã  **dÃ©placer physiquement le bras DOFBOT** afin de saisir lâ€™objet et le dÃ©poser dans la **corbeille correspondante**.
 
 Cette partie est **la plus critique de tout le projet**, car elle fait le lien direct entre :
 
 - la perception (vision + TF),
-- la décision (planification),
-- et l’action réelle (moteurs).
+- la dÃ©cision (planification),
+- et lâ€™action rÃ©elle (moteurs).
 
-Pour cela, nous utilisons le package **MoveIt** de ROS, qui repose sur la bibliothèque **OMPL (Open Motion Planning Library)** pour la planification de trajectoires.
+Pour cela, nous utilisons le package **MoveIt** de ROS, qui repose sur la bibliothÃ¨que **OMPL (Open Motion Planning Library)** pour la planification de trajectoires.
 
 ### 5.3.1 Planification de trajectoires avec MoveIt
 
-### OMPL – Open Motion Planning Library
+### OMPL â€“ Open Motion Planning Library
 
-OMPL est la **bibliothèque de planification de mouvement** utilisée par défaut par MoveIt. Elle regroupe plusieurs algorithmes permettant de rechercher un chemin valide dans l’**espace de configuration (C-space)** du robot.
+OMPL est la **bibliothÃ¨que de planification de mouvement** utilisÃ©e par dÃ©faut par MoveIt. Elle regroupe plusieurs algorithmes permettant de rechercher un chemin valide dans lâ€™**espace de configuration (C-space)** du robot.
 
-Ces algorithmes fonctionnent par **échantillonnage aléatoire** de configurations possibles jusqu’à trouver une trajectoire :
+Ces algorithmes fonctionnent par **Ã©chantillonnage alÃ©atoire** de configurations possibles jusquâ€™Ã  trouver une trajectoire :
 
-- atteignable cinématiquement,
+- atteignable cinÃ©matiquement,
 - respectant les limites articulaires,
-- évitant les collisions.
+- Ã©vitant les collisions.
 
-OMPL est stochastique : pour un même scénario, la planification peut réussir ou échouer selon les tirages aléatoires.
+OMPL est stochastique : pour un mÃªme scÃ©nario, la planification peut rÃ©ussir ou Ã©chouer selon les tirages alÃ©atoires.
 
 ### Algorithme RRT-Connect
 
-L’algorithme **RRT-Connect (Rapidly-exploring Random Tree – Connect)** est celui utilisé dans ce projet.
+Lâ€™algorithme **RRT-Connect (Rapidly-exploring Random Tree â€“ Connect)** est celui utilisÃ© dans ce projet.
 
 Principe :
 
-- création de deux arbres de recherche :
-    - un depuis la position de départ,
+- crÃ©ation de deux arbres de recherche :
+    - un depuis la position de dÃ©part,
     - un depuis la position cible,
 - tentative de connexion des deux arbres.
 
-Cet algorithme est bien adapté aux **robots manipulateurs à 6 degrés de liberté**, comme le DOFBOT.
+Cet algorithme est bien adaptÃ© aux **robots manipulateurs Ã  6 degrÃ©s de libertÃ©**, comme le DOFBOT.
 
-### 5.3.2 Première implémentation : `node_moveit_1.py`
+### 5.3.2 PremiÃ¨re implÃ©mentation : `node_moveit_1.py`
 
-### Objectif du nœud
+### Objectif du nÅ“ud
 
-Ce nœud réalise une **planification MoveIt vers un point cible fixe** afin de valider :
+Ce nÅ“ud rÃ©alise une **planification MoveIt vers un point cible fixe** afin de valider :
 
 - la communication avec MoveIt,
-- la génération de trajectoires,
-- l’exécution en simulation (RViz).
+- la gÃ©nÃ©ration de trajectoires,
+- lâ€™exÃ©cution en simulation (RViz).
 
-### Logique générale du script
+### Logique gÃ©nÃ©rale du script
 
 Le script :
 
-1. Initialise un nœud ROS Python.
-2. Crée une interface `MoveGroupCommander` pour le groupe **dofbot**.
-3. Définit une pose cible (position + orientation).
+1. Initialise un nÅ“ud ROS Python.
+2. CrÃ©e une interface `MoveGroupCommander` pour le groupe **dofbot**.
+3. DÃ©finit une pose cible (position + orientation).
 4. Lance la planification MoveIt.
-5. Publie la trajectoire calculée.
-6. Réutilise la trajectoire si la cible n’a pas changé.
+5. Publie la trajectoire calculÃ©e.
+6. RÃ©utilise la trajectoire si la cible nâ€™a pas changÃ©.
 
 ```python
 #!/usr/bin/env python
@@ -722,7 +722,7 @@ precedent_pose = Pose()
 
 def callback(data):
     global status_received
-    rospy.loginfo(" Statut d'exécution reçu : %s", data.data )
+    rospy.loginfo(" Statut d'exÃ©cution reÃ§u : %s", data.data )
     status_received = data.data
 
 def node_moveit_1():
@@ -790,14 +790,14 @@ def node_moveit_1():
             return
         rospy.loginfo(" Planification du mouvement pour la position cible...")
 
-        # Vérification si la position est la même ou n'est pas trop differente de l
+        # VÃ©rification si la position est la mÃªme ou n'est pas trop differente de l
 
         diff_pos.position.x=pos.position.x-precedent_pose.position.x
         diff_pos.position.y=pos.position.y-precedent_pose.position.y
         diff_pos.position.z=pos.position.z-precedent_pose.position.z
         diff_pos1=(diff_pos.position.x**2+diff_pos.position.y**2+diff_pos.position.z**2)**0.5        
         if  diff_pos1<0.03:
-            rospy.loginfo("?? Même position que précédemment, réutilisation de la trajectoire précédente")
+            rospy.loginfo("?? MÃªme position que prÃ©cÃ©demment, rÃ©utilisation de la trajectoire prÃ©cÃ©dente")
             angle_pub.publish(precedent_trajectory)
             status_received=None
             rospy.sleep(0.5)
@@ -834,72 +834,72 @@ if __name__ == '__main__':
                    
 ```
 
-Ce script implémente un **nœud ROS de planification de mouvement** pour le bras DOFBOT en utilisant **MoveIt**. Le nœud, nommé `dofbot_motion_plan_py`, publie des trajectoires articulaires sur le topic `/dofbot/trajectory` et s’assure que chaque plan est exécuté uniquement après réception d’un statut `"Success"` sur `/dofbot/execution_status`, garantissant la **synchronisation avec le module d’exécution**.
+Ce script implÃ©mente un **nÅ“ud ROS de planification de mouvement** pour le bras DOFBOT en utilisant **MoveIt**. Le nÅ“ud, nommÃ© `dofbot_motion_plan_py`, publie des trajectoires articulaires sur le topic `/dofbot/trajectory` et sâ€™assure que chaque plan est exÃ©cutÃ© uniquement aprÃ¨s rÃ©ception dâ€™un statut `"Success"` sur `/dofbot/execution_status`, garantissant la **synchronisation avec le module dâ€™exÃ©cution**.
 
-Une **pose cible fixe** est définie, avec orientation calculée à partir d’angles d’Euler convertis en quaternion. Le nœud inclut un mécanisme de **réutilisation de trajectoire** pour éviter de recalculer des plans lorsque la pose cible ne change pas significativement. Chaque plan valide est publié et enregistré comme trajectoire précédente, assurant ainsi une **planification stable et efficace**.
+Une **pose cible fixe** est dÃ©finie, avec orientation calculÃ©e Ã  partir dâ€™angles dâ€™Euler convertis en quaternion. Le nÅ“ud inclut un mÃ©canisme de **rÃ©utilisation de trajectoire** pour Ã©viter de recalculer des plans lorsque la pose cible ne change pas significativement. Chaque plan valide est publiÃ© et enregistrÃ© comme trajectoire prÃ©cÃ©dente, assurant ainsi une **planification stable et efficace**.
 
-Ce nœud constitue une **brique de base du contrôle par MoveIt**, permettant de tester et de valider la planification du bras dans des positions fixes pour le projet EcoCity.
+Ce nÅ“ud constitue une **brique de base du contrÃ´le par MoveIt**, permettant de tester et de valider la planification du bras dans des positions fixes pour le projet EcoCity.
 
-### Vidéo de fonctionnement
+### VidÃ©o de fonctionnement
 
 [https://vimeo.com/1151044989?fl=tl&fe=ec](https://vimeo.com/1151044989?fl=tl&fe=ec)
 
-### Limite observée
+### Limite observÃ©e
 
-Lors de l’exécution, on observe que :
+Lors de lâ€™exÃ©cution, on observe que :
 
-- ce n’est pas le **bout réel de la pince** qui atteint l’objet,
-- mais le **link 5** (dernier maillon de la chaîne cinématique).
+- ce nâ€™est pas le **bout rÃ©el de la pince** qui atteint lâ€™objet,
+- mais le **link 5** (dernier maillon de la chaÃ®ne cinÃ©matique).
 
-Cela rend la **préhension impossible ou imprécise**.
+Cela rend la **prÃ©hension impossible ou imprÃ©cise**.
 
-### 5.3.3 Origine du problème de l’effecteur
+### 5.3.3 Origine du problÃ¨me de lâ€™effecteur
 
-Le problème provient de la **description du robot** :
+Le problÃ¨me provient de la **description du robot** :
 
 - Le fichier **URDF** fourni avec le DOFBOT **ne contient pas le link de la pince**.
-- Le fichier **SRDF**, généré à partir de l’URDF, **ne définit donc aucun effecteur**.
+- Le fichier **SRDF**, gÃ©nÃ©rÃ© Ã  partir de lâ€™URDF, **ne dÃ©finit donc aucun effecteur**.
 
-Dans ce cas, MoveIt considère automatiquement le **dernier link de la chaîne cinématique** comme effecteur.
+Dans ce cas, MoveIt considÃ¨re automatiquement le **dernier link de la chaÃ®ne cinÃ©matique** comme effecteur.
 
-Chaîne cinématique utilisée :
+ChaÃ®ne cinÃ©matique utilisÃ©e :
 
 ```
 ['base_link', 'link1', 'link2', 'link3', 'link4', 'link5']
 
 ```
 
-Donc **link5 est considéré comme effecteur**, ce qui explique le comportement observé.
+Donc **link5 est considÃ©rÃ© comme effecteur**, ce qui explique le comportement observÃ©.
 
-### 5.3.4 Résolution : méthode des deux planifications
+### 5.3.4 RÃ©solution : mÃ©thode des deux planifications
 
-### Principe général
+### Principe gÃ©nÃ©ral
 
-L’objectif est de faire en sorte que le **bout réel de la pince** atteigne la position cible, même si MoveIt planifie vers **link5**.
+Lâ€™objectif est de faire en sorte que le **bout rÃ©el de la pince** atteigne la position cible, mÃªme si MoveIt planifie vers **link5**.
 
-?? L’idée est donc de calculer une **position corrigée**, appelée **position soustraite**, telle que :
+?? Lâ€™idÃ©e est donc de calculer une **position corrigÃ©e**, appelÃ©e **position soustraite**, telle que :
 
 - lorsque link5 atteint cette position,
-- alors la pince réelle atteint exactement l’objet.
+- alors la pince rÃ©elle atteint exactement lâ€™objet.
 
-Schéma cinématique du robot
+SchÃ©ma cinÃ©matique du robot
 
 ![DOFBOTSchemacinematique.png](./assets/dofbot-jetson-nano/DOFBOTSchemacinematique.png)
 
-### Modélisation mathématique
+### ModÃ©lisation mathÃ©matique
 
 Soit :
 
-- (P_0(x,y,z)) la position cible réelle de l’objet,
+- (P_0(x,y,z)) la position cible rÃ©elle de lâ€™objet,
 - (P_s(x_s,y_s,z_s)) la position soustraite.
 
-Relation géométrique :
+Relation gÃ©omÃ©trique :
 
 $$
 \begin{cases}x_s = x - h_x \\y_s = y - h_y \\z_s = z + h_z\end{cases}
 $$
 
-Les termes (h_x, h_y, h_z) dépendent de la **géométrie du bras** et des **angles articulaires**. Considérons un vecteur **h1** qui dirige la pince et dans le meme sens que **z5**.
+Les termes (h_x, h_y, h_z) dÃ©pendent de la **gÃ©omÃ©trie du bras** et des **angles articulaires**. ConsidÃ©rons un vecteur **h1** qui dirige la pince et dans le meme sens que **z5**.
 
 $$
 Dans \, \,  R1, on  \, a: \\ \vec{h}_1=h_1y\,\vec{y}_1-h_1z\,\vec{z}_1 \,\ avec 
@@ -914,7 +914,7 @@ h_1z =|\ell\cos\theta|
 
 $$
 
-- **Relation entre les repères 3 et 4 (rotation d’angle gamma) (R34)**
+- **Relation entre les repÃ¨res 3 et 4 (rotation dâ€™angle gamma) (R34)**
 
 ![Repere34-min (5).jpg](./assets/dofbot-jetson-nano/Repere34-min_(5).jpg)
 
@@ -922,7 +922,7 @@ $$
 \begin{cases}-\vec{x}_4 = \cos\gamma\,\vec{y}_3 - \sin\gamma\,\vec{x}_3 \\\vec{y}_4 = \cos\gamma\,\vec{x}_3 + \sin\gamma\,\vec{y}_3\end{cases}
 $$
 
-- **Relation entre les repères 2 et 3 (rotation d’angle ß) (R23)**
+- **Relation entre les repÃ¨res 2 et 3 (rotation dâ€™angle ÃŸ) (R23)**
 
 ![Repere23.png](./assets/dofbot-jetson-nano/Repere23.png)
 
@@ -930,7 +930,7 @@ $$
 \begin{cases}-\vec{x}_3 = \cos\beta\,\vec{y}_2 - \sin\beta\,\vec{x}_2 \\\vec{y}_3 = \cos\beta\,\vec{x}_2 + \sin\beta\,\vec{y}_2\end{cases}
 $$
 
-- **Relation entre les repères 1 et 2 (rotation d’angle a) (R21)**
+- **Relation entre les repÃ¨res 1 et 2 (rotation dâ€™angle a) (R21)**
 
 ![Repere12-min.png](./assets/dofbot-jetson-nano/Repere12-min.png)
 
@@ -938,7 +938,7 @@ $$
 \begin{cases}-\vec{x}_2 = \cos\alpha\,\vec{y}_1 + \sin\alpha\,\vec{z}_1 \\\vec{y}_2 = -\cos\alpha\,\vec{z}_1 + \sin\alpha\,\vec{y}_1\end{cases}
 $$
 
-- **Relations entre les repères 4 et 5 (R45)**
+- **Relations entre les repÃ¨res 4 et 5 (R45)**
 
 ![Repere45-min.png](./assets/dofbot-jetson-nano/Repere45-min.png)
 
@@ -946,7 +946,7 @@ $$
 \begin{cases}\vec{z}_5 = -\vec{x}_4 \\\vec{y}_5 = \vec{y}_4\end{cases}
 $$
 
-- **Relation entre le repère 5 et le repère 1 (angle ?\theta?) (R51)**
+- **Relation entre le repÃ¨re 5 et le repÃ¨re 1 (angle ?\theta?) (R51)**
 
 ![Repere15-min.png](./assets/dofbot-jetson-nano/Repere15-min.png)
 
@@ -954,7 +954,7 @@ $$
 \begin{cases}\vec{z}_5 &= \sin \theta \, \vec{y}_1 - \cos \theta \, \vec{z}_1 \\\vec{y}_5 &= -\sin \theta \, \vec{z}_1 - \cos \theta \, \vec{y}_1\end{cases}
 $$
 
-- **Relation entre repère 1 et 0 ( eta)**
+- **Relation entre repÃ¨re 1 et 0 ( eta)**
 
 ![Repere10-min.png](./assets/dofbot-jetson-nano/Repere10-min.png)
 
@@ -964,9 +964,9 @@ $$
 
 ### Calcul
 
-A ce niveau, on exploite les relations entre les différents repères pour pouvoir  déterminer hx, hy et hz.
+A ce niveau, on exploite les relations entre les diffÃ©rents repÃ¨res pour pouvoir  dÃ©terminer hx, hy et hz.
 
-- **Relations du repère 3 exprimé dans le repère 1**
+- **Relations du repÃ¨re 3 exprimÃ© dans le repÃ¨re 1**
 
 $$
 
@@ -994,7 +994,7 @@ $$
 
 $$
 
-- **Repère 4 exprimé dans le repère 3 (rotation gamma)**
+- **RepÃ¨re 4 exprimÃ© dans le repÃ¨re 3 (rotation gamma)**
 
 $$
 
@@ -1010,7 +1010,7 @@ $$
 
 $$
 
-- **Relations entre les repères 4 et 5**
+- **Relations entre les repÃ¨res 4 et 5**
 
 $$
 
@@ -1022,7 +1022,7 @@ $$
 
 $$
 
-- **Repère 5 exprimé dans le repère 1**
+- **RepÃ¨re 5 exprimÃ© dans le repÃ¨re 1**
 
 $$
 \begin{cases}
@@ -1037,7 +1037,7 @@ $$
 
 $$
 
-- **Relations trigonométriques écrites explicitement**
+- **Relations trigonomÃ©triques Ã©crites explicitement**
 
 $$
 
@@ -1084,7 +1084,7 @@ h_{z} =|\ell\sin(\alpha+\beta+\gamma)|
 
 $$
 
-Il est important de préciser qu’on prendra **hz= hz-0.02** pour que le bras descende de 2cm afin de pouvoir aggriper l’objet avec la pince . 
+Il est important de prÃ©ciser quâ€™on prendra **hz= hz-0.02** pour que le bras descende de 2cm afin de pouvoir aggriper lâ€™objet avec la pince . 
 
 Donc on a:
 
@@ -1100,21 +1100,21 @@ z\_s =z+|\ell\sin(\alpha+\beta+\gamma)| -0.02
 
 $$
 
-**Pourquoi le nom “deux planifications” ?**
+**Pourquoi le nom â€œdeux planificationsâ€ ?**
 
-Le nom “deux planifications dérive du fait que l’on effectue deux planifications avec Moveit . La première planification est pour obtenir les valeurs des angles **a ,ß ,? et ?** lorsque le pseudo effecteur atteint la position cible et avec ces valeurs on détermine le point soustrait. La deuxième planification correspond à la détermination des angles qu’il faut pour que l’effecteur réel atteigne l’objet.
+Le nom â€œdeux planifications dÃ©rive du fait que lâ€™on effectue deux planifications avec Moveit . La premiÃ¨re planification est pour obtenir les valeurs des angles **a ,ÃŸ ,? et ?** lorsque le pseudo effecteur atteint la position cible et avec ces valeurs on dÃ©termine le point soustrait. La deuxiÃ¨me planification correspond Ã  la dÃ©termination des angles quâ€™il faut pour que lâ€™effecteur rÃ©el atteigne lâ€™objet.
 
-### 5.3.5 Implémentation logicielle de la correction
+### 5.3.5 ImplÃ©mentation logicielle de la correction
 
 ### `node_moveit_1_modified.py`
 
-Ce script intègre la **méthode des deux planifications** directement dans la phase de planification MoveIt.
+Ce script intÃ¨gre la **mÃ©thode des deux planifications** directement dans la phase de planification MoveIt.
 
 Fonctions principales :
 
-- récupération des angles issus de la première planification,
+- rÃ©cupÃ©ration des angles issus de la premiÃ¨re planification,
 - calcul automatique de la position soustraite,
-- replanification vers la position corrigée,
+- replanification vers la position corrigÃ©e,
 - publication de la trajectoire finale.
 
 ```python
@@ -1155,7 +1155,7 @@ def xyz_soustrait(trajectory):
 
 def callback(data):
     global status_received
-    rospy.loginfo("Statut d'exécution reçu : %s", data.data )
+    rospy.loginfo("Statut d'exÃ©cution reÃ§u : %s", data.data )
     status_received = data.data
 
 def node_moveit_1_modified():
@@ -1224,7 +1224,7 @@ def node_moveit_1_modified():
             return
         rospy.loginfo("Planification du mouvement pour la position cible...")
 
-        # Vérification si la position est la même ou n'est pas trop differente de l
+        # VÃ©rification si la position est la mÃªme ou n'est pas trop differente de l
 
         diff_pos.position.x=pos.position.x-precedent_pose.position.x
         diff_pos.position.y=pos.position.y-precedent_pose.position.y
@@ -1232,7 +1232,7 @@ def node_moveit_1_modified():
         diff_pos1=(diff_pos.position.x**2+diff_pos.position.y**2+diff_pos.position.z**2)**0.5
         diff_pos.orientation.w=pos.orientation.w-precedent_pose.orientation.w
         if diff_pos1<0.003 and diff_pos.orientation.w<0.01 :
-            rospy.loginfo("Même position que précédemment, réutilisation de la trajectoire précédente")
+            rospy.loginfo("MÃªme position que prÃ©cÃ©demment, rÃ©utilisation de la trajectoire prÃ©cÃ©dente")
             angle_pub.publish(precedent_trajectory)
             status_received=None
             rospy.sleep(0.5)
@@ -1286,23 +1286,23 @@ if __name__ == '__main__':
         pass    
 ```
 
-Ce script implémente un **nœud ROS de planification de mouvements** pour le bras robotique DOFBOT, basé sur **MoveIt**, avec une **pose cible fixe prédéfinie**. Le nœud, nommé `dofbot_motion_plan_py`, est utilisé principalement pour des **tests contrôlés, des démonstrations et la validation du modèle cinématique**.
+Ce script implÃ©mente un **nÅ“ud ROS de planification de mouvements** pour le bras robotique DOFBOT, basÃ© sur **MoveIt**, avec une **pose cible fixe prÃ©dÃ©finie**. Le nÅ“ud, nommÃ© `dofbot_motion_plan_py`, est utilisÃ© principalement pour des **tests contrÃ´lÃ©s, des dÃ©monstrations et la validation du modÃ¨le cinÃ©matique**.
 
-Le nœud attend la réception d’un statut `"Success"` sur le topic `/dofbot/execution_status` avant de lancer une nouvelle planification, assurant ainsi une **synchronisation correcte avec le module d’exécution**. Une pose cible complète (position et orientation) est définie explicitement, l’orientation étant calculée à partir d’angles d’Euler convertis en quaternion.
+Le nÅ“ud attend la rÃ©ception dâ€™un statut `"Success"` sur le topic `/dofbot/execution_status` avant de lancer une nouvelle planification, assurant ainsi une **synchronisation correcte avec le module dâ€™exÃ©cution**. Une pose cible complÃ¨te (position et orientation) est dÃ©finie explicitement, lâ€™orientation Ã©tant calculÃ©e Ã  partir dâ€™angles dâ€™Euler convertis en quaternion.
 
-Afin d’améliorer la précision de la saisie, une **correction géométrique de la pose cible** est appliquée pour compenser la distance entre le dernier lien du bras et la pince. Le nœud effectue alors une seconde planification à partir de cette pose corrigée, garantissant un positionnement plus précis de l’effecteur.
+Afin dâ€™amÃ©liorer la prÃ©cision de la saisie, une **correction gÃ©omÃ©trique de la pose cible** est appliquÃ©e pour compenser la distance entre le dernier lien du bras et la pince. Le nÅ“ud effectue alors une seconde planification Ã  partir de cette pose corrigÃ©e, garantissant un positionnement plus prÃ©cis de lâ€™effecteur.
 
-Le script intègre également un **mécanisme de réutilisation de trajectoire**, permettant d’éviter des recalculs inutiles lorsque la pose cible reste inchangée. La trajectoire articulaire finale est publiée sur le topic `/dofbot/trajectory`, tandis que la pose corrigée est diffusée à des fins de visualisation et de débogage.
+Le script intÃ¨gre Ã©galement un **mÃ©canisme de rÃ©utilisation de trajectoire**, permettant dâ€™Ã©viter des recalculs inutiles lorsque la pose cible reste inchangÃ©e. La trajectoire articulaire finale est publiÃ©e sur le topic `/dofbot/trajectory`, tandis que la pose corrigÃ©e est diffusÃ©e Ã  des fins de visualisation et de dÃ©bogage.
 
-Ce nœud constitue une **version expérimentale et de validation** du module de planification, facilitant l’analyse du comportement de MoveIt et l’optimisation des paramètres de mouvement dans le projet EcoCity.
+Ce nÅ“ud constitue une **version expÃ©rimentale et de validation** du module de planification, facilitant lâ€™analyse du comportement de MoveIt et lâ€™optimisation des paramÃ¨tres de mouvement dans le projet EcoCity.
 
 ### `node_planning_cmp.py`
 
-Ce nœud :
+Ce nÅ“ud :
 
-- s’abonne au topic `/waste_pose`,
-- applique la correction géométrique,
-- déclenche la planification finale.
+- sâ€™abonne au topic `/waste_pose`,
+- applique la correction gÃ©omÃ©trique,
+- dÃ©clenche la planification finale.
 
 ```python
 #!/usr/bin/env python
@@ -1341,7 +1341,7 @@ def xyz_soustrait(trajectory):
 
 def callback_pos(data):
     global last_object_pose
-    rospy.loginfo("Objet reçu : Position{ x=%.3f, y=%.3f, z=%.3f}", data.point.x, data.point.y, data.point.z)
+    rospy.loginfo("Objet reÃ§u : Position{ x=%.3f, y=%.3f, z=%.3f}", data.point.x, data.point.y, data.point.z)
     last_object_pose = data  # on sauvegarde la position de l'objet
 
 def node_planning_cmp():
@@ -1400,7 +1400,7 @@ def node_planning_cmp():
         pos.orientation.y = -0.000217502
         pos.orientation.z = 0.000375234
         pos.orientation.w = -0.340811
-        # Vérification si la position est la même ou n'est pas trop differente de l
+        # VÃ©rification si la position est la mÃªme ou n'est pas trop differente de l
         
         if not precedent_trajectory is None:
             diff_pos.position.x=pos.position.x-precedent_pose.position.x
@@ -1408,7 +1408,7 @@ def node_planning_cmp():
             diff_pos.position.z=pos.position.z-precedent_pose.position.z
             diff_pos1=(diff_pos.position.x**2+diff_pos.position.y**2+diff_pos.position.z**2)**0.5
             if diff_pos1<0.03:
-                rospy.loginfo("Même position que précédemment, réutilisation de la trajectoire précédente")
+                rospy.loginfo("MÃªme position que prÃ©cÃ©demment, rÃ©utilisation de la trajectoire prÃ©cÃ©dente")
                 angle_pub.publish(precedent_trajectory)
                 last_object_pose=None
                 rospy.sleep(0.5)
@@ -1461,30 +1461,30 @@ if __name__ == '__main__':
         pass    
 ```
 
-Ce script implémente un **nœud ROS de planification de trajectoires** pour le bras robotique DOFBOT, basé sur **MoveIt**. Le nœud, nommé `dofbot_motion_plan_py`, est chargé de convertir une **position cible détectée dans l’espace** en une **trajectoire articulaire exploitable** par le module de commande.
+Ce script implÃ©mente un **nÅ“ud ROS de planification de trajectoires** pour le bras robotique DOFBOT, basÃ© sur **MoveIt**. Le nÅ“ud, nommÃ© `dofbot_motion_plan_py`, est chargÃ© de convertir une **position cible dÃ©tectÃ©e dans lâ€™espace** en une **trajectoire articulaire exploitable** par le module de commande.
 
-Le nœud s’abonne au topic `/waste/pose` afin de recevoir la position cartésienne de l’objet à saisir, exprimée dans le repère du robot. À partir de cette position, une pose cible complète (position et orientation) est définie et transmise au planificateur MoveIt via le groupe de mouvement `dofbot`.
+Le nÅ“ud sâ€™abonne au topic `/waste/pose` afin de recevoir la position cartÃ©sienne de lâ€™objet Ã  saisir, exprimÃ©e dans le repÃ¨re du robot. Ã€ partir de cette position, une pose cible complÃ¨te (position et orientation) est dÃ©finie et transmise au planificateur MoveIt via le groupe de mouvement `dofbot`.
 
-Plusieurs paramètres de planification sont configurés afin d’améliorer la robustesse du calcul, notamment le temps de planification, le nombre de tentatives, ainsi que les tolérances sur la position et l’orientation. Le nœud intègre également un **mécanisme de réutilisation de trajectoire**, permettant de republier une trajectoire précédente lorsque la cible varie peu, réduisant ainsi le temps de calcul.
+Plusieurs paramÃ¨tres de planification sont configurÃ©s afin dâ€™amÃ©liorer la robustesse du calcul, notamment le temps de planification, le nombre de tentatives, ainsi que les tolÃ©rances sur la position et lâ€™orientation. Le nÅ“ud intÃ¨gre Ã©galement un **mÃ©canisme de rÃ©utilisation de trajectoire**, permettant de republier une trajectoire prÃ©cÃ©dente lorsque la cible varie peu, rÃ©duisant ainsi le temps de calcul.
 
-Après une première planification, une **correction de la pose cible** est appliquée pour tenir compte de la distance entre le dernier lien du bras et la pince. Cette étape génère une seconde trajectoire plus précise, adaptée à la saisie de l’objet.
+AprÃ¨s une premiÃ¨re planification, une **correction de la pose cible** est appliquÃ©e pour tenir compte de la distance entre le dernier lien du bras et la pince. Cette Ã©tape gÃ©nÃ¨re une seconde trajectoire plus prÃ©cise, adaptÃ©e Ã  la saisie de lâ€™objet.
 
-La trajectoire finale, de type `JointTrajectory`, est publiée sur le topic `/dofbot/trajectory`, tandis que la pose corrigée est diffusée à des fins de débogage. Ce nœud constitue ainsi le **cœur du module de planification**, assurant le lien entre la perception de l’environnement et l’exécution des mouvements du DOFBOT dans le cadre du projet EcoCity.
+La trajectoire finale, de type `JointTrajectory`, est publiÃ©e sur le topic `/dofbot/trajectory`, tandis que la pose corrigÃ©e est diffusÃ©e Ã  des fins de dÃ©bogage. Ce nÅ“ud constitue ainsi le **cÅ“ur du module de planification**, assurant le lien entre la perception de lâ€™environnement et lâ€™exÃ©cution des mouvements du DOFBOT dans le cadre du projet EcoCity.
 
-### 5.3.6 Déplacement réel du bras DOFBOT
+### 5.3.6 DÃ©placement rÃ©el du bras DOFBOT
 
-Une fois la trajectoire validée, l’exécution réelle est assurée par la librairie **Arm_Lib**, fournie avec le DOFBOT.
+Une fois la trajectoire validÃ©e, lâ€™exÃ©cution rÃ©elle est assurÃ©e par la librairie **Arm_Lib**, fournie avec le DOFBOT.
 
-### Fonction clé utilisée
+### Fonction clÃ© utilisÃ©e
 
 **`Arm_serial_servo_write6(S1,S2,S3,S4,S5,S6,time)`**
 
-Cette fonction permet de commander **simultanément les six servomoteurs** du bras.
+Cette fonction permet de commander **simultanÃ©ment les six servomoteurs** du bras.
 
-### 5.3.7 Nœuds de commande du bras réel
+### 5.3.7 NÅ“uds de commande du bras rÃ©el
 
-- **`dofbot_arm_lib`** : exécution simple d’une trajectoire.
-- **`dofbot_arm_lib_class`** : prise de l’objet + tri automatique.
+- **`dofbot_arm_lib`** : exÃ©cution simple dâ€™une trajectoire.
+- **`dofbot_arm_lib_class`** : prise de lâ€™objet + tri automatique.
 
 ### **`dofbot_arm_lib`**
 
@@ -1509,10 +1509,10 @@ last_object_trajectory =None
 # Callback function to receive the object pose
 def callback(data):
     global last_object_trajectory
-    rospy.loginfo("Trajectoire reçue : ")
+    rospy.loginfo("Trajectoire reÃ§ue : ")
     for i,point in enumerate (data.points):
         rospy.loginfo(f"Point {i}: {point.positions}")
-    last_object_trajectory = data  # on sauvegarde la dernière détection
+    last_object_trajectory = data  # on sauvegarde la derniÃ¨re dÃ©tection
 
 def dofbot_arm_lib():
     global last_object_trajectory
@@ -1528,7 +1528,7 @@ def dofbot_arm_lib():
     #initial position
     dofbot_initial_position()
     rospy.sleep(0.5)
-    # Attente jusqu’à ce qu’un message soit reçu
+    # Attente jusquâ€™Ã  ce quâ€™un message soit reÃ§u
     while not rospy.is_shutdown() :
         
         rospy.loginfo("En attente de la trajectoire.")
@@ -1551,15 +1551,15 @@ def dofbot_arm_lib():
                                 point.positions[4]*RA2DE+90 ,
                                 0,
                                 1000)
-            rospy.loginfo(f"Point {i} exécutée.")
-        rospy.loginfo("Trajectoire complète exécutée.")    
+            rospy.loginfo(f"Point {i} exÃ©cutÃ©e.")
+        rospy.loginfo("Trajectoire complÃ¨te exÃ©cutÃ©e.")    
         rospy.sleep(0.2)
         #Ferme la pince 
         Arm.Arm_serial_servo_write(6,173,500)
         rospy.sleep(1)
-        #Retour à la position initiale 
+        #Retour Ã  la position initiale 
         dofbot_initial_position()
-        rospy.loginfo("?? Retour à la position initiale.")
+        rospy.loginfo("?? Retour Ã  la position initiale.")
         rospy.sleep(1)
         status_pub.publish("Success")
         last_object_trajectory = None
@@ -1573,15 +1573,15 @@ if __name__ == '__main__':
         pass    
 ```
 
-Ce script implémente un **nœud ROS de commande du bras robotique DOFBOT**, dédié à l’**exécution d’une trajectoire articulaire** reçue depuis un module de planification.
+Ce script implÃ©mente un **nÅ“ud ROS de commande du bras robotique DOFBOT**, dÃ©diÃ© Ã  lâ€™**exÃ©cution dâ€™une trajectoire articulaire** reÃ§ue depuis un module de planification.
 
-Le nœud, nommé `dofbot_arm_lib_py`, s’appuie sur la librairie matérielle `Arm_Lib` pour piloter directement les servomoteurs du bras. Il s’abonne au topic `/dofbot/trajectory` afin de recevoir une trajectoire de type `JointTrajectory`, contenant une séquence de positions articulaires horodatées.
+Le nÅ“ud, nommÃ© `dofbot_arm_lib_py`, sâ€™appuie sur la librairie matÃ©rielle `Arm_Lib` pour piloter directement les servomoteurs du bras. Il sâ€™abonne au topic `/dofbot/trajectory` afin de recevoir une trajectoire de type `JointTrajectory`, contenant une sÃ©quence de positions articulaires horodatÃ©es.
 
-La trajectoire reçue est exécutée **point par point**, en respectant les délais temporels définis, après conversion des angles de radians vers degrés et application d’un offset mécanique adapté au DOFBOT. Chaque point correspond à une configuration articulaire envoyée simultanément aux servomoteurs.
+La trajectoire reÃ§ue est exÃ©cutÃ©e **point par point**, en respectant les dÃ©lais temporels dÃ©finis, aprÃ¨s conversion des angles de radians vers degrÃ©s et application dâ€™un offset mÃ©canique adaptÃ© au DOFBOT. Chaque point correspond Ã  une configuration articulaire envoyÃ©e simultanÃ©ment aux servomoteurs.
 
-Une fois la trajectoire entièrement exécutée, la pince est fermée pour simuler ou effectuer la prise de l’objet, puis le bras est automatiquement ramené à sa **position initiale de référence**. Un message d’état est ensuite publié sur le topic `/dofbot/execution_status`, indiquant la réussite de l’exécution.
+Une fois la trajectoire entiÃ¨rement exÃ©cutÃ©e, la pince est fermÃ©e pour simuler ou effectuer la prise de lâ€™objet, puis le bras est automatiquement ramenÃ© Ã  sa **position initiale de rÃ©fÃ©rence**. Un message dâ€™Ã©tat est ensuite publiÃ© sur le topic `/dofbot/execution_status`, indiquant la rÃ©ussite de lâ€™exÃ©cution.
 
-Ce nœud constitue une **brique de base du contrôle moteur**, assurant la transition entre la planification de trajectoires et l’action physique du bras robotique dans l’architecture ROS du projet EcoCity.
+Ce nÅ“ud constitue une **brique de base du contrÃ´le moteur**, assurant la transition entre la planification de trajectoires et lâ€™action physique du bras robotique dans lâ€™architecture ROS du projet EcoCity.
 
 ### **`dofbot_arm_lib_class`**
 
@@ -1602,7 +1602,7 @@ RA2DE = 180 / pi
 trajectoire_corbeilles={
     "Menagers": [150,5,86,91,90,173],   #Gauche
     "Dangereux": [30,5,86,91,90,173],    #Droite
-    "Recyclabes": [90,175,94,89,90,173]  #Arrière
+    "Recyclabes": [90,175,94,89,90,173]  #ArriÃ¨re
 }
 
 # Variable to store the last detected object pose
@@ -1625,26 +1625,26 @@ def tri_corbeille(classe):
                                 trajectoire_corbeilles[classe][5],
                                 1000)
     rospy.sleep(1)
-    #Lache l'objet et retourne à ta position initiale
+    #Lache l'objet et retourne Ã  ta position initiale
     Arm.Arm_serial_servo_write(6,0,500)
-    rospy.loginfo("Dépot de l'objet.")
+    rospy.loginfo("DÃ©pot de l'objet.")
     rospy.sleep(1)
-    #Retour à la position initiale
+    #Retour Ã  la position initiale
     dofbot_initial_position()
     rospy.sleep(1)
 
 # Callback function to receive the object pose
 def callback_trajectory(data):
     global last_object_trajectory
-    rospy.loginfo("Trajectoire reçue : ")
+    rospy.loginfo("Trajectoire reÃ§ue : ")
     for i,point in enumerate (data.points):
         rospy.loginfo(f"Point {i}: {point.positions}")
-    last_object_trajectory = data  # on sauvegarde la dernière détection
+    last_object_trajectory = data  # on sauvegarde la derniÃ¨re dÃ©tection
 
 def callback_class(data):
     global last_object_class
     last_object_class = data.data
-    rospy.loginfo("Classe d'objet reçue : %s", data.data )
+    rospy.loginfo("Classe d'objet reÃ§ue : %s", data.data )
 
 def dofbot_arm_lib_class():
     global last_object_trajectory, last_object_class
@@ -1663,7 +1663,7 @@ def dofbot_arm_lib_class():
     #initial position
     dofbot_initial_position()
     rospy.sleep(0.5)
-    # Attente jusqu’à ce qu’un message soit reçu
+    # Attente jusquâ€™Ã  ce quâ€™un message soit reÃ§u
     while not rospy.is_shutdown() :
 
         rospy.loginfo("En attente de la trajectoire.")
@@ -1686,8 +1686,8 @@ def dofbot_arm_lib_class():
                                 point.positions[4]*RA2DE+90 ,
                                 0,
                                 1000)
-            rospy.loginfo(f"Point {i} exécutée.")
-        rospy.loginfo("Trajectoire complète exécutée.")    
+            rospy.loginfo(f"Point {i} exÃ©cutÃ©e.")
+        rospy.loginfo("Trajectoire complÃ¨te exÃ©cutÃ©e.")    
         rospy.sleep(2)
         rospy.loginfo("Fermeture de la pince.")
         Arm.Arm_serial_servo_write(6,173,500)
@@ -1698,7 +1698,7 @@ def dofbot_arm_lib_class():
         #Back to init
         """
         dofbot_initial_position()
-        rospy.loginfo("Retour à la position initiale.")
+        rospy.loginfo("Retour Ã  la position initiale.")
         rospy.sleep(1)
         """
         #Tri effectif
@@ -1716,23 +1716,23 @@ if __name__ == '__main__':
         pass    
 ```
 
-Ce script implémente un **nœud ROS de contrôle du bras robotique DOFBOT**, chargé d’exécuter une **trajectoire articulaire** et d’assurer le **tri automatique d’objets** vers différentes corbeilles en fonction de leur classe.
+Ce script implÃ©mente un **nÅ“ud ROS de contrÃ´le du bras robotique DOFBOT**, chargÃ© dâ€™exÃ©cuter une **trajectoire articulaire** et dâ€™assurer le **tri automatique dâ€™objets** vers diffÃ©rentes corbeilles en fonction de leur classe.
 
-Le nœud, nommé `dofbot_arm_lib_class_py`, s’appuie sur la librairie matérielle `Arm_Lib` pour piloter directement les servomoteurs du bras. Les trajectoires de dépôt associées à chaque type d’objet (ménagers, dangereux, recyclables) sont définies sous forme d’angles articulaires prédéfinis.
+Le nÅ“ud, nommÃ© `dofbot_arm_lib_class_py`, sâ€™appuie sur la librairie matÃ©rielle `Arm_Lib` pour piloter directement les servomoteurs du bras. Les trajectoires de dÃ©pÃ´t associÃ©es Ã  chaque type dâ€™objet (mÃ©nagers, dangereux, recyclables) sont dÃ©finies sous forme dâ€™angles articulaires prÃ©dÃ©finis.
 
-Le nœud s’abonne au topic `/dofbot/trajectory` afin de recevoir une trajectoire de type `JointTrajectory`, ainsi qu’au topic `/dofbot/object_class` pour récupérer la classe de l’objet détecté. La trajectoire reçue est exécutée point par point, avec un respect des délais temporels, après conversion des angles de radians vers degrés et application d’un offset mécanique.
+Le nÅ“ud sâ€™abonne au topic `/dofbot/trajectory` afin de recevoir une trajectoire de type `JointTrajectory`, ainsi quâ€™au topic `/dofbot/object_class` pour rÃ©cupÃ©rer la classe de lâ€™objet dÃ©tectÃ©. La trajectoire reÃ§ue est exÃ©cutÃ©e point par point, avec un respect des dÃ©lais temporels, aprÃ¨s conversion des angles de radians vers degrÃ©s et application dâ€™un offset mÃ©canique.
 
-Une fois la trajectoire terminée, la pince est fermée pour saisir l’objet, puis le bras est repositionné avant d’être dirigé vers la corbeille correspondant à la classe détectée. L’objet est ensuite relâché et le bras revient à sa position initiale.
+Une fois la trajectoire terminÃ©e, la pince est fermÃ©e pour saisir lâ€™objet, puis le bras est repositionnÃ© avant dâ€™Ãªtre dirigÃ© vers la corbeille correspondant Ã  la classe dÃ©tectÃ©e. Lâ€™objet est ensuite relÃ¢chÃ© et le bras revient Ã  sa position initiale.
 
-Enfin, un message d’état est publié sur le topic `/dofbot/execution_status`, indiquant la bonne exécution du cycle de tri. Ce nœud constitue ainsi le **lien opérationnel entre la perception, la planification et l’action**, assurant un tri autonome et cohérent des déchets dans le cadre du projet EcoCity.
+Enfin, un message dâ€™Ã©tat est publiÃ© sur le topic `/dofbot/execution_status`, indiquant la bonne exÃ©cution du cycle de tri. Ce nÅ“ud constitue ainsi le **lien opÃ©rationnel entre la perception, la planification et lâ€™action**, assurant un tri autonome et cohÃ©rent des dÃ©chets dans le cadre du projet EcoCity.
 
-### 5.3.8 Erreurs rencontrées et solutions
+### 5.3.8 Erreurs rencontrÃ©es et solutions
 
 ```python
-**/usr/bin/env: ‘python3\r’: No such fileor directory**
+**/usr/bin/env: â€˜python3\râ€™: No such fileor directory**
 ```
 
-- Problème CRLF Windows ? `sed -i 's/\r$//' fichier.py`
+- ProblÃ¨me CRLF Windows ? `sed -i 's/\r$//' fichier.py`
 
 ```python
 **rosrun dofbot_moveit node_moveit.py
@@ -1764,16 +1764,16 @@ name, robot_description, ns, wait_for_servers
 RuntimeError: Unable to connect to move_group action server 'move_group' within allotted time (5s)**
 ```
 
-- MoveGroup non lancé ? `roslaunch dofbot_config demo.launch`
+- MoveGroup non lancÃ© ? `roslaunch dofbot_config demo.launch`
 
 ### 5.3.9 Remarques importantes
 
-La planification MoveIt peut échouer occasionnellement en raison de son caractère stochastique.
+La planification MoveIt peut Ã©chouer occasionnellement en raison de son caractÃ¨re stochastique.
 
-Un échec fréquent indique généralement :
+Un Ã©chec frÃ©quent indique gÃ©nÃ©ralement :
 
-- une cible hors d’atteinte,
-- une orientation irréalisable,
+- une cible hors dâ€™atteinte,
+- une orientation irrÃ©alisable,
 - une collision,
 - des contraintes trop strictes.
 
@@ -1831,22 +1831,22 @@ while not rospy.is_shutdown():
 
 ```
 
-Ce script implémente un **nœud ROS de visualisation** permettant d’afficher une **cible spatiale dans RViz** sous forme de marqueur 3D. Le nœud, nommé `target_marker_publisher`, publie des messages `visualization_msgs/Marker` sur le topic `/visualisation_marker` à une fréquence de 1 Hz.
+Ce script implÃ©mente un **nÅ“ud ROS de visualisation** permettant dâ€™afficher une **cible spatiale dans RViz** sous forme de marqueur 3D. Le nÅ“ud, nommÃ© `target_marker_publisher`, publie des messages `visualization_msgs/Marker` sur le topic `/visualisation_marker` Ã  une frÃ©quence de 1 Hz.
 
-Le marqueur est exprimé dans le repère `base_link`, assurant la cohérence avec le modèle cinématique du bras DOFBOT. Il est représenté par une **sphère**, utilisée pour matérialiser un point cible dans l’espace, défini par des coordonnées cartésiennes fixes (x,y,z)(x, y, z)(x,y,z).
+Le marqueur est exprimÃ© dans le repÃ¨re `base_link`, assurant la cohÃ©rence avec le modÃ¨le cinÃ©matique du bras DOFBOT. Il est reprÃ©sentÃ© par une **sphÃ¨re**, utilisÃ©e pour matÃ©rialiser un point cible dans lâ€™espace, dÃ©fini par des coordonnÃ©es cartÃ©siennes fixes (x,y,z)(x, y, z)(x,y,z).
 
-L’orientation du marqueur est spécifiée à l’aide d’angles d’Euler (roll, pitch, yaw), convertis en quaternion afin de respecter les conventions ROS. Bien que la cible soit principalement positionnelle, cette orientation permet également de représenter une orientation de référence de l’effecteur.
+Lâ€™orientation du marqueur est spÃ©cifiÃ©e Ã  lâ€™aide dâ€™angles dâ€™Euler (roll, pitch, yaw), convertis en quaternion afin de respecter les conventions ROS. Bien que la cible soit principalement positionnelle, cette orientation permet Ã©galement de reprÃ©senter une orientation de rÃ©fÃ©rence de lâ€™effecteur.
 
-La taille et la couleur du marqueur sont configurées pour garantir une bonne visibilité dans RViz. À chaque itération, le marqueur est republié, assurant son affichage continu tant que le nœud est actif.
+La taille et la couleur du marqueur sont configurÃ©es pour garantir une bonne visibilitÃ© dans RViz. Ã€ chaque itÃ©ration, le marqueur est republiÃ©, assurant son affichage continu tant que le nÅ“ud est actif.
 
-Ce nœud constitue un **outil simple et efficace de validation visuelle**, facilitant le débogage et l’analyse des calculs de cinématique inverse et des trajectoires du bras robotique.
+Ce nÅ“ud constitue un **outil simple et efficace de validation visuelle**, facilitant le dÃ©bogage et lâ€™analyse des calculs de cinÃ©matique inverse et des trajectoires du bras robotique.
 
-### 5.3.10 Récapitulatif des nœuds
+### 5.3.10 RÃ©capitulatif des nÅ“uds
 
-| Nœud | Rôle |
+| NÅ“ud | RÃ´le |
 | --- | --- |
 | node_planning_cmp | Planification avec correction |
-| dofbot_arm_lib_class | Préhension et tri |
+| dofbot_arm_lib_class | PrÃ©hension et tri |
 
 ### 5.3.11 Liens utiles
 
@@ -1854,92 +1854,92 @@ Ce nœud constitue un **outil simple et efficace de validation visuelle**, facili
 - [https://wiki.ros.org/ROS/Tutorials/CreatingPackage](https://wiki.ros.org/ROS/Tutorials/CreatingPackage)
 - [https://www.yahboom.net/study/Dofbot-Jetson_nano](https://www.yahboom.net/study/Dofbot-Jetson_nano)
 
-## 5.4 Cinématique inverse
+## 5.4 CinÃ©matique inverse
 
-Initialement, la planification de trajectoires du bras **DOFBOT Jetson Nano** devait être entièrement assurée par **MoveIt**. Toutefois, lors des phases de tests et d’intégration, cette approche ne s’est pas révélée suffisamment fiable ni précise pour notre cas d’usage, notamment en raison :
+Initialement, la planification de trajectoires du bras **DOFBOT Jetson Nano** devait Ãªtre entiÃ¨rement assurÃ©e par **MoveIt**. Toutefois, lors des phases de tests et dâ€™intÃ©gration, cette approche ne sâ€™est pas rÃ©vÃ©lÃ©e suffisamment fiable ni prÃ©cise pour notre cas dâ€™usage, notamment en raison :
 
-- des contraintes géométriques spécifiques du poste de tri,
-- de la précision requise pour atteindre la zone d’arrêt des déchets sur le convoyeur,
-- et des difficultés rencontrées pour obtenir des trajectoires stables et répétables adaptées au cycle de tri.
+- des contraintes gÃ©omÃ©triques spÃ©cifiques du poste de tri,
+- de la prÃ©cision requise pour atteindre la zone dâ€™arrÃªt des dÃ©chets sur le convoyeur,
+- et des difficultÃ©s rencontrÃ©es pour obtenir des trajectoires stables et rÃ©pÃ©tables adaptÃ©es au cycle de tri.
 
-Afin de garantir un positionnement robuste et maîtrisé de la pince, nous avons donc opté pour une **approche analytique basée sur la cinématique inverse**, directement dérivée du modèle géométrique du robot fourni par le constructeur (**URDF officielle Yahboom**).
+Afin de garantir un positionnement robuste et maÃ®trisÃ© de la pince, nous avons donc optÃ© pour une **approche analytique basÃ©e sur la cinÃ©matique inverse**, directement dÃ©rivÃ©e du modÃ¨le gÃ©omÃ©trique du robot fourni par le constructeur (**URDF officielle Yahboom**).
 
 ### 5.4.1 Objectif
 
-L’objectif de cette partie est de déterminer les **angles des six servomoteurs** du bras robotique afin que la pince atteigne une position cible définie par les coordonnées cartésiennes , exprimées dans le **repère de base du robot** (`base_link`).
+Lâ€™objectif de cette partie est de dÃ©terminer les **angles des six servomoteurs** du bras robotique afin que la pince atteigne une position cible dÃ©finie par les coordonnÃ©es cartÃ©siennes , exprimÃ©es dans le **repÃ¨re de base du robot** (`base_link`).
 
-Ce repère est celui défini dans l’URDF officielle fournie par **Yahboom**, et il est considéré comme fixe et assimilable au repère terrestre.
+Ce repÃ¨re est celui dÃ©fini dans lâ€™URDF officielle fournie par **Yahboom**, et il est considÃ©rÃ© comme fixe et assimilable au repÃ¨re terrestre.
 
-### 5.4.2 Méthode adoptée
+### 5.4.2 MÃ©thode adoptÃ©e
 
-La démarche suivie pour établir la cinématique inverse repose sur les étapes suivantes :
+La dÃ©marche suivie pour Ã©tablir la cinÃ©matique inverse repose sur les Ã©tapes suivantes :
 
-1. **Identification et définition explicite des repères cinématiques** associés à chaque segment du robot à partir de l’URDF.
-2. **Élaboration du schéma cinématique du bras**, mettant en évidence les liaisons et les degrés de liberté.
-3. **Établissement de la cinématique directe**, permettant d’exprimer la position de l’effecteur en fonction des angles articulaires.
-4. **Validation expérimentale** du modèle à partir de mesures réelles effectuées sur le robot.
-5. **Exploitation de la cinématique directe pour dériver analytiquement la cinématique inverse**.
+1. **Identification et dÃ©finition explicite des repÃ¨res cinÃ©matiques** associÃ©s Ã  chaque segment du robot Ã  partir de lâ€™URDF.
+2. **Ã‰laboration du schÃ©ma cinÃ©matique du bras**, mettant en Ã©vidence les liaisons et les degrÃ©s de libertÃ©.
+3. **Ã‰tablissement de la cinÃ©matique directe**, permettant dâ€™exprimer la position de lâ€™effecteur en fonction des angles articulaires.
+4. **Validation expÃ©rimentale** du modÃ¨le Ã  partir de mesures rÃ©elles effectuÃ©es sur le robot.
+5. **Exploitation de la cinÃ©matique directe pour dÃ©river analytiquement la cinÃ©matique inverse**.
 
-### 5.4.3 Schéma cinématique du robot
+### 5.4.3 SchÃ©ma cinÃ©matique du robot
 
-En se basant sur l’URDF officielle du DOFBOT, on distingue **six repères** successifs permettant de définir la position et l’orientation de chaque segment du bras dans l’espace.
+En se basant sur lâ€™URDF officielle du DOFBOT, on distingue **six repÃ¨res** successifs permettant de dÃ©finir la position et lâ€™orientation de chaque segment du bras dans lâ€™espace.
 
-- **Repère 0 – `base_link`** : repère principal du robot, immobile, dans lequel sont exprimées les coordonnées des objets à saisir.
+- **RepÃ¨re 0 â€“ `base_link`** : repÃ¨re principal du robot, immobile, dans lequel sont exprimÃ©es les coordonnÃ©es des objets Ã  saisir.
 
 ![image.png](./assets/dofbot-jetson-nano/image%209.png)
 
-Pour rappel l’axe des x est en rouge, l’axe des y en bleu et l’axe des z en vert. 
+Pour rappel lâ€™axe des x est en rouge, lâ€™axe des y en bleu et lâ€™axe des z en vert. 
 
-- **Repère 1** : situé au niveau du moteur de rotation de la base.
+- **RepÃ¨re 1** : situÃ© au niveau du moteur de rotation de la base.
 
 ![image.png](./assets/dofbot-jetson-nano/image%2010.png)
 
-- **Repère 2** : associé au premier moteur levant et au premier segment du bras.
+- **RepÃ¨re 2** : associÃ© au premier moteur levant et au premier segment du bras.
 
 ![image.png](./assets/dofbot-jetson-nano/image%2011.png)
 
-- **Repère 3** : associé au second moteur levant et au second segment du bras.
+- **RepÃ¨re 3** : associÃ© au second moteur levant et au second segment du bras.
 
 ![image.png](./assets/dofbot-jetson-nano/image%2012.png)
 
-- **Repère 4** : associé au troisième moteur levant et au troisième segment du bras.
+- **RepÃ¨re 4** : associÃ© au troisiÃ¨me moteur levant et au troisiÃ¨me segment du bras.
 
 ![image.png](./assets/dofbot-jetson-nano/image%2013.png)
 
-- **Repère 5** : associé au moteur commandant l’orientation de la pince.
+- **RepÃ¨re 5** : associÃ© au moteur commandant lâ€™orientation de la pince.
 
 ![image.png](./assets/dofbot-jetson-nano/image%2014.png)
 
-Les repères étant correctement définis, il est alors possible de dresser le **schéma cinématique global du robot**, utilisé pour l’écriture de la cinématique directe.
+Les repÃ¨res Ã©tant correctement dÃ©finis, il est alors possible de dresser le **schÃ©ma cinÃ©matique global du robot**, utilisÃ© pour lâ€™Ã©criture de la cinÃ©matique directe.
 
 ![WhatsApp Image 2026-01-04 at 02.20.54.jpeg](./assets/dofbot-jetson-nano/WhatsApp_Image_2026-01-04_at_02.20.54.jpeg)
 
-### 5.4.4 Paramètres géométriques et notations
+### 5.4.4 ParamÃ¨tres gÃ©omÃ©triques et notations
 
-Les longueurs des différents segments du bras sont définies comme suit :
+Les longueurs des diffÃ©rents segments du bras sont dÃ©finies comme suit :
 
 $$
 \begin{cases}\theta = \operatorname{mes}(\vec{x}_0,\vec{x}_1) \\\alpha = \operatorname{mes}(\vec{x}_1,-\vec{x}_2) \\\beta = \operatorname{mes}(\vec{y}_2,-\vec{x}_3) \\\gamma = \operatorname{mes}(\vec{y}_3,-\vec{x}_4)\end{cases}
 \\[0.3cm]
 \begin{split}
-                             \\l_1 &= OO_2 = 0.1275~\text{m} \\l_2 &= O_2O_3 = 0.08285~\text{m} \\l_3 &= O_3O_4 = 0.08285~\text{m} \\l_4 &= O_4O_5 = 0.02385~\text{m} \\l_5 &=O_5P= 0.1~\text{m (mesuré manuellement sur le robot)}\end{split}
+                             \\l_1 &= OO_2 = 0.1275~\text{m} \\l_2 &= O_2O_3 = 0.08285~\text{m} \\l_3 &= O_3O_4 = 0.08285~\text{m} \\l_4 &= O_4O_5 = 0.02385~\text{m} \\l_5 &=O_5P= 0.1~\text{m (mesurÃ© manuellement sur le robot)}\end{split}
 $$
 
-Les angles articulaires sont définis à partir des relations géométriques entre les axes des différents repères : alpha, beta , gamma et teta.
+Les angles articulaires sont dÃ©finis Ã  partir des relations gÃ©omÃ©triques entre les axes des diffÃ©rents repÃ¨res : alpha, beta , gamma et teta.
 
-### 5.4.5 Cinématique directe du bras
+### 5.4.5 CinÃ©matique directe du bras
 
-La cinématique directe permet d’exprimer les coordonnées  de l’effecteur (point ) dans le repère  en fonction des longueurs des segments et des angles articulaires.
+La cinÃ©matique directe permet dâ€™exprimer les coordonnÃ©es  de lâ€™effecteur (point ) dans le repÃ¨re  en fonction des longueurs des segments et des angles articulaires.
 
 $$
-\begin{align*}\text{D'après   la relation de chasles , on a}
+\begin{align*}\text{D'aprÃ¨s   la relation de chasles , on a}
 \\\overrightarrow{OP} = \overrightarrow{OO_2} + \overrightarrow{O_2O_3} + \overrightarrow{O_3O_4} + \overrightarrow{O_4O_5} + \overrightarrow{O_5P}
 \\ = l_1 \overrightarrow{3}_1 - l_2 \overrightarrow{x}_2 - l_3 \overrightarrow{x}_3 + l_4 \overrightarrow{z}_5 + l_5 \overrightarrow{z}_5
 \\\overrightarrow{OP} = l_1 \overrightarrow{z}_1 - l_2 \overrightarrow{x}_2 - l_3 \overrightarrow{x}_3 + (l_4 + l_5) \overrightarrow{z}_5   \
 \end{align*}
 $$
 
- Figures géométrales de changement de repères entres les différentes bases .
+ Figures gÃ©omÃ©trales de changement de repÃ¨res entres les diffÃ©rentes bases .
 
 ![image.png](./assets/dofbot-jetson-nano/image%2015.png)
 
@@ -1965,23 +1965,23 @@ z &= \ell_1 + \ell_2 \sin\alpha - \ell_3 \cos(\alpha+\beta) - (\ell_4+\ell_5)\si
 \end{align}
 $$
 
-### 5.4.6 Cinématique inverse
+### 5.4.6 CinÃ©matique inverse
 
-Le système obtenu comporte **trois équations pour quatre inconnues**. Afin de rendre le problème solvable, un angle est fixé.
+Le systÃ¨me obtenu comporte **trois Ã©quations pour quatre inconnues**. Afin de rendre le problÃ¨me solvable, un angle est fixÃ©.
 
-L’angle choisi est  (premier moteur levant). Sa valeur a été fixée à **83°**, correspondant à la position réelle de tri du robot, avec une orientation de la pince adaptée à la zone d’arrêt des déchets sur le convoyeur.
+Lâ€™angle choisi est  (premier moteur levant). Sa valeur a Ã©tÃ© fixÃ©e Ã  **83Â°**, correspondant Ã  la position rÃ©elle de tri du robot, avec une orientation de la pince adaptÃ©e Ã  la zone dâ€™arrÃªt des dÃ©chets sur le convoyeur.
 
-> ?? Cette valeur dépend de la configuration physique du poste de tri et peut être ajustée si la position du robot est modifiée.
+> ?? Cette valeur dÃ©pend de la configuration physique du poste de tri et peut Ãªtre ajustÃ©e si la position du robot est modifiÃ©e.
 > 
 
-Les angles correspondant à la rotation et à l’ouverture de la pince ne sont pas pris en compte dans les calculs, leur influence sur la position du point  étant négligeable. Ils sont donc fixés directement dans le code.
+Les angles correspondant Ã  la rotation et Ã  lâ€™ouverture de la pince ne sont pas pris en compte dans les calculs, leur influence sur la position du point  Ã©tant nÃ©gligeable. Ils sont donc fixÃ©s directement dans le code.
 
 $$
 \begin{align*}\text{avec } \ell_2 = \ell_3 \\[0.5em]\begin{cases}x = \cos\theta \Big(\ell_2\cos\alpha + \ell_2\sin(\alpha+\beta) - (\ell_4+\ell_5)\cos(\alpha+\beta+\gamma)\Big) \\y = \sin\theta \Big(\ell_2\cos\alpha + \ell_2\sin(\alpha+\beta) - (\ell_4+\ell_5)\cos(\alpha+\beta+\gamma)\Big) \\z = \ell_1 + \ell_2\sin\alpha - \ell_2\cos(\alpha+\beta) - (\ell_4+\ell_5)\sin(\alpha+\beta+\gamma)\end{cases}\\\
 \Rightarrow\;  \frac{y}{x} = \tan\theta\qquad\\\Longrightarrow\qquad\theta = \arctan\!\left(-\frac{y}{x}\right)\\[1em]\begin{cases}\ell_2\big(\cos\alpha + \sin(\alpha+\beta)\big) - (\ell_4+\ell_5)\cos(\alpha+\beta+\gamma) = \dfrac{y}{\sin\theta} \\[0.5em]\ell_1 + \ell_2\big(\sin\alpha - \cos(\alpha+\beta)\big) - (\ell_4+\ell_5)\sin(\alpha+\beta+\gamma) = z\end{cases}\\[1em]\begin{cases}\cos(\alpha+\beta+\gamma)= \dfrac{\ell_2(\cos\alpha + \sin(\alpha+\beta)) - \dfrac{y}{\sin\theta}}{\ell_4+\ell_5} \\[1em]\sin(\alpha+\beta+\gamma)= \dfrac{\ell_1 + \ell_2(\sin\alpha - \cos(\alpha+\beta)) - z}{\ell_4+\ell_5}\end{cases}\\[1em]\text{En utilisant } \sin^2(\cdot) + \cos^2(\cdot) = 1 : \\[0.5em]\left(\dfrac{\ell_2(\cos\alpha + \sin(\alpha+\beta)) - \dfrac{y}{\sin\theta}}{\ell_4+\ell_5}\right)^2+\left(\dfrac{\ell_1 + \ell_2(\sin\alpha - \cos(\alpha+\beta)) - z}{\ell_4+\ell_5}\right)^2= 1\\[1em]\Rightarrow\;\big(\ell_2(\cos\alpha + \sin(\alpha+\beta)) - \tfrac{y}{\sin\theta}\big)^2+\big(\ell_1 + \ell_2(\sin\alpha - \cos(\alpha+\beta)) - z\big)^2= (\ell_4+\ell_5)^2\end{align*}
 $$
 
-L’inconnu ici étant beta , en développant , on trouve une équation de la forme : 
+Lâ€™inconnu ici Ã©tant beta , en dÃ©veloppant , on trouve une Ã©quation de la forme : 
 
 $$
 
@@ -2001,7 +2001,7 @@ b = -\frac{2yl_2}{\sin\theta}\sin\alpha + (2l_2 z - 2l_1 l_2)\cos\alpha
  
 $$
 
-Cette équation équivaut successivement à : 
+Cette Ã©quation Ã©quivaut successivement Ã  : 
 
 $$
 \frac{a}{A} \sin \beta + \frac{b}{A} \cos \beta = 1.
@@ -2018,29 +2018,29 @@ $$
 
 $$
 
-Une condition d’accessibilité est imposée afin de garantir l’existence d’une solution :
+Une condition dâ€™accessibilitÃ© est imposÃ©e afin de garantir lâ€™existence dâ€™une solution :
 
 $$
 \left| \frac{A}{\sqrt{a^2 + b^2}} \right| <= 1
 $$
 
-Si cette condition n’est pas respectée, la position cible  est considérée comme **inatteignable** par le bras robotique.
+Si cette condition nâ€™est pas respectÃ©e, la position cible  est considÃ©rÃ©e comme **inatteignable** par le bras robotique.
 
 $$
 \beta = \cos^{-1} \left( \frac{A}{\sqrt{a^2 + b^2}} \right) + \varphi
 
 $$
 
-Une fois la condition vérifiée, les angles  et  sont calculés analytiquement, en tenant compte des contraintes mécaniques et des limites angulaires du robot.
+Une fois la condition vÃ©rifiÃ©e, les angles  et  sont calculÃ©s analytiquement, en tenant compte des contraintes mÃ©caniques et des limites angulaires du robot.
 
 $$
 \tan(\alpha + \beta + \gamma) = \frac{l_1 + l_2 (\sin\alpha - \cos(\alpha + \beta)) - z}{l_2 (\cos\alpha + \sin(\alpha + \beta)) - \frac{y}{\sin\theta}}
 \\ \text{ Donc } \gamma= \tan^{-1} \left( \frac{l_1 + l_2 (\sin\alpha - \cos(\alpha + \beta)) - z}{l_2 (\cos\alpha + \sin(\alpha + \beta)) - \frac{y}{\sin\theta}} \right) -\alpha - \beta
 $$
 
-### 5.4.7 Implémentation logicielle
+### 5.4.7 ImplÃ©mentation logicielle
 
-L’ensemble de la cinématique inverse présentée ci-dessus a été implémenté sous forme de code, utilisé directement pour le pilotage du bras lors du tri automatique.
+Lâ€™ensemble de la cinÃ©matique inverse prÃ©sentÃ©e ci-dessus a Ã©tÃ© implÃ©mentÃ© sous forme de code, utilisÃ© directement pour le pilotage du bras lors du tri automatique.
 
 ```python
 import math
@@ -2049,7 +2049,7 @@ def IK(x,y,z):
     pi=3.14
     l1=0.1075
     l2=0.08285
-    l3=0.17385 # l3 représente ici l4+l5
+    l3=0.17385 # l3 reprÃ©sente ici l4+l5
     alpha=83*pi/180  # alpha etant succeptible de modification 
 
     #Calcul de teta
@@ -2071,7 +2071,7 @@ def IK(x,y,z):
         phi=-phi
     
     if A/((a**2 + b**2)**(1/2)) > 1 or A/((a**2 + b**2)**(1/2))<-1:
-        print("Pas de solution trouvée")
+        print("Pas de solution trouvÃ©e")
         return None
     print(A/((a**2 + b**2)**(1/2)))
     print(round(A/((a**2 + b**2)**(1/2)),2))
@@ -2080,7 +2080,7 @@ def IK(x,y,z):
 
     
     if (round(math.sin(beta)*a/A +math.cos(beta)*b/A, 6) !=1):
-        print("Solution mal trouvé")
+        print("Solution mal trouvÃ©")
         return None
     
     if beta>=pi/2 or beta<=0:
@@ -2090,7 +2090,7 @@ def IK(x,y,z):
 
     sin= (l1+l2*(math.sin(alpha)-math.cos(alpha+beta)) -z)/l3
     cos=(l2*(math.cos(alpha)+ math.sin(alpha+beta))- y/math.sin(teta))/l3
-    somme_angle= math.acos(cos) # On aurait pu utiliser directement la tangante comme décrit dans la documentation
+    somme_angle= math.acos(cos) # On aurait pu utiliser directement la tangante comme dÃ©crit dans la documentation
     if round(math.sin(somme_angle),4)!=round(sin,4):
         somme_angle=-somme_angle
     gamma=somme_angle-alpha-beta
@@ -2099,55 +2099,69 @@ def IK(x,y,z):
     elif gamma>2*pi:
         gamma=gamma-2*pi
 
-    return (round(teta*180/pi,0) - 4, round(alpha*180/pi,0), round(beta*180/pi,0),  round(gamma*180/pi,0) ) # Convertion en degrés
+    return (round(teta*180/pi,0) - 4, round(alpha*180/pi,0), round(beta*180/pi,0),  round(gamma*180/pi,0) ) # Convertion en degrÃ©s
 ```
 
-Le script présenté ci-dessus implémente une **fonction de cinématique inverse (Inverse Kinematics – IK)** destinée à calculer les **angles articulaires du bras robotique DOFBOT** à partir d’une **position cible cartésienne** (x,y,z)(x, y, z)(x,y,z) de l’effecteur final. Cette fonction constitue un élément fondamental pour la planification de mouvements et le pilotage précis du bras dans l’espace.
+Le script prÃ©sentÃ© ci-dessus implÃ©mente une **fonction de cinÃ©matique inverse (Inverse Kinematics â€“ IK)** destinÃ©e Ã  calculer les **angles articulaires du bras robotique DOFBOT** Ã  partir dâ€™une **position cible cartÃ©sienne** (x,y,z)(x, y, z)(x,y,z) de lâ€™effecteur final. Cette fonction constitue un Ã©lÃ©ment fondamental pour la planification de mouvements et le pilotage prÃ©cis du bras dans lâ€™espace.
 
-La fonction `IK(x, y, z)` repose sur un **modèle géométrique du DOFBOT**, défini à partir des longueurs physiques des segments du bras (`l1`, `l2`, `l3`) ainsi que d’un **angle d’inclinaison fixe** `alpha`, exprimé en radians. Ces paramètres traduisent la structure mécanique réelle du robot et permettent d’établir une correspondance entre l’espace cartésien et l’espace articulaire.
+La fonction `IK(x, y, z)` repose sur un **modÃ¨le gÃ©omÃ©trique du DOFBOT**, dÃ©fini Ã  partir des longueurs physiques des segments du bras (`l1`, `l2`, `l3`) ainsi que dâ€™un **angle dâ€™inclinaison fixe** `alpha`, exprimÃ© en radians. Ces paramÃ¨tres traduisent la structure mÃ©canique rÃ©elle du robot et permettent dâ€™Ã©tablir une correspondance entre lâ€™espace cartÃ©sien et lâ€™espace articulaire.
 
-Dans un premier temps, le script calcule l’angle **? (teta)** correspondant à la **rotation de la base** du bras autour de l’axe vertical. Cet angle est obtenu à partir de la relation trigonométrique `atan(y/x)`, puis ajusté afin de garantir sa validité dans l’intervalle [0,p][0, \pi][0,p]. Cette étape assure une orientation correcte du bras vers la cible dans le plan horizontal.
+Dans un premier temps, le script calcule lâ€™angle **? (teta)** correspondant Ã  la **rotation de la base** du bras autour de lâ€™axe vertical. Cet angle est obtenu Ã  partir de la relation trigonomÃ©trique `atan(y/x)`, puis ajustÃ© afin de garantir sa validitÃ© dans lâ€™intervalle [0,p][0, \pi][0,p]. Cette Ã©tape assure une orientation correcte du bras vers la cible dans le plan horizontal.
 
-Ensuite, le calcul de l’angle **ß (beta)** est effectué à l’aide d’une formulation trigonométrique avancée, intégrant les paramètres géométriques du bras et la position cible. Les coefficients intermédiaires `a`, `b` et `A` permettent de résoudre l’équation issue de la loi des cosinus. Des **vérifications de cohérence mathématique** sont appliquées afin de détecter les cas où aucune solution physique n’existe, garantissant ainsi la robustesse du calcul. En cas d’incohérence, le script signale explicitement l’absence de solution.
+Ensuite, le calcul de lâ€™angle **ÃŸ (beta)** est effectuÃ© Ã  lâ€™aide dâ€™une formulation trigonomÃ©trique avancÃ©e, intÃ©grant les paramÃ¨tres gÃ©omÃ©triques du bras et la position cible. Les coefficients intermÃ©diaires `a`, `b` et `A` permettent de rÃ©soudre lâ€™Ã©quation issue de la loi des cosinus. Des **vÃ©rifications de cohÃ©rence mathÃ©matique** sont appliquÃ©es afin de dÃ©tecter les cas oÃ¹ aucune solution physique nâ€™existe, garantissant ainsi la robustesse du calcul. En cas dâ€™incohÃ©rence, le script signale explicitement lâ€™absence de solution.
 
-Une attention particulière est portée à la **sélection de la bonne branche trigonométrique**, via la variable `phi`, afin d’éviter les ambiguïtés liées aux fonctions inverses. Des contrôles numériques supplémentaires permettent de confirmer la validité de la solution retenue avant de poursuivre le calcul.
+Une attention particuliÃ¨re est portÃ©e Ã  la **sÃ©lection de la bonne branche trigonomÃ©trique**, via la variable `phi`, afin dâ€™Ã©viter les ambiguÃ¯tÃ©s liÃ©es aux fonctions inverses. Des contrÃ´les numÃ©riques supplÃ©mentaires permettent de confirmer la validitÃ© de la solution retenue avant de poursuivre le calcul.
 
-Le script détermine ensuite l’angle **? (gamma)**, correspondant à l’orientation du dernier segment du bras (effecteur). Ce calcul s’appuie sur les relations trigonométriques reliant les contributions des segments précédents à la position finale désirée. L’angle obtenu est ensuite normalisé dans l’intervalle [0,2p][0, 2\pi][0,2p] afin de respecter les contraintes mécaniques et logicielles du bras robotique.
+Le script dÃ©termine ensuite lâ€™angle **? (gamma)**, correspondant Ã  lâ€™orientation du dernier segment du bras (effecteur). Ce calcul sâ€™appuie sur les relations trigonomÃ©triques reliant les contributions des segments prÃ©cÃ©dents Ã  la position finale dÃ©sirÃ©e. Lâ€™angle obtenu est ensuite normalisÃ© dans lâ€™intervalle [0,2p][0, 2\pi][0,2p] afin de respecter les contraintes mÃ©caniques et logicielles du bras robotique.
 
-Enfin, la fonction retourne un **tuple d’angles articulaires exprimés en degrés**, prêts à être utilisés par les servomoteurs du DOFBOT ou par un nœud ROS de commande. Une correction fixe est appliquée à l’angle de base afin d’aligner le résultat avec le **référentiel réel du robot**, tenant compte des offsets mécaniques observés expérimentalement.
+Enfin, la fonction retourne un **tuple dâ€™angles articulaires exprimÃ©s en degrÃ©s**, prÃªts Ã  Ãªtre utilisÃ©s par les servomoteurs du DOFBOT ou par un nÅ“ud ROS de commande. Une correction fixe est appliquÃ©e Ã  lâ€™angle de base afin dâ€™aligner le rÃ©sultat avec le **rÃ©fÃ©rentiel rÃ©el du robot**, tenant compte des offsets mÃ©caniques observÃ©s expÃ©rimentalement.
 
-En résumé, cette fonction de cinématique inverse permet de **convertir une consigne cartésienne en commandes articulaires exploitables**, jouant ainsi un rôle clé dans l’intégration du DOFBOT avec les modules de planification de trajectoires, de contrôle moteur et de visualisation sous ROS et MoveIt.
+En rÃ©sumÃ©, cette fonction de cinÃ©matique inverse permet de **convertir une consigne cartÃ©sienne en commandes articulaires exploitables**, jouant ainsi un rÃ´le clÃ© dans lâ€™intÃ©gration du DOFBOT avec les modules de planification de trajectoires, de contrÃ´le moteur et de visualisation sous ROS et MoveIt.
 
 ### Remarque
 
-Cette approche par cinématique inverse analytique nous a permis d’obtenir un **contrôle plus précis, plus rapide et plus stable** du bras robotique que l’approche basée uniquement sur MoveIt, tout en restant cohérente avec l’architecture ROS globale du projet EcoCity.
+Cette approche par cinÃ©matique inverse analytique nous a permis dâ€™obtenir un **contrÃ´le plus prÃ©cis, plus rapide et plus stable** du bras robotique que lâ€™approche basÃ©e uniquement sur MoveIt, tout en restant cohÃ©rente avec lâ€™architecture ROS globale du projet EcoCity.
 
 **Incident technique : perte des identifiants des servomoteurs**
 
-Lors de la phase initiale de tests du **Dofbot Jetson Nano**, un incident technique est survenu au niveau du **contrôleur des servomoteurs** .
+Lors de la phase initiale de tests du **Dofbot Jetson Nano**, un incident technique est survenu au niveau du **contrÃ´leur des servomoteurs** .
 
-En effet, **tous les identifiants (IDs) des servomoteurs** ont été redéfinis à **6** suite à une **erreur de communication** entre le Jetson Nano et le module de contrôle.
+En effet, **tous les identifiants (IDs) des servomoteurs** ont Ã©tÃ© redÃ©finis Ã  **6** suite Ã  une **erreur de communication** entre le Jetson Nano et le module de contrÃ´le.
 
-Cette panne a entraîné l’impossibilité de lire les angles des servo moteurs (indispensable pour enregistrer la position du bras au niveau des corbeilles et aussi pour calculer la position des déchets dans le repère du bras avec le nœud robot_state_Publisher )
+Cette panne a entraÃ®nÃ© lâ€™impossibilitÃ© de lire les angles des servo moteurs (indispensable pour enregistrer la position du bras au niveau des corbeilles et aussi pour calculer la position des dÃ©chets dans le repÃ¨re du bras avec le nÅ“ud robot_state_Publisher )
 
 **Diagnostic :**
 
-- Les mouvements du bras étaient désordonnés et incontrôlés.
-- Lorsqu’on essayaient de lire les angles des servomoteurs en utilisant les identifiants le code retournait none
-- Lorsqu’on essayait de modifier les angles des servomoteurs en utilisant les identifiants de 1 à 5 ça ne marchait pas mais par contre avec 6 comme identifiant, tout les servo moteurs bougeaient et allaient à l’angle spécifié.
+- Les mouvements du bras Ã©taient dÃ©sordonnÃ©s et incontrÃ´lÃ©s.
+- Lorsquâ€™on essayaient de lire les angles des servomoteurs en utilisant les identifiants le code retournait none
+- Lorsquâ€™on essayait de modifier les angles des servomoteurs en utilisant les identifiants de 1 Ã  5 Ã§a ne marchait pas mais par contre avec 6 comme identifiant, tout les servo moteurs bougeaient et allaient Ã  lâ€™angle spÃ©cifiÃ©.
 
-**Solution essayées mais sans résultat**
+**Solution essayÃ©es mais sans rÃ©sultat**
 
-- **Utilisation du logiciel PC de yahboom conçu pour réinitialiser les identifiants des servo moteurs :** a trouvé la fonction Arm_set_servo_id () qui a pour rôle de redéfinir les IDs des servos.
-- Après installation du logiciel nous avons essayé de le lancé mais celui ci n’arrivait pas à communiquer avec la jetson nano parce que apparemment la jetson nano lançait un serveur tcp tandis que le logiciel voulait communiquer par http.
-- **Recherche de la commande précise à envoyer au servo afin de réécrire leurs identifiants.**
+- **Utilisation du logiciel PC de yahboom conÃ§u pour rÃ©initialiser les identifiants des servo moteurs :** a trouvÃ© la fonction Arm_set_servo_id () qui a pour rÃ´le de redÃ©finir les IDs des servos.
+- AprÃ¨s installation du logiciel nous avons essayÃ© de le lancÃ© mais celui ci nâ€™arrivait pas Ã Â communiquer avec la jetson nano parce que apparemment la jetson nano lanÃ§ait un serveur tcp tandis que le logiciel voulait communiquer par http.
+- **Recherche de la commande prÃ©cise Ã  envoyer au servo afin de rÃ©Ã©crire leurs identifiants.**
 
-Nous avons recherché la documentation officielle des servomoteurs afin de déterminer la commande à envoyer pour réécrire leurs identifiants mais le code qu’on leur envoyait ne marchait pas et les identifiants étaient toujours à 6 .
+Nous avons recherchÃ© la documentation officielle des servomoteurs afin de dÃ©terminer la commande Ã  envoyer pour rÃ©Ã©crire leurs identifiants mais le code quâ€™on leur envoyait ne marchait pas et les identifiants Ã©taient toujours Ã  6 .
 
 **Solution**
 
-La solution était plus simple qu’on l’imaginait apparemment car la fonction qui permettait de remettre les identifiants était dans la bibliothèque Arm_lib venu avec le dofbot la même bibliothèque qui permettait de lire et de modifier les angles des servo moteurs. Nous avons en effet contacté yahboom qui nous a envoyé un code mais qui utilisait la bibliothèque Rosmaster_lib qui n’est pas adapté à la version de robot qu’on avait. Il nous suffisait juste de trouver l’équivalent de la fonction qu’ils ont utilisé dans notre bibliothèque : Arm_serial_set_id(id).
+La solution Ã©tait plus simple quâ€™on lâ€™imaginait apparemment car la fonction qui permettait de remettre les identifiants Ã©tait dans la bibliothÃ¨que Arm_lib venu avec le dofbot la mÃªme bibliothÃ¨que qui permettait de lire et de modifier les angles des servo moteurs. Nous avons en effet contactÃ© yahboom qui nous a envoyÃ© un code mais qui utilisait la bibliothÃ¨que Rosmaster_lib qui nâ€™est pas adaptÃ© Ã  la version de robot quâ€™on avait. Il nous suffisait juste de trouver lâ€™Ã©quivalent de la fonction quâ€™ils ont utilisÃ© dans notre bibliothÃ¨que : Arm_serial_set_id(id).
 
-Il suffisait donc de brancher chaque servo moteur à la carte d’extension séparément et d’utiliser cette fonction pour remettre l’identifiant.
+Il suffisait donc de brancher chaque servo moteur Ã  la carte dâ€™extension sÃ©parÃ©ment et dâ€™utiliser cette fonction pour remettre lâ€™identifiant.
 
-Ici se présente le code utilisé:
+Ici se prÃ©sente le code utilisÃ©:
+
+---
+
+## DÃ©monstration VidÃ©o
+
+<div class="video-embed">
+  <iframe
+    src="https://player.vimeo.com/video/1190665279?badge=0&autopause=0&player_id=0&app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+    allowfullscreen
+    title="DOFBOT Jetson Nano - DÃ©monstration TRC 2025">
+  </iframe>
+</div>

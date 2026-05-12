@@ -76,3 +76,14 @@ Le système est autonome grâce à un pack de **batteries LiPPo** (4 cellules 
 - **Sécurité :** Intégration d'interrupteurs de sectionnement pour isoler les circuits lors des phases de maintenance.
 
 ---
+## Démonstration Vidéo
+
+<div class="video-embed">
+  <iframe
+    src="https://player.vimeo.com/video/1104753694?badge=0&autopause=0&player_id=0&app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+    allowfullscreen
+    title="Système Convoyeur - Démonstration TRC 2025">
+  </iframe>
+</div>

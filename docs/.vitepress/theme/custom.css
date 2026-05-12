@@ -412,3 +412,30 @@ mjx-container[display="true"] {
   background: rgba(54, 192, 135, 0.12);
   color: #4ade9e;
 }
+
+/* ===== Navbar - fond toujours visible sur les pages docs ===== */
+.VPNavBar {
+  background-color: var(--vp-c-bg) !important;
+  border-bottom: 1px solid var(--vp-c-divider) !important;
+  backdrop-filter: blur(8px);
+}
+
+/* ===== Vidéos embarquées (Vimeo / YouTube) ===== */
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* ratio 16:9 */
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+}
+
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}

@@ -335,6 +335,26 @@
       </div>
     </section>
 
+    <!-- Section Résultat Final - Vidéo -->
+    <section class="video-result-section">
+      <div class="section-container">
+        <div class="section-header animate__animated animate__fadeIn">
+          <span class="section-tag"><i class="fas fa-play-circle"></i> DÉMONSTRATION LIVE</span>
+          <h2 class="section-title">Notre Résultat Final</h2>
+          <p class="section-desc">Découvrez notre système robotique intégré en action lors de la grande finale TRC 2025</p>
+        </div>
+        <div class="video-player-wrapper animate__animated animate__fadeInUp">
+          <iframe
+            src="https://player.vimeo.com/video/1190665279?badge=0&autopause=0&player_id=0&app_id=58479"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+            allowfullscreen
+            title="Résultat Final TRC 2025 - Team IMSP"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
     <!-- Documentation Finale Section -->
     <section class="final-doc-section">
       <div class="section-container">
@@ -2236,6 +2256,35 @@ a.pole-item {
 
 .test-btn:hover i {
   transform: translateX(5px);
+}
+
+/* ============================================ */
+/* Section Résultat Final - Vidéo               */
+/* ============================================ */
+.video-result-section {
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #0a0a1a 0%, #0f1a2e 100%);
+  position: relative;
+}
+
+.video-player-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-top: 56.25%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(54, 192, 135, 0.25), 0 4px 16px rgba(0,0,0,0.5);
+  border: 1px solid rgba(54, 192, 135, 0.3);
+}
+
+.video-player-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 /* ============================================ */

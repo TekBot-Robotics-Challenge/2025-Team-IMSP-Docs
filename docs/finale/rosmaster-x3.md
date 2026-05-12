@@ -555,6 +555,14 @@ finally:
     print("Connexion série fermée.")
 ```
 
-***Résultat final Obtenu***
+## Résultat Final
 
-[https://vimeo.com/1190665279?share=copy&fl=sv&fe=ci](https://vimeo.com/1190665279?share=copy&fl=sv&fe=ci)
+<div class="video-embed">
+  <iframe
+    src="https://player.vimeo.com/video/1190744596?badge=0&autopause=0&player_id=0&app_id=58479"
+    frameborder="0"
+    allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+    allowfullscreen
+    title="Rosmaster X3 - Démonstration TRC 2025">
+  </iframe>
+</div>
