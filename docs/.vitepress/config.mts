@@ -104,67 +104,72 @@ export default defineConfig({
       },
 
       {
-        text: 'TRC 2025:La grande finale',
-        items: [
-          {
-            text: 'Accueil',
-            link: '/trc2025-robotics/index.md'
-          },
-          {
-            text: 'README',
-            link: '/trc2025-robotics/README.md'
-          },
-          {
-            text: 'Dofbot Jetson Nano',
-            items: [
-              {
-                text: 'Présentation Dofbot',
-                link: '/trc2025-robotics/trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md'
-              }
-            ]
-          },
-          {
-            text: 'Système ROSMASTER X3',
-            items: [
-              {
-                text: 'Système de collecte (global)',
-                link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/systeme-rosmaster.md'
-              },
-              {
-                text: 'Solutions mécaniques',
-                items: [
-                  {
-                    text: 'Solution 1 : Pince mécanique articulée',
-                    link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-1-Pince-mécanique-articule.md'
-                  },
-                  {
-                    text: 'Solution 2 : Pelle frontale + berne arrière',
-                    link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-2-Pelle-frontale-avec-berne-arriere.md'
-                  },
-                  {
-                    text: 'Solution 3 : Collecte en masse par canalisation (choisie)',
-                    link: '/trc2025-robotics/trc2025-finale/systeme-ramassage-x3/Solution-3-Système-de-collecte-en-masse-à-canalisation.md'
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
+  text: 'TRC 2025: La finale',
+  collapsed: true,
+  items: [    
+    {
+      text: 'Généralités',
+      link: '/finale/README.md'
+    },
+
+    {
+      
+      items: [
+        {
+          text: 'Dofbot Jetson Nano',
+          link: '/finale/trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md'
+        }
+      ]
+    },
       {
-        text: 'Documentation Finale',
+      
+      items: [
+        {
+          text: 'Système Convoyeur',
+          link: '/finale/trc2025-finale/systeme-convoyeur/systeme-convoyeur.md'
+        }
+      ]
+    },
+
+    {
+      
+      items: [
+        {
+          text: 'Système ROSMASTER X3',
+          link: '/finale/trc2025-finale/systeme-rosmaster-x3/systeme-rosmaster.md'
+        },
+
+        {
+          text: 'Solutions mécaniques',
+          collapsed: true,
+          items: [
+            {
+              text: 'Solution 1 : Pince mécanique articulée',
+              link: '/finale/trc2025-finale/systeme-rosmaster-x3/Solution-1-Pince-mécanique-articule.md'
+            },
+            {
+              text: 'Solution 2 : Pelle frontale + berne arrière',
+              link: '/finale/trc2025-finale/systeme-rosmaster-x3/Solution-2-Pelle-frontale-avec-berne-arriere.md'
+            },
+            {
+              text: 'Solution 3 : Collecte en masse par canalisation (choisie)',
+              link: '/finale/trc2025-finale/systeme-rosmaster-x3/Solution-3-Système-de-collecte-en-masse-à-canalisation.md'
+            }
+          ]
+        }
+      ]
+    }
+  ]
+},
+      {
+        text: 'Raccourcis',
         items: [
-          { text: 'Vue d\'ensemble', link: '/finale/' },
-          { text: 'Rosmaster X3', link: '/finale/rosmaster-x3',
-            collapsed: true,
-            items: [
-              { text: 'Solution 1 : Pince articulée', link: '/finale/solution-1' },
-              { text: 'Solution 2 : Pelle frontale', link: '/finale/solution-2' },
-              { text: 'Solution 3 : Canalisation arrière', link: '/finale/solution-3' },
-            ]
-          },
-          { text: 'Système Convoyeur', link: '/finale/convoyeur' },
-          { text: 'DofBot Jetson Nano', link: '/finale/dofbot-jetson-nano' }
+          { text: 'Accueil', link: '/index.md' },
+          { text: 'Rosmaster X3', link: '/finale/trc2025-finale/systeme-rosmaster-x3/systeme-rosmaster.md',
+                      },
+          { text: 'Système Convoyeur', link: '/finale/trc2025-finale/systeme-convoyeur/systeme-convoyeur.md' },
+
+          { text: 'DofBot Jetson Nano', link: '/finale/trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano.md' }
         ]
       }
     ],

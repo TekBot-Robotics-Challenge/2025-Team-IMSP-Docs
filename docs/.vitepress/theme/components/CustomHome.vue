@@ -6,7 +6,7 @@
       <nav class="custom-nav">
         <div class="logo animate__animated animate__fadeInDown">
           <img
-            src="/2025-Team-IMSP-Docs/logo.svg"
+            src="/logo.svg"
             alt="Logo"
             class="logo-img"
           />
@@ -92,7 +92,7 @@
           <div class="hero-image-wrapper animate__animated animate__fadeInRight animate__delay-1s">
             <div class="hero-image-bg"></div>
             <img
-              src="/2025-Team-IMSP-Docs/IMSP_TEAM.png"
+              src="/IMSP_TEAM.png"
               alt="IMSP Team"
               class="hero-image"
             />
@@ -360,7 +360,7 @@
               <div class="doc-feature"><i class="fas fa-circle-check"></i> Détection des déchets</div>
               <div class="doc-feature"><i class="fas fa-circle-check"></i> Communication ESP32</div>
             </div>
-            <a href="/2025-Team-IMSP-Docs/finale/rosmaster-x3" class="doc-btn">
+            <a href="/2025-Team-IMSP-Docs/finale/trc2025-finale/systeme-rosmaster-x3/systeme-rosmaster" class="doc-btn">
               <i class="fas fa-book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
@@ -381,7 +381,7 @@
               <div class="doc-feature"><i class="fas fa-circle-check"></i> Contrôle motorisé</div>
               <div class="doc-feature"><i class="fas fa-circle-check"></i> Synchronisation système</div>
             </div>
-            <a href="/2025-Team-IMSP-Docs/finale/convoyeur" class="doc-btn">
+            <a href="/2025-Team-IMSP-Docs/finale/trc2025-finale/systeme-convoyeur/systeme-convoyeur" class="doc-btn">
               <i class="fas fa-book-open"></i>
               <span>Accéder à la documentation</span>
             </a>
@@ -402,7 +402,7 @@
               <div class="doc-feature"><i class="fas fa-circle-check"></i> Préhension adaptative</div>
               <div class="doc-feature"><i class="fas fa-circle-check"></i> Interface ROS2</div>
             </div>
-            <a href="/2025-Team-IMSP-Docs/finale/dofbot-jetson-nano" class="doc-btn">
+            <a href="/2025-Team-IMSP-Docs/finale/trc2025-finale/dofbot-jetson-nano/dofbot-jetson-nano" class="doc-btn">
               <i class="fas fa-book-open"></i>
               <span>Accéder à la documentation</span>
             </a>

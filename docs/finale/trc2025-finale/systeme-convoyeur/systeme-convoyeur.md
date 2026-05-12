@@ -1,10 +1,4 @@
-﻿---
-outline: deep
----
-
-# SYSTÈME CONVOYEUR
-
-[**ACCUEIL**](/2025-Team-IMSP-Docs/finale/) | [**SYSTEMES**](/2025-Team-IMSP-Docs/finale/#architecture-du-système)                                                                                                                                                                       
+                                                                             
 
 # SYSTÈME CONVOYEUR : CONCEPTION ET OPTIMISATION
 
@@ -33,6 +27,10 @@ Lors des phases de test précédentes, plusieurs points critiques ont été iden
 
 ## III. Optimisations Mécaniques et Structurelles
 
+<img src="./convoyeur.png" align="right" width="300" style="margin-left: 30px;">
+
+
+
 Pour pallier ces défauts, une refonte partielle de la structure a été opérée :
 
 1. **Fiabilisation de l'Axe de Rotation :** Adoption d’un **montage de roulements en X** pour une meilleure répartition des charges et une rotation fluide.
@@ -41,9 +39,7 @@ Pour pallier ces défauts, une refonte partielle de la structure a été opéré
 4. **Mise à niveau Ergonomique :** Intégration de supports de base pour fixer la hauteur du tapis à **100 mm du sol**, alignant parfaitement le convoyeur avec le champ d'action du Dofbot.
 5. **Protection des Capteurs :** Modélisation et impression 3D de boîtiers de protection pour les émetteurs et récepteurs laser.
 
-<div style="width: 100%; max-width: 800px; margin: 2rem auto;">
-  <img src="./assets/systeme-convoyeur/convoyeur.png?v=2" alt="Système Convoyeur" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-</div>
+
 
 ---
 

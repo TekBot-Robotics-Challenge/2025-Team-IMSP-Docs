@@ -61,7 +61,7 @@
       <div class="former-member-card animate__animated animate__fadeInUp">
         <div class="member-photo-ring">
           <div class="member-avatar">
-            <img src="/2025-Team-IMSP-Docs/Marus.jpg" alt="Marius HOUNKPETOHOU" loading="lazy" />
+            <img src="/Marus.jpg" alt="Marius HOUNKPETOHOU" loading="lazy" />
           </div>
         </div>
         <div class="member-info">
@@ -71,7 +71,7 @@
               <i class="fab fa-linkedin"></i>
             </a>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
 
@@ -80,7 +80,7 @@
       <div class="footer-content">
         <div class="footer-col">
           <div class="footer-logo">
-            <img src="/2025-Team-IMSP-Docs/logo.svg" alt="IMSP Logo" class="footer-logo-img" />
+            <img src="/logo.svg" alt="IMSP Logo" class="footer-logo-img" />
             <h3>TEAM IMSP</h3>
           </div>
           <p class="footer-desc">
