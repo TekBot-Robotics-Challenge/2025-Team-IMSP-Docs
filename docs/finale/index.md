@@ -10,4 +10,4 @@ outline: deep
 import FinaleIntro from '../.vitepress/theme/components/FinaleIntro.vue'
 </script>
 
-<FinaleIntro />
+<FinaleIntro /> 
